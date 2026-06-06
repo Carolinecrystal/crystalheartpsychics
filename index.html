@@ -1223,122 +1223,77 @@ function resetTarot(){
   document.getElementById('shuffleBtn').textContent='✨ Shuffle the Deck';
 }
 
-// ─── READER FEED ──────────────────────────────────────────────────
+// ─── READER FEED — fully driven by Inveroak XML ──────────────────
 const PROFILE_BASE='https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
-const FEED_URL='https://corsproxy.io/?url=https://www.crystalheartpsychics.com/wp-json/inveroak-feed/v1/feed/';
+const XML_FEED='https://corsproxy.io/?url=https://services.inveroak.co.uk/readerimages/livepanel/91232.xml';
 
-// ── Static reader data (photos + bios always show) ──
-const READERS_STATIC=[
-  {
-    pin:'5330',
-    name:'Caroline',
-    title:'Psychic Medium & Founder',
-    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b68e4e496_generated_image.png',
-    bio:'Caroline is the founder of Crystal Heart Psychics. A gifted Psychic Medium, Clairvoyant and healer with over 17 years of experience. NLP Master Practitioner, CBT Therapist, Hypnotherapist and Past Life Regression Therapist. Reiki & Seichem Master Teacher. Featured in Soul & Spirit Magazine 2013, 2014 & 2016.',
-    specs:['Psychic Medium','Clairvoyant','Past Lives','NLP','Hypnotherapy','Healing'],
-    stars:5,
-    // Caroline does NOT take live calls — she books privately
-    forceOffline:true
-  },
-  {
-    pin:'4322',
-    name:'Serena',
-    title:'Clairvoyant & Medium',
-    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/c43c3e9a9_generated_image.png',
-    bio:'A compassionate and gifted reader who connects deeply with spirit to bring messages of love, clarity and hope. Specialising in relationships and life path guidance.',
-    specs:['Clairvoyant','Love & Relationships','Life Path','Tarot'],
-    stars:5
-  },
-  {
-    pin:'6317',
-    name:'Lydia',
-    title:'Angel Card Reader',
-    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b0baacd1c_generated_image.png',
-    bio:'A naturally gifted psychic with a warm, nurturing approach. Known for accuracy in love readings and the ability to tune into your energy quickly and clearly.',
-    specs:['Clairvoyant','Angel Cards','Love Readings','Energy Work'],
-    stars:5
-  },
-  {
-    pin:'4476',
-    name:'Terry',
-    title:'Psychic Medium & Tarot',
-    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/a7c70a14a_generated_image.png',
-    bio:'An experienced psychic reader with exceptional skills in connecting with your energy. Warm, direct and deeply accurate — bringing real clarity to the questions that matter most.',
-    specs:['Psychic Medium','Tarot','Career','Relationships'],
-    stars:5
-  },
-  {
-    pin:'2556',
-    name:'Luna',
-    title:'Tarot & Psychic Intuitive',
-    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b2832b9c2_generated_image.png',
-    bio:'A highly intuitive reader who blends tarot and psychic ability to paint a vivid picture of your situation. Known for practical guidance you can act on.',
-    specs:['Tarot','Psychic','Clairvoyant','Life Coaching'],
-    stars:5
-  },
-  {
-    pin:'3349',
-    name:'Miriam',
-    title:'Spirit Medium & Past Life',
-    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/9548a2dc7_generated_image.png',
-    bio:'A gifted medium with a kind, gentle energy who specialises in spirit communication, past life regression and soul purpose readings.',
-    specs:['Spirit Communication','Past Lives','Soul Purpose','Mediumship'],
-    stars:5
-  },
-];
+// Static photo overrides (keyed by PIN) — used when Inveroak Picture URL is unreliable
+const PHOTO_OVERRIDES={
+  '5330':'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b68e4e496_generated_image.png'
+};
 
-let liveStatuses={};
+let liveReaders=[];
 
 async function loadReaderStatuses(){
   try{
-    const res=await fetch(FEED_URL+'?t='+Date.now(),{cache:'no-cache'});
+    const res=await fetch(XML_FEED+'?t='+Date.now(),{cache:'no-cache'});
     const text=await res.text();
-    if(text.trim().startsWith('[')){
-      const data=JSON.parse(text);
-      data.forEach(r=>{liveStatuses[String(r.pin||r.id||'')]=r.status||'logged-off';});
-    } else {
-      // Parse HTML feed format
-      const blocks=text.split(/<div class="op op-/).slice(1);
-      blocks.forEach(b=>{
-        const pM=b.match(/^(\d+) ([a-z\-]+)/);
-        if(pM)liveStatuses[pM[1]]=pM[2];
-      });
-    }
-  } catch(e){
-    // Feed unavailable — statuses stay unknown (show as offline)
+    const parser=new DOMParser();
+    const doc=parser.parseFromString(text,'text/xml');
+    const nodes=[...doc.querySelectorAll('Reader')];
+    liveReaders=nodes.map(n=>{
+      const get=tag=>n.querySelector(tag)?.textContent?.trim()||'';
+      const pin=get('Pin');
+      const status=(get('Status')||'').toLowerCase();
+      const pic=get('Picture');
+      return{
+        pin,
+        name:get('Name'),
+        bio:get('Description').replace(/\s+/g,' ').trim(),
+        status,
+        photo:PHOTO_OVERRIDES[pin]||(pic&&pic!=='None'?pic:''),
+        rating:parseInt(get('Rating'))||100
+      };
+    });
+  }catch(e){
+    // Feed failed — keep previous data if any
   }
   renderReaders();
 }
 
 function renderReaders(){
   const grid=document.getElementById('readersGrid');
-  grid.innerHTML=READERS_STATIC.map(r=>{
-    const live=r.forceOffline?'logged-off':(liveStatuses[r.pin]||'logged-off');
-    const isAvail=live==='available';
-    const isBusy=live==='busy';
+  if(!liveReaders.length){
+    grid.innerHTML='<div class="loading"><div class="spinner"></div><p>Loading our readers…</p></div>';
+    return;
+  }
+  grid.innerHTML=liveReaders.map(r=>{
+    const isAvail=r.status==='available';
+    const isBusy=r.status==='busy';
     const statusClass=isAvail?'s-available':isBusy?'s-busy':'s-offline';
     const statusText=isAvail?'🟢 Available Now':isBusy?'🟡 With a Client':'⚫ Offline';
     const ctaClass=isAvail||isBusy?'reader-cta':'reader-cta reader-cta-offline';
     const ctaText=isAvail?'📞 Book a Reading':isBusy?'⏳ Join Queue':'📅 Leave a Message';
     const ctaHref=isAvail||isBusy?PROFILE_BASE+r.pin:'mailto:info@crystalheartpsychics.com?subject=Reading Request - '+encodeURIComponent(r.name);
     const ctaTarget=isAvail||isBusy?'_blank':'_self';
-    const stars='★'.repeat(r.stars||5)+'☆'.repeat(5-(r.stars||5));
-    return\`<div class="reader-card">
+    const stars='★★★★★';
+    const photoHtml=r.photo
+      ?`<img src="${r.photo}" alt="${r.name} - Crystal Heart Psychic" loading="lazy" onerror="this.style.display='none'">`
+      :`<div style="width:100%;height:100%;background:linear-gradient(160deg,#2d1060,#0d0520);display:flex;align-items:center;justify-content:center;font-size:64px">🔮</div>`;
+    return`<div class="reader-card">
       <div class="reader-photo-wrap">
-        <img src="\${r.photo}" alt="\${r.name} - Crystal Heart Psychic Reader" loading="lazy">
+        ${photoHtml}
         <div class="reader-photo-overlay"></div>
-        <span class="reader-status-float \${statusClass}">\${statusText}</span>
+        <span class="reader-status-float ${statusClass}">${statusText}</span>
       </div>
       <div class="reader-card-body">
-        <div class="reader-name">\${r.name}</div>
-        <div class="reader-pin">\${r.title}</div>
-        <div class="reader-pin-number">📞 PIN: \${r.pin}</div>
-        <div class="reader-stars">\${stars}</div>
-        <div class="reader-bio">\${r.bio}</div>
-        <div class="reader-tags">\${r.specs.map(s=>\`<span class="reader-tag">\${s}</span>\`).join('')}</div>
-        <a href="\${ctaHref}" target="\${ctaTarget}" class="\${ctaClass}">\${ctaText}</a>
+        <div class="reader-name">${r.name}</div>
+        <div class="reader-pin-number">📞 PIN: ${r.pin}</div>
+        <div class="reader-stars">${stars}</div>
+        <div class="reader-bio">${r.bio||'A gifted and experienced Crystal Heart reader.'}</div>
+        <a href="${ctaHref}" target="${ctaTarget}" class="${ctaClass}">${ctaText}</a>
       </div>
-    </div>\`;
+    </div>`;
   }).join('');
 }
 
