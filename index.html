@@ -1374,11 +1374,8 @@ function openReaderModal(pin){
   var statusClass=isAvail?'s-available':isBusy?'s-busy':'s-offline';
   var statusText=isAvail?'&#127374; Available Now':isBusy?'&#128993; With a Client':'&#9899; Offline';
   var hero=document.getElementById('rmpHero');
-  if(r.photo){
-    hero.innerHTML='<img src="'+r.photo+'" onerror="this.outerHTML='<div class=rmp-hero-fallback>&#128302;</div>'"><span class="rmp-status '+statusClass+'">'+statusText+'</span><button class="rmp-close" onclick="closeReaderModal()">&#10005;</button>';
-  } else {
-    hero.innerHTML='<div class="rmp-hero-fallback">&#128302;</div><span class="rmp-status '+statusClass+'">'+statusText+'</span><button class="rmp-close" onclick="closeReaderModal()">&#10005;</button>';
-  }
+  var heroImg=r.photo?'<img src="'+r.photo+'" onerror="this.style.display=\'none\'">'  :'<div class="rmp-hero-fallback">&#128302;</div>';
+  hero.innerHTML=heroImg+'<span class="rmp-status '+statusClass+'">'+statusText+'</span><button class="rmp-close" onclick="closeReaderModal()">&#10005;</button>';
   document.getElementById('rmpName').textContent=r.name;
   document.getElementById('rmpStarsign').textContent=r.starSign?'Star Sign: '+r.starSign:'Crystal Heart Psychic';
   document.getElementById('rmpPin').textContent='PIN: '+r.pin;
