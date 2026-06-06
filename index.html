@@ -155,6 +155,25 @@ nav a:hover{color:var(--purple3);border-bottom-color:var(--purple)}
 .blog-modal-title{font-family:'Cinzel',serif;font-size:clamp(16px,2.5vw,24px);color:var(--white);margin-bottom:16px;line-height:1.3}
 .blog-modal-body{color:var(--text);font-size:14px;line-height:1.9}
 .blog-modal-body p{margin-bottom:14px}
+.blog-share-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:24px;padding-top:18px;border-top:1px solid var(--border)}
+.share-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:8px;font-size:12px;font-weight:600;letter-spacing:.5px;text-decoration:none;border:none;cursor:pointer;transition:all .25s;font-family:'Raleway',sans-serif}
+.share-fb{background:#1877f2;color:#fff}.share-fb:hover{background:#1558b0}
+.share-tw{background:#000;color:#fff}.share-tw:hover{background:#222}
+.share-wa{background:#25d366;color:#fff}.share-wa:hover{background:#1ead52}
+.share-copy{background:var(--bg3);color:var(--text);border:1px solid var(--border2)}.share-copy:hover{border-color:var(--purple);color:var(--purple-light)}
+.share-ai-btn{background:linear-gradient(135deg,var(--purple),#c77dff);color:#fff;margin-left:auto}.share-ai-btn:hover{opacity:.85}
+.social-gen-panel{margin-top:20px;background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:20px;display:none}
+.social-gen-panel.open{display:block}
+.social-gen-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.sgt{padding:7px 16px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:1px solid var(--border2);background:var(--bg2);color:var(--muted);font-family:'Raleway',sans-serif;transition:all .2s}
+.sgt.active,.sgt:hover{background:var(--purple);border-color:var(--purple);color:#fff}
+.social-output{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px;font-size:13px;color:var(--text);line-height:1.8;min-height:80px;white-space:pre-wrap;margin-bottom:12px}
+.social-output.loading{color:var(--muted);font-style:italic}
+.social-gen-actions{display:flex;gap:8px;flex-wrap:wrap}
+.sga{padding:8px 16px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid var(--border2);background:var(--bg2);color:var(--text);font-family:'Raleway',sans-serif;transition:all .2s}
+.sga:hover{border-color:var(--purple);color:var(--purple-light)}
+.sga.primary{background:linear-gradient(135deg,var(--purple),#9d4edd);border-color:transparent;color:#fff}
+.char-count{font-size:11px;color:var(--muted);text-align:right;margin-bottom:8px}
 
 /* Horoscopes */
 .horoscope-section{padding:0 20px 60px;max-width:1200px;margin:0 auto}
@@ -406,6 +425,29 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
     <button class="blog-modal-close" onclick="closeBlogModal()">✕</button>
     <div class="blog-modal-title" id="blogModalTitle"></div>
     <div class="blog-modal-body" id="blogModalBody"></div>
+    <!-- Share Bar -->
+    <div class="blog-share-bar">
+      <a id="shareFb" class="share-btn share-fb" target="_blank" rel="noopener">📘 Facebook</a>
+      <a id="shareTw" class="share-btn share-tw" target="_blank" rel="noopener">𝕏 Twitter</a>
+      <a id="shareWa" class="share-btn share-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <button class="share-btn share-copy" onclick="copyBlogLink()">🔗 Copy Link</button>
+      <button class="share-btn share-ai-btn" onclick="toggleSocialGen()">✨ Generate Social Post</button>
+    </div>
+    <!-- AI Social Post Generator -->
+    <div class="social-gen-panel" id="socialGenPanel">
+      <div class="social-gen-tabs">
+        <button class="sgt active" onclick="genPost('facebook',this)">📘 Facebook</button>
+        <button class="sgt" onclick="genPost('instagram',this)">📸 Instagram</button>
+        <button class="sgt" onclick="genPost('twitter',this)">𝕏 Twitter/X</button>
+        <button class="sgt" onclick="genPost('whatsapp',this)">💬 WhatsApp</button>
+      </div>
+      <div class="social-output" id="socialOutput">Click a platform above to generate a post...</div>
+      <div class="char-count" id="charCount"></div>
+      <div class="social-gen-actions">
+        <button class="sga primary" onclick="regenPost()">🔄 Regenerate</button>
+        <button class="sga" onclick="copySocialPost()">📋 Copy Post</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -852,12 +894,120 @@ function buildBlog() {
   `).join('');
 }
 
+let _currentBlog = null;
 function openBlog(i) {
   const b = BLOGS[i];
+  _currentBlog = b;
   document.getElementById('blogModalTitle').textContent = b.title;
   document.getElementById('blogModalBody').innerHTML = b.body;
   document.getElementById('blogModal').classList.add('open');
   document.body.style.overflow='hidden';
+  // reset social gen
+  document.getElementById('socialGenPanel').classList.remove('open');
+  document.getElementById('socialOutput').textContent = 'Click a platform above to generate a post...';
+  document.getElementById('charCount').textContent = '';
+  _lastPlatform = null;
+  // wire share links
+  const pageUrl = encodeURIComponent(window.location.href.split('#')[0]);
+  const title = encodeURIComponent('✨ ' + b.title + ' | Crystal Heart Psychics');
+  const excerpt = encodeURIComponent((b.excerpt||'').substring(0,100));
+  document.getElementById('shareFb').href = 'https://www.facebook.com/sharer/sharer.php?u='+pageUrl+'&quote='+title;
+  document.getElementById('shareTw').href = 'https://twitter.com/intent/tweet?text='+title+'&url='+pageUrl+'&hashtags=CrystalHeartPsychics,Psychic,Spiritual';
+  document.getElementById('shareWa').href = 'https://wa.me/?text='+title+'%20'+pageUrl;
+}
+
+function copyBlogLink() {
+  navigator.clipboard.writeText(window.location.href.split('#')[0]).then(()=>{
+    const btn = event.target;
+    const orig = btn.textContent;
+    btn.textContent = '✅ Copied!';
+    setTimeout(()=>btn.textContent=orig, 2000);
+  });
+}
+
+let _lastPlatform = null;
+function toggleSocialGen() {
+  const panel = document.getElementById('socialGenPanel');
+  panel.classList.toggle('open');
+  if(panel.classList.contains('open') && !_lastPlatform) {
+    genPost('facebook', document.querySelector('.sgt'));
+  }
+}
+
+const POST_TEMPLATES = {
+  facebook: (b) => `✨ New blog from Crystal Heart Psychics ✨
+
+"${b.title}"
+
+${(b.excerpt||'').substring(0,200)}...
+
+Read the full article on our website 💜🔮
+
+#CrystalHeartPsychics #Psychic #Spiritual #Guidance`,
+  instagram: (b) => `✨ ${b.title} ✨
+
+${(b.excerpt||'').substring(0,150)}...
+
+🔮 Truth • Love • Clarity • Guidance
+
+👇 Link in bio
+
+#CrystalHeartPsychics #Psychic #Spiritual #Clairvoyant #TarotReading #PsychicReading #Healing #Guidance #SpiritualAwakening #Love`,
+  twitter: (b) => `✨ ${b.title}
+
+${(b.excerpt||'').substring(0,120)}...
+
+🔮 crystalheartpsychics.co.uk
+
+#Psychic #Spiritual #CrystalHeart`,
+  whatsapp: (b) => `🔮 *${b.title}*
+
+${(b.excerpt||'').substring(0,180)}...
+
+💜 Read more at crystalheartpsychics.co.uk
+
+_Crystal Heart Psychics — Truth • Love • Clarity • Guidance_`
+};
+
+const CHAR_LIMITS = { facebook: null, instagram: 2200, twitter: 280, whatsapp: null };
+
+function genPost(platform, btn) {
+  _lastPlatform = platform;
+  document.querySelectorAll('.sgt').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  const out = document.getElementById('socialOutput');
+  const count = document.getElementById('charCount');
+  out.classList.add('loading');
+  out.textContent = 'Generating...';
+  count.textContent = '';
+  setTimeout(() => {
+    if(!_currentBlog) return;
+    const text = POST_TEMPLATES[platform](_currentBlog);
+    out.classList.remove('loading');
+    out.textContent = text;
+    const lim = CHAR_LIMITS[platform];
+    if(lim) {
+      const over = text.length > lim;
+      count.style.color = over ? '#ff5555' : 'var(--muted)';
+      count.textContent = text.length + '/' + lim + (over ? ' ⚠️ Too long for '+platform : ' chars');
+    } else {
+      count.textContent = text.length + ' chars';
+    }
+  }, 600);
+}
+
+function regenPost() {
+  if(_lastPlatform) genPost(_lastPlatform, document.querySelector('.sgt.active'));
+}
+
+function copySocialPost() {
+  const text = document.getElementById('socialOutput').textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn = event.target;
+    const orig = btn.textContent;
+    btn.textContent = '✅ Copied!';
+    setTimeout(()=>btn.textContent=orig, 2000);
+  });
 }
 
 function closeBlogModal(){
