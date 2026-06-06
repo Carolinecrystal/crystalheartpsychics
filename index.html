@@ -3,173 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crystal Heart Psychics | Genuine Psychic Readings</title>
+<title>Crystal Heart® Psychics | Genuine Psychic Readings</title>
 <meta name="description" content="Speak to a genuine psychic reader today. Phone, text or online readings available 24/7. Crystal Heart Psychics — trusted psychic readings since 2007.">
+<meta property="og:title" content="Crystal Heart® Psychics | Genuine Psychic Readings">
+<meta property="og:description" content="Speak to a gifted psychic reader today. Live readings by phone, text and online. Trusted since 2007.">
+<meta property="og:image" content="https://media.base44.com/images/public/69ef12132b7c75ed36aea371/2d67f3cd1_generated_image.png">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --purple-dark: #0d0618; --purple-deep: #1a0a2e; --purple-mid: #2d1054;
-    --purple-bright: #7b2fff; --purple-glow: #9d4edd; --purple-light: #c77dff;
-    --pink-soft: #e040fb; --gold: #f4c430; --white: #ffffff;
-    --text-light: #e0d0f0; --text-muted: #a89bc0;
-  }
-  body { background: var(--purple-dark); color: var(--text-light); font-family: 'Raleway', sans-serif; line-height: 1.6; }
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0f0a1a; --bg2:#160d28; --bg3:#1e1035;
+  --border:#2a1f45; --border2:#3d2d60;
+  --purple:#7c3aed; --purple2:#8b5cf6; --purple3:#a78bfa;
+  --white:#ffffff; --text:#d4c8f0; --muted:#7c6fa0;
+  --gold:#f4c430; --green:#00e676; --amber:#ffa726;
+}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6}
 
-  .legal-top { background: #0a0015; border-bottom: 1px solid #3a1060; padding: 7px 20px; text-align: center; font-size: 11px; color: var(--text-muted); letter-spacing: 0.3px; }
+/* legal bar */
+.legal-top{background:#08050f;border-bottom:1px solid var(--border);padding:7px 20px;text-align:center;font-size:11px;color:var(--muted);letter-spacing:.3px}
 
-  header { background: linear-gradient(180deg, #0a0015 0%, var(--purple-deep) 100%); border-bottom: 1px solid #3a1060; padding: 24px 20px; text-align: center; }
-  .logo { font-family: 'Cinzel', serif; font-size: clamp(26px, 5vw, 50px); font-weight: 700; letter-spacing: 6px; background: linear-gradient(135deg, #c77dff, #ffffff, #f4c430, #c77dff); background-size: 300%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
-  .logo .heart { -webkit-text-fill-color: var(--pink-soft); filter: drop-shadow(0 0 8px var(--pink-soft)); }
-  @keyframes shimmer { 0%{background-position:0% 50%} 100%{background-position:300% 50%} }
-  .tagline { font-size: 12px; letter-spacing: 3px; color: var(--text-muted); text-transform: uppercase; margin-top: 6px; }
+/* header */
+header{background:var(--bg);border-bottom:1px solid var(--border);text-align:center}
+header img{width:100%;max-height:160px;object-fit:cover;object-position:center 30%;display:block}
 
-  nav { background: var(--purple-mid); border-bottom: 2px solid var(--purple-glow); display: flex; justify-content: center; flex-wrap: wrap; }
-  nav a { color: var(--text-light); text-decoration: none; padding: 13px 18px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: all 0.3s; border-bottom: 3px solid transparent; }
-  nav a:hover { color: var(--purple-light); border-bottom-color: var(--purple-glow); background: rgba(123,47,255,0.15); }
+/* nav */
+nav{background:var(--bg2);border-bottom:1px solid var(--border);display:flex;justify-content:center;flex-wrap:wrap;position:sticky;top:0;z-index:200}
+nav a{color:var(--text);text-decoration:none;padding:13px 14px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;transition:all .2s;border-bottom:2px solid transparent}
+nav a:hover{color:var(--purple3);border-bottom-color:var(--purple)}
 
-  .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #0a0015; padding: 2px; }
-  .contact-box { background: linear-gradient(135deg, var(--purple-deep), var(--purple-mid)); padding: 18px 12px; text-align: center; border: 1px solid #3a1060; cursor: pointer; transition: all 0.3s; }
-  .contact-box:hover { background: linear-gradient(135deg, var(--purple-mid), #3d1570); border-color: var(--purple-glow); transform: translateY(-2px); }
-  .contact-box .flag { font-size: 18px; margin-bottom: 4px; }
-  .contact-box .label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; }
-  .contact-box .number { font-family: 'Cinzel', serif; font-size: clamp(16px, 2.5vw, 22px); font-weight: 700; color: var(--gold); text-shadow: 0 0 15px rgba(244,196,48,0.4); letter-spacing: 1px; }
-  .contact-box .sublabel { font-size: 9.5px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+/* phone boxes */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.contact-box{background:var(--bg2);padding:20px 14px;text-align:center;cursor:pointer;transition:background .2s}
+.contact-box:hover{background:var(--bg3)}
+.contact-box .flag{font-size:20px;margin-bottom:4px}
+.contact-box .label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.contact-box .number{font-family:'Cinzel',serif;font-size:clamp(15px,2.2vw,22px);font-weight:700;color:var(--gold);letter-spacing:1px}
+.contact-box .sublabel{font-size:9.5px;color:var(--muted);margin-top:5px;line-height:1.5}
 
-  .disclaimer { background: #070010; border-top: 1px solid #2a0840; border-bottom: 1px solid #2a0840; padding: 12px 20px; text-align: center; font-size: 10px; color: #8070a0; line-height: 1.9; }
+/* disclaimer */
+.disclaimer{background:#07040f;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:10px 20px;text-align:center;font-size:10px;color:#554868;line-height:1.9}
+.disclaimer a{color:var(--muted)}
 
-  .section-hdr { text-align: center; padding: 46px 20px 24px; }
-  .section-hdr h2 { font-family: 'Cinzel', serif; font-size: clamp(20px, 3.5vw, 34px); font-weight: 600; letter-spacing: 4px; color: var(--purple-light); text-transform: uppercase; margin-bottom: 8px; }
-  .section-hdr p { color: var(--text-muted); font-size: 14px; max-width: 600px; margin: 0 auto; }
-  .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--purple-glow), transparent); margin: 12px auto; }
+/* section header */
+.section-hdr{text-align:center;padding:52px 20px 28px}
+.section-hdr h2{font-family:'Cinzel',serif;font-size:clamp(18px,3vw,30px);font-weight:600;letter-spacing:4px;color:var(--white);text-transform:uppercase;margin-bottom:10px}
+.section-hdr p{color:var(--muted);font-size:14px;max-width:560px;margin:0 auto}
+.divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--purple2),transparent);margin:12px auto}
 
-  .filter-bar { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; padding: 0 20px 28px; }
-  .filter-btn { background: rgba(123,47,255,0.15); border: 1px solid #3a1060; color: var(--text-muted); padding: 8px 20px; border-radius: 25px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.3s; font-family: 'Raleway', sans-serif; }
-  .filter-btn:hover, .filter-btn.active { background: rgba(123,47,255,0.4); border-color: var(--purple-glow); color: var(--purple-light); }
+/* filter */
+.filter-bar{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:0 20px 28px}
+.filter-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:7px 18px;border-radius:999px;font-size:11px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif}
+.filter-btn:hover,.filter-btn.active{background:rgba(124,58,237,.2);border-color:var(--purple2);color:var(--purple3)}
 
-  .readers-section { padding: 0 20px 40px; max-width: 1200px; margin: 0 auto; }
-  .readers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+/* reader cards */
+.readers-section{padding:0 20px 50px;max-width:1200px;margin:0 auto}
+.readers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.reader-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .25s,box-shadow .25s}
+.reader-card:hover{border-color:var(--border2);box-shadow:0 8px 32px rgba(124,58,237,.18)}
+.reader-card-top{display:flex;align-items:center;padding:16px;gap:14px;border-bottom:1px solid var(--border)}
+.reader-photo{width:76px;height:106px;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--border2);flex-shrink:0}
+.reader-photo-fallback{width:76px;height:106px;border-radius:8px;background:var(--bg3);border:1px solid var(--border2);display:none;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}
+.reader-name{font-family:'Cinzel',serif;font-size:17px;font-weight:600;color:var(--white);margin-bottom:3px}
+.reader-pin{font-size:11px;color:var(--muted);letter-spacing:1px;margin-bottom:6px}
+.stars{color:var(--gold);font-size:12px;margin-bottom:6px}
+.status-badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.s-available{background:rgba(0,200,100,.12);color:#00e676;border:1px solid rgba(0,200,100,.3)}
+.s-busy{background:rgba(255,170,0,.12);color:#ffaa00;border:1px solid rgba(255,170,0,.3)}
+.s-offline{background:rgba(100,80,140,.12);color:var(--muted);border:1px solid var(--border)}
+.reader-card-body{padding:14px 16px}
+.reader-bio{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.specialty-wrap{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.tag{background:rgba(124,58,237,.12);border:1px solid var(--border2);color:var(--purple3);padding:2px 9px;border-radius:999px;font-size:10px}
+.card-footer{padding:12px 16px;border-top:1px solid var(--border);display:flex;gap:8px}
+.btn-p{flex:1;background:var(--purple);color:white;border:none;padding:10px;border-radius:8px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;text-decoration:none;display:block;text-align:center;transition:background .2s;font-family:'Inter',sans-serif}
+.btn-p:hover{background:var(--purple2)}
+.btn-s{background:transparent;color:var(--muted);border:1px solid var(--border);padding:10px 12px;border-radius:8px;font-size:11px;cursor:pointer;text-decoration:none;display:block;text-align:center;transition:all .2s;white-space:nowrap;font-family:'Inter',sans-serif}
+.btn-s:hover{border-color:var(--border2);color:var(--purple3)}
+.loading{text-align:center;padding:60px 20px;color:var(--muted)}
+.spinner{width:40px;height:40px;border:2px solid var(--border2);border-top-color:var(--purple);border-radius:50%;animation:spin .9s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-  .reader-card { background: linear-gradient(145deg, #1a0a2e, #110820); border: 1px solid #3a1060; border-radius: 16px; overflow: hidden; transition: all 0.4s; }
-  .reader-card:hover { border-color: var(--purple-glow); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(123,47,255,0.25); }
-  .reader-card-top { display: flex; align-items: center; padding: 18px; gap: 14px; background: linear-gradient(135deg, rgba(123,47,255,0.1), transparent); border-bottom: 1px solid #2a0840; }
-  .reader-photo { width: 80px; height: 110px; object-fit: cover; object-position: top; border-radius: 10px; border: 2px solid var(--purple-glow); box-shadow: 0 0 18px rgba(157,78,221,0.35); flex-shrink: 0; }
-  .reader-photo-fallback { width: 80px; height: 110px; border-radius: 10px; background: linear-gradient(135deg, var(--purple-mid), var(--purple-bright)); border: 2px solid var(--purple-glow); display: none; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; }
-  .reader-info { flex: 1; }
-  .reader-name { font-family: 'Cinzel', serif; font-size: 19px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
-  .reader-pin { font-size: 11px; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 7px; }
-  .stars { color: var(--gold); font-size: 13px; margin-bottom: 7px; }
-  .status-badge { display: inline-block; padding: 3px 11px; border-radius: 20px; font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
-  .s-available { background: rgba(0,200,100,0.2); color: #00e676; border: 1px solid rgba(0,200,100,0.4); animation: pg 2s infinite; }
-  .s-busy { background: rgba(255,170,0,0.2); color: #ffaa00; border: 1px solid rgba(255,170,0,0.4); }
-  .s-offline { background: rgba(120,100,150,0.2); color: #9880b0; border: 1px solid rgba(120,100,150,0.3); }
-  @keyframes pg { 0%,100%{box-shadow:0 0 5px rgba(0,200,100,0.3)} 50%{box-shadow:0 0 14px rgba(0,200,100,0.6)} }
+/* CHR promo */
+.chr-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px 20px;text-align:center}
+.chr-section h2{font-family:'Cinzel',serif;font-size:clamp(18px,2.8vw,28px);color:var(--white);letter-spacing:4px;margin-bottom:10px}
+.chr-section p{color:var(--muted);max-width:540px;margin:0 auto 28px;font-size:14px}
+.chr-btn{display:inline-block;background:var(--purple);color:white;padding:14px 36px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.chr-btn:hover{background:var(--purple2)}
 
-  .reader-card-body { padding: 14px 18px; }
-  .reader-bio { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
-  .specialty-wrap { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
-  .tag { background: rgba(123,47,255,0.2); border: 1px solid rgba(123,47,255,0.4); color: var(--purple-light); padding: 2px 9px; border-radius: 20px; font-size: 10px; }
-  .card-footer { padding: 12px 18px; border-top: 1px solid #2a0840; display: flex; gap: 9px; }
-  .btn-p { flex: 1; background: linear-gradient(135deg, var(--purple-bright), var(--purple-glow)); color: white; border: none; padding: 11px; border-radius: 8px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; text-decoration: none; display: block; text-align: center; transition: all 0.3s; font-family: 'Raleway', sans-serif; }
-  .btn-p:hover { background: linear-gradient(135deg, #9d4edd, #b968ff); box-shadow: 0 4px 20px rgba(123,47,255,0.5); }
-  .btn-s { background: transparent; color: var(--text-muted); border: 1px solid #3a1060; padding: 11px 14px; border-radius: 8px; font-size: 11px; cursor: pointer; text-decoration: none; display: block; text-align: center; transition: all 0.3s; white-space: nowrap; font-family: 'Raleway', sans-serif; }
-  .btn-s:hover { border-color: var(--purple-glow); color: var(--purple-light); }
+/* Blog */
+.blog-section{padding:0 20px 60px;max-width:1200px;margin:0 auto}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.blog-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .25s,box-shadow .25s;cursor:pointer}
+.blog-card:hover{border-color:var(--border2);box-shadow:0 8px 28px rgba(124,58,237,.15)}
+.blog-card-body{padding:20px}
+.blog-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--purple3);margin-bottom:8px}
+.blog-title{font-family:'Cinzel',serif;font-size:15px;font-weight:600;color:var(--white);margin-bottom:10px;line-height:1.4}
+.blog-excerpt{font-size:13px;color:var(--muted);line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.blog-card-footer{padding:12px 20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.blog-date{font-size:11px;color:var(--muted)}
+.read-more{font-size:11px;color:var(--purple3);letter-spacing:1px;text-transform:uppercase;cursor:pointer}
 
-  .loading { text-align: center; padding: 60px 20px; color: var(--text-muted); }
-  .spinner { width: 46px; height: 46px; border: 3px solid #3a1060; border-top-color: var(--purple-glow); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 18px; }
-  @keyframes spin { to { transform: rotate(360deg); } }
+/* Blog modal */
+.blog-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:500;overflow-y:auto;padding:40px 20px}
+.blog-modal.open{display:flex;justify-content:center;align-items:flex-start}
+.blog-modal-box{background:var(--bg2);border:1px solid var(--border2);border-radius:14px;padding:36px;max-width:760px;width:100%;position:relative;margin:auto}
+.blog-modal-close{position:absolute;top:14px;right:18px;background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;line-height:1}
+.blog-modal-close:hover{color:var(--white)}
+.blog-modal-title{font-family:'Cinzel',serif;font-size:clamp(16px,2.5vw,24px);color:var(--white);margin-bottom:16px;line-height:1.3}
+.blog-modal-body{color:var(--text);font-size:14px;line-height:1.9}
+.blog-modal-body p{margin-bottom:14px}
 
-  .chr-section { background: linear-gradient(135deg, #0a001a, #1a0535); border-top: 2px solid var(--purple-glow); border-bottom: 2px solid var(--purple-glow); padding: 50px 20px; text-align: center; }
-  .chr-section h2 { font-family: 'Cinzel', serif; font-size: clamp(19px, 3vw, 30px); color: var(--purple-light); letter-spacing: 4px; margin-bottom: 8px; }
-  .chr-section p { color: var(--text-muted); max-width: 580px; margin: 0 auto 28px; font-size: 14px; }
-  .chr-btn { display: inline-block; background: linear-gradient(135deg, var(--purple-bright), var(--pink-soft)); color: white; padding: 15px 38px; border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.3s; box-shadow: 0 4px 25px rgba(224,64,251,0.3); }
-  .chr-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(224,64,251,0.5); }
+/* Horoscopes */
+.horoscope-section{padding:0 20px 60px;max-width:1200px;margin:0 auto}
+.horoscope-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.horoscope-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 14px;text-align:center;cursor:pointer;transition:all .2s}
+.horoscope-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.horo-sign{font-size:30px;margin-bottom:8px}
+.horo-name{font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;color:var(--white);text-transform:uppercase;margin-bottom:3px}
+.horo-dates{font-size:10px;color:var(--muted)}
 
-  .quick-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; padding: 40px 20px; }
-  .quick-btn { background: linear-gradient(135deg, var(--purple-deep), var(--purple-mid)); border: 1px solid #3a1060; color: var(--text-light); padding: 18px 28px; border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s; min-width: 160px; }
-  .quick-btn:hover { border-color: var(--purple-glow); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(123,47,255,0.2); }
-  .quick-btn .icon { font-size: 28px; display: block; margin-bottom: 8px; }
-  .quick-btn .label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+/* Horoscope modal */
+.horo-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:500;overflow-y:auto;padding:40px 20px}
+.horo-modal.open{display:flex;justify-content:center;align-items:flex-start}
+.horo-modal-box{background:var(--bg2);border:1px solid var(--border2);border-radius:14px;padding:36px;max-width:680px;width:100%;position:relative;margin:auto}
+.horo-modal-close{position:absolute;top:14px;right:18px;background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer}
+.horo-modal-close:hover{color:var(--white)}
+.horo-modal-sign{font-size:56px;text-align:center;margin-bottom:10px}
+.horo-modal-title{font-family:'Cinzel',serif;font-size:22px;color:var(--white);text-align:center;letter-spacing:3px;margin-bottom:4px}
+.horo-modal-dates{font-size:11px;color:var(--muted);text-align:center;margin-bottom:20px}
+.horo-modal-body{color:var(--text);font-size:14px;line-height:1.9}
+.horo-section-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--purple3);margin:16px 0 6px}
 
-  footer { background: #040008; border-top: 1px solid #2a0840; padding: 40px 20px; text-align: center; }
-  .footer-logo { font-family: 'Cinzel', serif; font-size: 20px; color: var(--purple-light); letter-spacing: 4px; margin-bottom: 18px; }
-  .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin-bottom: 20px; }
-  .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
-  .footer-links a:hover { color: var(--purple-light); }
-  .footer-legal { font-size: 10px; color: #5a4870; max-width: 800px; margin: 0 auto; line-height: 1.9; }
-  .footer-copy { font-size: 11px; color: #5a4870; margin-top: 18px; }
+/* Tarot */
+.tarot-outer{background:var(--bg2);border-top:1px solid var(--border);padding:50px 20px}
+.tarot-wrap{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:40px 20px;text-align:center;max-width:700px;margin:0 auto}
+.tarot-spread{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:30px 0}
+.tarot-position{display:flex;flex-direction:column;align-items:center;gap:10px}
+.position-label{color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+.card-slot{width:110px;height:190px;border-radius:10px;cursor:pointer;perspective:1000px}
+.card-inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .7s ease;border-radius:10px}
+.card-inner.flipped{transform:rotateY(180deg)}
+.card-front,.card-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;box-sizing:border-box}
+.card-back{background:var(--bg2);border:1px solid var(--border2)}
+.card-back-pattern{font-size:40px;opacity:.5}
+.card-back-text{color:var(--muted);font-size:8px;letter-spacing:2px;margin-top:8px;text-align:center}
+.card-front{background:var(--bg);border:1px solid var(--gold);transform:rotateY(180deg)}
+.card-front.reversed{transform:rotateY(180deg) rotate(180deg)}
+.card-emoji{font-size:36px;margin-bottom:6px}
+.card-name{color:var(--gold);font-size:9px;letter-spacing:1px;text-transform:uppercase;text-align:center;line-height:1.4}
+.card-reversed-tag{color:#ff8080;font-size:8px;letter-spacing:1px;margin-top:3px}
+.card-meaning{color:var(--purple3);font-size:9px;text-align:center;margin-top:5px;line-height:1.4}
+.tarot-btn{background:var(--purple);color:white;border:none;padding:13px 34px;border-radius:999px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;cursor:pointer;margin:8px;transition:background .2s}
+.tarot-btn:hover{background:var(--purple2)}
+.tarot-btn:disabled{opacity:.4;cursor:not-allowed}
+.tarot-reading{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:22px;margin-top:22px;text-align:left;display:none}
+.reading-title{color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;text-align:center}
+.reading-card{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.reading-card:last-child{border-bottom:none;margin-bottom:0}
+.reading-card-name{color:var(--gold);font-size:12px;letter-spacing:1px;margin-bottom:6px}
+.reading-card-text{color:var(--muted);font-size:13px;line-height:1.7}
+.shuffle-status{color:var(--muted);font-size:11px;letter-spacing:1px;margin:10px 0;min-height:20px}
+.tarot-disclaimer{color:#3d3050;font-size:10px;margin-top:20px;font-style:italic}
+.reset-btn{background:var(--bg2) !important;border:1px solid var(--border2) !important;color:var(--muted) !important}
 
-  /* Modal */
-  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; }
-  .modal-overlay.open { display: flex; }
-  .modal-box { background: var(--purple-deep); border: 1px solid var(--purple-glow); border-radius: 16px; padding: 20px; max-width: 680px; width: 90%; position: relative; }
-  .modal-close { position: absolute; top: 10px; right: 14px; background: none; border: none; color: var(--text-muted); font-size: 22px; cursor: pointer; }
-  .modal-close:hover { color: white; }
-  iframe.vid { width: 100%; height: 340px; border: none; border-radius: 8px; }
+/* Footer */
+footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;text-align:center}
+.footer-logo{font-family:'Cinzel',serif;font-size:20px;letter-spacing:4px;color:var(--white);margin-bottom:12px}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-bottom:20px}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:12px;letter-spacing:1px;transition:color .2s}
+.footer-links a:hover{color:var(--purple3)}
+.footer-legal{font-size:10px;color:#3d3050;line-height:1.8;max-width:680px;margin:0 auto 8px}
+.footer-copy{font-size:11px;color:#3d3050;margin-top:14px}
 
-  @media(max-width:600px) { .contact-grid{grid-template-columns:repeat(2,1fr)} nav a{padding:10px 10px;font-size:10px} .readers-grid{grid-template-columns:1fr} }
-
-  /* --- Tarot App Styles --- */
-
-  .tarot-wrap { background: linear-gradient(135deg, #0d0020 0%, #1a0035 100%); border-radius: 16px; padding: 40px 20px; text-align: center; font-family: 'Georgia', serif; max-width: 700px; margin: 0 auto; }
-  .tarot-spread { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0; }
-  .tarot-position { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  .position-label { color: #d4af37; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
-  .card-slot { width: 110px; height: 190px; border-radius: 10px; cursor: pointer; perspective: 1000px; }
-  .card-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.7s ease; border-radius: 10px; }
-  .card-inner.flipped { transform: rotateY(180deg); }
-  .card-front, .card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px; box-sizing: border-box; }
-  .card-back { background: linear-gradient(135deg, #2d0060, #4a1080); border: 2px solid #6a30a0; }
-  .card-back-pattern { font-size: 40px; opacity: 0.6; }
-  .card-back-text { color: #8060a0; font-size: 8px; letter-spacing: 2px; margin-top: 8px; text-align: center; }
-  .card-front { background: linear-gradient(135deg, #1a0035, #2d0060); border: 2px solid #d4af37; transform: rotateY(180deg); }
-  .card-front.reversed { transform: rotateY(180deg) rotate(180deg); }
-  .card-emoji { font-size: 36px; margin-bottom: 6px; }
-  .card-name { color: #d4af37; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; text-align: center; line-height: 1.4; }
-  .card-reversed-tag { color: #ff8080; font-size: 8px; letter-spacing: 1px; margin-top: 3px; }
-  .card-meaning { color: #c0a0e0; font-size: 9px; text-align: center; margin-top: 5px; line-height: 1.4; }
-  .tarot-btn { background: linear-gradient(135deg, #6a0dad, #9b30d0); color: white; border: none; padding: 14px 36px; border-radius: 30px; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 2px; cursor: pointer; margin: 10px 8px; transition: all 0.3s; box-shadow: 0 4px 20px rgba(106,13,173,0.4); }
-  .tarot-btn:hover { background: linear-gradient(135deg, #9b30d0, #c060f0); transform: translateY(-2px); }
-  .tarot-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
-  .tarot-reading { background: rgba(255,255,255,0.04); border: 1px solid #3a1060; border-radius: 12px; padding: 24px; margin-top: 24px; text-align: left; display: none; }
-  .reading-title { color: #d4af37; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; text-align: center; }
-  .reading-card { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #2a0840; }
-  .reading-card:last-child { border-bottom: none; margin-bottom: 0; }
-  .reading-card-name { color: #d4af37; font-size: 12px; letter-spacing: 1px; margin-bottom: 6px; }
-  .reading-card-text { color: #c0a0e0; font-size: 12px; line-height: 1.7; }
-  .shuffle-status { color: #8060a0; font-size: 11px; letter-spacing: 1px; margin: 10px 0; min-height: 20px; }
-  .tarot-disclaimer { color: #5a4070; font-size: 10px; margin-top: 20px; font-style: italic; }
-  .reset-btn { background: linear-gradient(135deg,#2d0060,#4a1080) !important; }
-
-
-  @media (max-width: 768px) {
-    .contact-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 480px) {
-    .contact-grid { grid-template-columns: 1fr; }
-  }
+@media(max-width:720px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.contact-grid{grid-template-columns:1fr};nav a{padding:10px 8px;font-size:10px};.readers-grid,.blog-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <div class="legal-top">🔮 Genuine Psychic Readings &nbsp;|&nbsp; 18+ Only &nbsp;|&nbsp; Entertainment Purposes &nbsp;|&nbsp; Bill Payer's Permission Required</div>
 
-<header style="background:#1a0535;padding:0;text-align:center;border-bottom:2px solid #3a1060;">
-  <img src="https://media.base44.com/images/public/69ef12132b7c75ed36aea371/2d67f3cd1_generated_image.png"
-    alt="Crystal Heart Psychics"
-    style="width:100%;height:auto;display:block;margin:0 auto;">
+<header>
+  <img src="https://media.base44.com/images/public/69ef12132b7c75ed36aea371/2d67f3cd1_generated_image.png" alt="Crystal Heart® Psychics">
 </header>
 
 <nav>
   <a href="#readers">Our Readers</a>
+  <a href="#blog">Blog</a>
   <a href="#horoscopes">Horoscopes</a>
   <a href="#tarot">Tarot</a>
   <a href="https://crystalheartradio.app" target="_blank">📻 Live Radio</a>
   <a href="https://www.crystalheartacademy.com" target="_blank">Academy</a>
-  <a href="https://crystalheartmind.app" target="_blank">🧘 Meditation</a>
   <a href="mailto:info@crystalheartpsychics.com">Contact</a>
 </nav>
 
+<!-- Phone Numbers -->
 <div class="contact-grid">
   <div class="contact-box" onclick="window.location='tel:02077545333'">
     <div class="flag">🇬🇧</div>
@@ -181,13 +210,13 @@
     <div class="flag">🇬🇧</div>
     <div class="label">Pay on Phone Bill</div>
     <div class="number">0906 636 4550</div>
-    <div class="sublabel">Calls cost £1.50 per minute plus your phone provider's access charge. 18+ only. Bill payer's permission required.</div>
+    <div class="sublabel">£1.50/min plus network access charge. 18+ only. Bill payer's permission required.</div>
   </div>
   <div class="contact-box">
     <div class="flag">🇬🇧</div>
-    <div class="label">Text HEART + Question To</div>
+    <div class="label">Text HEART + Your Question To</div>
     <div class="number">78887</div>
-    <div class="sublabel">£1.50 per text plus standard network rate. Max 3 msgs per reply (3 x £1.50). 18+ only.</div>
+    <div class="sublabel">£1.50 per text plus standard network rate. Max 3 msgs per reply. 18+ only.</div>
   </div>
   <div class="contact-box" onclick="window.location='tel:8555460126'">
     <div class="flag">🇺🇸</div>
@@ -203,36 +232,36 @@
   </div>
   <div class="contact-box">
     <div class="flag">🇦🇺</div>
-    <div class="label">🇦🇺 Text HEART + Question To</div>
+    <div class="label">Australia — Text HEART To</div>
     <div class="number">1977 1977</div>
     <div class="sublabel">25¢/msg sent. $3.50/reply. Max 3 texts per reply. 18+ only.</div>
   </div>
 </div>
 
 <div class="disclaimer">
-  All services 18+. 0906 = £1.50 per min plus your phone provider's access charge. Calls recorded. Bill payer's permission required. Entertainment only.<br>
-  SMS costs £1.50 per reply, maximum of 3 replies per message sent (standard network charges apply). To opt out of free promo msgs call Helpline. SP: Inveroak.com, PO Box 10015 CM1 9HH. Helpline: <a href="tel:03301140300" style="color:#b090d0;">0330 114 0300</a>
+  All services 18+. 0906 calls cost £1.50 per min plus your phone provider's access charge. Calls recorded. Bill payer's permission required. Entertainment only.<br>
+  SMS costs £1.50 per reply, max 3 replies per message. To opt out call helpline. SP: Inveroak.com, PO Box 10015 CM1 9HH. Helpline: <a href="tel:03301140300">0330 114 0300</a>
 </div>
 
+<!-- Readers -->
 <div class="section-hdr" id="readers">
   <h2>Our Psychic Readers</h2>
   <div class="divider"></div>
-  <p>Speak to one of our gifted readers today. All readers are personally vetted by Caroline.</p>
+  <p>All readers are personally vetted by Caroline. Call, text or book online.</p>
 </div>
-
 <div class="filter-bar">
   <button class="filter-btn active" onclick="filterReaders('all',this)">All Readers</button>
   <button class="filter-btn" onclick="filterReaders('available',this)">🟢 Available Now</button>
   <button class="filter-btn" onclick="filterReaders('busy',this)">🟡 Busy</button>
   <button class="filter-btn" onclick="filterReaders('logged-off',this)">⚫ Offline</button>
 </div>
-
 <div class="readers-section">
   <div class="readers-grid" id="readersGrid">
-    <div class="loading"><div class="spinner"></div><p>Connecting to our readers...</p></div>
+    <div class="loading"><div class="spinner"></div><p>Connecting to our readers…</p></div>
   </div>
 </div>
 
+<!-- CHR Promo -->
 <div class="chr-section">
   <h2>📻 Crystal Heart Radio</h2>
   <div class="divider"></div>
@@ -240,390 +269,752 @@
   <a href="https://crystalheartradio.app" target="_blank" class="chr-btn">🔮 Tune In Live</a>
 </div>
 
-<div class="section-hdr" id="horoscopes" style="padding-bottom:10px">
+<!-- Blog -->
+<div class="section-hdr" id="blog">
+  <h2>Psychic Blog</h2>
+  <div class="divider"></div>
+  <p>Insights, guidance and spiritual wisdom from Caroline and the Crystal Heart team.</p>
+</div>
+<div class="blog-section">
+  <div class="blog-grid" id="blogGrid"></div>
+</div>
+
+<!-- Horoscopes -->
+<div class="section-hdr" id="horoscopes">
   <h2>Daily Horoscopes</h2>
   <div class="divider"></div>
-  <p>Your daily cosmic guidance — updated every morning.</p>
+  <p>Choose your star sign for today's cosmic guidance.</p>
 </div>
-<div class="quick-links">
-  <a href="https://www.astrology.com/horoscope/daily.html" target="_blank" class="quick-btn">
-    <span class="icon">♈</span><span class="label">Daily Horoscopes</span>
-  </a>
-  <a href="#tarot" class="quick-btn">
-    <span class="icon">🃏</span><span class="label">Free Tarot Reading</span>
-  </a>
-  <a href="https://crystalheartradio.app" target="_blank" class="quick-btn">
-    <span class="icon">✍️</span><span class="label">Psychic Blog</span>
-  </a>
-  <a href="https://crystalheartmind.app" target="_blank" class="quick-btn">
-    <span class="icon">🧘</span><span class="label">Meditation &amp; Hypnosis</span>
-  </a>
-  <a href="https://www.crystalheartacademy.com" target="_blank" class="quick-btn">
-    <span class="icon">🎓</span><span class="label">Crystal Heart Academy</span>
-  </a>
+<div class="horoscope-section">
+  <div class="horoscope-grid" id="horoscopeGrid"></div>
 </div>
 
-
-<section id="tarot" style="background:#07000f;padding:40px 20px;border-top:2px solid #2a0840;">
-  <div class="section-hdr">
+<!-- Tarot -->
+<div class="tarot-outer" id="tarot">
+  <div class="section-hdr" style="padding-top:0">
     <h2>🃏 Free Tarot Reading</h2>
     <div class="divider"></div>
-    <p>Focus on your question, shuffle the deck and draw your three cards</p>
+    <p>Focus on your question, shuffle the deck and draw your three cards.</p>
   </div>
-
-
-
-<div class="tarot-wrap">
-  <button class="tarot-btn" id="shuffleBtn" onclick="shuffleCards()">✨ Shuffle the Deck</button>
-  <button class="tarot-btn" id="drawBtn" onclick="drawCards()" disabled>🃏 Draw Your Cards</button>
-  <div class="shuffle-status" id="shuffleStatus"></div>
-
-  <div class="tarot-spread">
-    <div class="tarot-position">
-      <div class="position-label">Past</div>
-      <div class="card-slot" onclick="flipCard(0)">
-        <div class="card-inner" id="tcard0">
-          <div class="card-back"><div class="card-back-pattern">🔮</div><div class="card-back-text">CRYSTAL HEART<br>PSYCHICS</div></div>
-          <div class="card-front" id="tcardFront0"></div>
+  <div class="tarot-wrap">
+    <button class="tarot-btn" id="shuffleBtn" onclick="shuffleCards()">✨ Shuffle the Deck</button>
+    <div class="shuffle-status" id="shuffleStatus"></div>
+    <div class="tarot-spread">
+      <div class="tarot-position">
+        <div class="position-label">Past</div>
+        <div class="card-slot" onclick="flipCard(0)">
+          <div class="card-inner" id="cardInner0">
+            <div class="card-back"><div class="card-back-pattern">🔮</div><div class="card-back-text">CRYSTAL HEART</div></div>
+            <div class="card-front" id="tcardFront0"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tarot-position">
+        <div class="position-label">Present</div>
+        <div class="card-slot" onclick="flipCard(1)">
+          <div class="card-inner" id="cardInner1">
+            <div class="card-back"><div class="card-back-pattern">🔮</div><div class="card-back-text">CRYSTAL HEART</div></div>
+            <div class="card-front" id="tcardFront1"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tarot-position">
+        <div class="position-label">Future</div>
+        <div class="card-slot" onclick="flipCard(2)">
+          <div class="card-inner" id="cardInner2">
+            <div class="card-back"><div class="card-back-pattern">🔮</div><div class="card-back-text">CRYSTAL HEART</div></div>
+            <div class="card-front" id="tcardFront2"></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="tarot-position">
-      <div class="position-label">Present</div>
-      <div class="card-slot" onclick="flipCard(1)">
-        <div class="card-inner" id="tcard1">
-          <div class="card-back"><div class="card-back-pattern">🔮</div><div class="card-back-text">CRYSTAL HEART<br>PSYCHICS</div></div>
-          <div class="card-front" id="tcardFront1"></div>
-        </div>
-      </div>
+    <div id="tarotReading" class="tarot-reading">
+      <div class="reading-title">✨ Your Reading</div>
+      <div id="readingContent"></div>
+      <button class="tarot-btn reset-btn" onclick="resetTarot()" style="margin-top:16px;font-size:12px;padding:10px 24px">↺ New Reading</button>
     </div>
-    <div class="tarot-position">
-      <div class="position-label">Future</div>
-      <div class="card-slot" onclick="flipCard(2)">
-        <div class="card-inner" id="tcard2">
-          <div class="card-back"><div class="card-back-pattern">🔮</div><div class="card-back-text">CRYSTAL HEART<br>PSYCHICS</div></div>
-          <div class="card-front" id="tcardFront2"></div>
-        </div>
-      </div>
-    </div>
+    <p class="tarot-disclaimer">For entertainment purposes only. 18+ only.</p>
   </div>
-
-  <div class="tarot-reading" id="tarotReading">
-    <div class="reading-title">✨ Your Reading</div>
-    <div id="readingContent"></div>
-  </div>
-
-  <button class="tarot-btn reset-btn" id="resetBtn" onclick="resetReading()" style="display:none;">🔄 New Reading</button>
-  <div class="tarot-disclaimer">For entertainment purposes only. 18+ only. Crystal Heart Psychics © 2026</div>
 </div>
-
-<script>
-(function() {
-const DECK = [
-  {name:"The Fool",e:"🌟",u:"New beginnings and a leap of faith. The universe supports your fresh start — trust the journey ahead.",r:"Recklessness or naivety. Pause and think before you act."},
-  {name:"The Magician",e:"🪄",u:"You have all the tools you need. Willpower and focus will manifest your desires into reality.",r:"Manipulation or untapped talent. Are you truly using your gifts?"},
-  {name:"The High Priestess",e:"🌙",u:"Trust your intuition above all else. Sacred knowledge and inner wisdom are your greatest guides right now.",r:"Secrets or disconnection from your intuition. Something is hidden — look deeper."},
-  {name:"The Empress",e:"🌺",u:"Abundance, creativity and nurturing energy surround you. A time of beautiful growth is at hand.",r:"Creative blocks or over-dependence. Reconnect with yourself and nature."},
-  {name:"The Emperor",e:"👑",u:"Take authority and establish structure. A solid foundation built now will stand the test of time.",r:"Rigidity or loss of control. Examine who truly holds power in your situation."},
-  {name:"The Hierophant",e:"⛪",u:"Seek wisdom from a trusted guide or tradition. Spiritual counsel will illuminate your path forward.",r:"Question convention. It is time to find your own truth beyond what you have been taught."},
-  {name:"The Lovers",e:"💕",u:"A significant choice must be made from the heart. Love, harmony and alignment are yours when you choose wisely.",r:"Imbalance in a relationship. Are you being true to yourself and your values?"},
-  {name:"The Chariot",e:"🏆",u:"Victory through sheer determination. Stay focused — your willpower will carry you to success.",r:"Loss of direction or control. Reclaim your focus before moving forward."},
-  {name:"Strength",e:"🦁",u:"Inner courage and compassion are your greatest strengths. Gentle persistence overcomes every obstacle.",r:"Self-doubt is holding you back. You are far stronger than you believe."},
-  {name:"The Hermit",e:"🕯️",u:"Withdraw and reflect. The answers you seek are found in solitude and honest self-examination.",r:"Isolation or withdrawal from life. Are you hiding from something that needs facing?"},
-  {name:"Wheel of Fortune",e:"☸️",u:"Fate turns in your favour. Embrace the change — this cycle brings new and positive opportunities.",r:"Resistance to change brings stagnation. What you resist persists."},
-  {name:"Justice",e:"⚖️",u:"Truth and fairness prevail. An honest outcome is on its way — trust that what is right will be done.",r:"Dishonesty or imbalance in a situation. Seek the full truth before judging."},
-  {name:"The Hanged Man",e:"🌀",u:"Pause and surrender. A new perspective gained through stillness will change everything.",r:"Delays caused by your own resistance. Let go of what you cannot control."},
-  {name:"Death",e:"🌹",u:"A powerful transformation is underway. Something must end so something far better can begin.",r:"You are clinging to what no longer serves you. Release it with love and move forward."},
-  {name:"Temperance",e:"🌊",u:"Balance and moderation bring harmony. Flow with life rather than against it — patience is rewarded.",r:"Excess or imbalance is causing disruption. Find your centre and restore equilibrium."},
-  {name:"The Devil",e:"⛓️",u:"Examine what chains you. You have far more power to break free than you currently believe.",r:"Liberation is within reach. Reclaim your power — the chains are loosening."},
-  {name:"The Tower",e:"⚡",u:"Sudden change clears the path for truth. What falls was built on false foundations — trust the process.",r:"Avoid disaster by heeding the warning signs already present in your situation."},
-  {name:"The Star",e:"⭐",u:"Hope, renewal and faith. After the storm comes serenity — the universe has a beautiful plan for you.",r:"Reconnect with hope. Your inner light has not gone out — let it shine again."},
-  {name:"The Moon",e:"🌕",u:"Not everything is as it appears. Trust your deepest instincts to navigate the illusion before you.",r:"Confusion is lifting. Clarity and truth are beginning to emerge from the shadows."},
-  {name:"The Sun",e:"☀️",u:"Joy, vitality and success flow toward you. Embrace the warmth — this is a wonderfully positive time.",r:"A temporary cloud covers the sun. Joy is on its way — hold on through this passing moment."},
-  {name:"Judgement",e:"📯",u:"A profound awakening calls you forward. Reflect honestly and step boldly into your next chapter.",r:"Self-doubt or refusing to learn from the past is blocking your growth. Forgive and move on."},
-  {name:"The World",e:"🌍",u:"Completion and wholeness. You have come full circle — celebrate your achievement and honour how far you have come.",r:"Something is unfinished. Tie up loose ends before moving on to what comes next."},
-  {name:"Ace of Cups",e:"💧",u:"New love, compassion and emotional new beginnings flow toward you. Open your heart to receive.",r:"Blocked emotions or a missed emotional opportunity. Allow yourself to feel and to heal."},
-  {name:"Two of Cups",e:"💑",u:"A powerful union of hearts. Partnership, mutual love and deep connection are forming around you.",r:"Imbalance in a relationship. Are both parties truly giving and receiving equally?"},
-  {name:"Three of Cups",e:"🎉",u:"Celebration and friendship. Joyful times with those you love are on their way — embrace the happiness.",r:"Overindulgence or drama within your social circle. Step back and nurture genuine connections."},
-  {name:"Six of Cups",e:"🌸",u:"A nostalgic and comforting energy surrounds you. Childhood memories or an old friend brings joy.",r:"Living too much in the past is preventing your present happiness. Take the lessons and look forward."},
-  {name:"Nine of Cups",e:"🌟",u:"Your wish is coming true. The universe is conspiring in your favour — contentment and satisfaction await.",r:"Gratitude for what you already have will open the door to even more abundance."},
-  {name:"Ten of Cups",e:"🏠",u:"True happiness in love, family and home. Divine love and lasting harmony are yours to embrace.",r:"Misaligned values in a relationship or family situation. Real happiness must come from within."},
-  {name:"Ace of Pentacles",e:"💰",u:"A golden new beginning in finances or career. Abundance and opportunity are being offered to you now.",r:"A missed financial opportunity. Ensure your foundations are solid before proceeding."},
-  {name:"Six of Pentacles",e:"🤝",u:"Generosity and giving. What you put out into the world returns to you multiplied — share freely.",r:"Strings attached to generosity. Examine the motives of those offering or receiving help."},
-  {name:"Ten of Pentacles",e:"🏰",u:"Long-term wealth, security and a lasting legacy. Family prosperity and financial stability are assured.",r:"Instability in financial or family matters. Revisit your long-term foundations."},
-  {name:"Ace of Wands",e:"🔥",u:"Creative inspiration and passionate new beginnings. Act on your ideas now — the energy is electric.",r:"Creative blocks or delays. The spark is still within you — nurture it back to life."},
-  {name:"Three of Wands",e:"🚀",u:"Your plans are taking flight. Expansion, foresight and exciting opportunities are opening before you.",r:"Obstacles to progress. Adjust your strategy and persist — your destination is still ahead."},
-  {name:"Seven of Wands",e:"🛡️",u:"Stand your ground with confidence. You have earned your position — defend it with courage.",r:"Feeling overwhelmed or giving up too easily. Choose your battles wisely and protect what matters."},
-  {name:"Ace of Swords",e:"⚔️",u:"Breakthrough and clarity cut through confusion. A moment of powerful revelation is coming your way.",r:"Miscommunication or mental confusion. Think very carefully before you speak or decide."},
-  {name:"Three of Swords",e:"💔",u:"Heartbreak and grief are part of this journey. Allow yourself to feel — healing always follows honest pain.",r:"Recovery and forgiveness are within reach. The worst of this pain is now behind you."},
-  {name:"Queen of Cups",e:"👸",u:"Lead with compassion and emotional wisdom. Your empathy and intuition will guide you perfectly.",r:"Emotional insecurity or over-giving. You must nurture yourself before you can truly help others."},
-  {name:"King of Wands",e:"🦅",u:"Bold visionary leadership. Your passion and charisma inspire everyone — trust your instincts and lead.",r:"Impulsiveness or setting impossibly high expectations. Lead with wisdom as well as fire."},
-  {name:"Knight of Pentacles",e:"🌾",u:"Steady, reliable progress through hard work and dedication. Slow and steady truly wins this race.",r:"Boredom or stagnation. Break the routine and reignite your motivation to move forward."},
-  {name:"Page of Cups",e:"🐠",u:"An unexpected and beautiful message is coming. Stay open — your intuition is delivering something magical.",r:"Emotional immaturity or creative blocks. Lead from the heart and trust what you feel."},
-  {name:"Five of Cups",e:"😢",u:"Grieve what was lost, but do not forget what still remains. Healing and hope are present even now.",r:"Moving on and acceptance. It is now safe to release this grief and find your peace."},
-  {name:"Seven of Cups",e:"✨",u:"Many possibilities appear before you. Choose wisely — not everything that glitters is truly gold.",r:"Cut through confusion and make a clear, grounded decision. Clarity is available to you now."},
-  {name:"Eight of Cups",e:"🚶",u:"Walk away from what no longer feeds your soul. Courage to leave creates space for something far better.",r:"Fear of moving on is keeping you stuck. Ask yourself honestly — is hope here truly justified?"},
-  {name:"Four of Cups",e:"😔",u:"Look more carefully at what is being offered to you right now. A gift you have overlooked awaits.",r:"Withdrawal and apathy are causing you to miss real opportunities. Return to the present moment."}
-];
-
-const POSITIONS = ["Past","Present","Future"];
-let shuffled = false, drawn = [], flipped = [false,false,false];
-
-window.shuffleCards = function() {
-  const btn = document.getElementById('shuffleBtn');
-  const status = document.getElementById('shuffleStatus');
-  btn.disabled = true;
-  status.textContent = '🔮 Shuffling the deck...';
-  const syms = ['✨','🌙','⭐','🔮','💜','🌟','🃏'];
-  let count = 0;
-  const iv = setInterval(() => {
-    status.textContent = syms[count%syms.length] + ' Shuffling... ' + syms[(count+3)%syms.length];
-    count++;
-    if (count > 14) {
-      clearInterval(iv);
-      shuffled = true;
-      status.textContent = '✨ The deck is ready. Draw your cards when you feel called.';
-      document.getElementById('drawBtn').disabled = false;
-      btn.textContent = '✨ Shuffle Again';
-      btn.disabled = false;
-    }
-  }, 120);
-};
-
-window.drawCards = function() {
-  if (!shuffled) return;
-  flipped = [false,false,false];
-  for (let i=0;i<3;i++) {
-    document.getElementById('tcard'+i).classList.remove('flipped');
-    const f = document.getElementById('tcardFront'+i);
-    f.classList.remove('reversed');
-    f.innerHTML = '';
-  }
-  document.getElementById('tarotReading').style.display = 'none';
-  document.getElementById('resetBtn').style.display = 'none';
-  const deck = [...DECK].sort(() => Math.random()-0.5);
-  drawn = deck.slice(0,3).map(c => ({...c, rev: Math.random() > 0.72}));
-  for (let i=0;i<3;i++) {
-    const f = document.getElementById('tcardFront'+i);
-    const c = drawn[i];
-    f.innerHTML = '<div class="card-emoji">'+c.e+'</div><div class="card-name">'+c.name+'</div>'+(c.rev?'<div class="card-reversed-tag">REVERSED</div>':'')+'<div class="card-meaning">'+(c.rev?c.r:c.u).split('.')[0]+'.</div>';
-    if (c.rev) f.classList.add('reversed'); else f.classList.remove('reversed');
-  }
-  document.getElementById('shuffleStatus').textContent = '🃏 Click each card to reveal it...';
-  document.getElementById('drawBtn').disabled = true;
-};
-
-window.flipCard = function(i) {
-  if (!drawn.length || flipped[i]) return;
-  document.getElementById('tcard'+i).classList.add('flipped');
-  flipped[i] = true;
-  if (flipped.every(f=>f)) setTimeout(showReading, 700);
-};
-
-function showReading() {
-  const content = document.getElementById('readingContent');
-  content.innerHTML = drawn.map((c,i) => '<div class="reading-card"><div class="reading-card-name">'+c.e+' '+POSITIONS[i]+': '+c.name+(c.rev?' (Reversed)':'')+'</div><div class="reading-card-text">'+(c.rev?c.r:c.u)+'</div></div>').join('');
-  document.getElementById('tarotReading').style.display = 'block';
-  document.getElementById('resetBtn').style.display = 'inline-block';
-  document.getElementById('shuffleStatus').textContent = '✨ Your reading is complete. Trust what resonates.';
-  document.getElementById('tarotReading').scrollIntoView({behavior:'smooth',block:'nearest'});
-}
-
-window.resetReading = function() {
-  drawn = []; flipped = [false,false,false]; shuffled = false;
-  for (let i=0;i<3;i++) {
-    document.getElementById('tcard'+i).classList.remove('flipped');
-    const f = document.getElementById('tcardFront'+i);
-    f.classList.remove('reversed'); f.innerHTML='';
-  }
-  document.getElementById('tarotReading').style.display='none';
-  document.getElementById('resetBtn').style.display='none';
-  document.getElementById('shuffleBtn').textContent='✨ Shuffle the Deck';
-  document.getElementById('shuffleBtn').disabled=false;
-  document.getElementById('drawBtn').disabled=true;
-  document.getElementById('shuffleStatus').textContent='';
-};
-})();
-</script>
-</section>
-
-
-
-
-
 
 <footer>
-  <div class="footer-logo">CRYSTAL ♥ PSYCHICS</div>
+  <div class="footer-logo">CRYSTAL HEART® PSYCHICS</div>
   <div class="footer-links">
-    <a href="#readers">Our Readers</a>
-    <a href="mailto:info@crystalheartpsychics.com">About Us</a>
-    <a href="https://crystalheartradio.app">Blog</a>
-    <a href="#terms">Terms & Privacy</a>
-    <a href="https://crystalheartradio.app" target="_blank">Crystal Heart Radio</a>
-    <a href="https://crystalheartmind.app" target="_blank">Meditation &amp; Hypnosis</a>
-    <a href="https://www.crystalheartacademy.com" target="_blank">Crystal Heart Academy</a>
-    <a href="mailto:info@crystalheartpsychics.com">Contact Us</a>
+    <a href="#readers">Readers</a>
+    <a href="#blog">Blog</a>
+    <a href="#horoscopes">Horoscopes</a>
+    <a href="#tarot">Tarot</a>
+    <a href="https://crystalheartradio.app" target="_blank">Live Radio</a>
+    <a href="https://www.crystalheartacademy.com" target="_blank">Academy</a>
+    <a href="https://crystalheartmind.app" target="_blank">Meditation</a>
+    <a href="mailto:info@crystalheartpsychics.com">Contact</a>
   </div>
   <div class="footer-legal">
-    For entertainment purposes only. 18+ only. Bill payer's permission required. All calls are recorded and may be monitored for training purposes.<br>
-    0906 calls cost £1.50/min plus network access charge. SMS: £1.50/reply, max 3 replies. Standard network charges apply.<br>
+    Crystal Heart® is a registered trademark of Crystal Heart Visions Ltd (UK Reg No: 98011089). All readings are for entertainment purposes only. 18+ only. Please do not make major life decisions based solely on psychic readings. If you are in distress, please contact <strong>Samaritans: 116 123</strong>.<br><br>
     SP: Inveroak.com, PO Box 10015, CM1 9HH. Customer Helpline: 0330 114 0300 (Mon–Sun 8am–10pm).<br>
-    Crystal Heart Psychics is a trading name of Crystal Heart Visions Ltd. Registered in England &amp; Wales.<br>
-    Crystal Heart® is a registered trademark (UK Reg No: 98011089), Classes 016 &amp; 045. Regulated under PSA Code of Practice 15.
+    USA: Billing support at the number displayed. Australia: ACMA registered. AU Helpline: 1800 689 373.
   </div>
-  <div class="footer-copy">© 2026 Crystal Heart Visions Ltd. All rights reserved.</div>
+  <div class="footer-copy">© 2007–2026 Crystal Heart Visions Ltd. All rights reserved.</div>
 </footer>
 
-<div class="modal-overlay" id="vidModal">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeVid()">✕</button>
-    <iframe class="vid" id="vidFrame" src="" allowfullscreen></iframe>
+<!-- Blog Modal -->
+<div class="blog-modal" id="blogModal" onclick="if(event.target===this)closeBlogModal()">
+  <div class="blog-modal-box">
+    <button class="blog-modal-close" onclick="closeBlogModal()">✕</button>
+    <div class="blog-modal-title" id="blogModalTitle"></div>
+    <div class="blog-modal-body" id="blogModalBody"></div>
+  </div>
+</div>
+
+<!-- Horoscope Modal -->
+<div class="horo-modal" id="horoModal" onclick="if(event.target===this)closeHoroModal()">
+  <div class="horo-modal-box">
+    <button class="horo-modal-close" onclick="closeHoroModal()">✕</button>
+    <div class="horo-modal-sign" id="horoModalSign"></div>
+    <div class="horo-modal-title" id="horoModalTitle"></div>
+    <div class="horo-modal-dates" id="horoModalDates"></div>
+    <div class="horo-modal-body" id="horoModalBody"></div>
   </div>
 </div>
 
 <script>
-const FEED_URL = 'https://www.crystalheartpsychics.com/wp-json/inveroak-feed/v1/feed/';
-const IMG_BASE = 'https://services.inveroak.co.uk/readerimages/images/';
-const PROFILE_BASE = 'https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
+// ─── BLOG DATA ────────────────────────────────────────────────────
+const BLOGS = [
+  {
+    tag:'Psychic Insights', date:'2024',
+    title:'Why People Seek Psychic Guidance at Night',
+    excerpt:'For many people, nighttime is when emotions feel strongest. The distractions of the day become quieter, thoughts become louder, and unresolved feelings often surface more clearly.',
+    body:`<p>For many people, nighttime is when emotions feel strongest. The distractions of the day become quieter, thoughts become louder, and unresolved feelings often surface more clearly. This is one reason why late night psychic readings continue growing in popularity across the UK.</p>
+<p>Whether someone is dealing with relationship uncertainty, emotional stress, career worries, grief, or personal transitions — the quiet hours of the night can make these concerns feel more pressing.</p>
+<p>At Crystal Heart Psychics, our readers are available around the clock. Whether it's 2am and you can't sleep, or you simply feel more open to guidance after dark — we're here. Our readers are compassionate, genuine and experienced.</p>
+<p>You deserve clarity at any hour. Call us on <strong>0207 754 5333</strong> or text HEART to <strong>78887</strong>.</p>`
+  },
+  {
+    tag:'Relationships', date:'2023',
+    title:'The Importance of Self-Worth in Relationships',
+    excerpt:'Self-worth refers to the intrinsic value and respect one holds for themselves. Cultivating a strong sense of self-worth is crucial as it determines how we perceive ourselves and our ability to love and be loved.',
+    body:`<p>Self-worth, often interchangeable with self-esteem, refers to the intrinsic value and respect one holds for themselves. It is not dependent on external validation but rather stems from an internal sense of self-appreciation.</p>
+<p>Cultivating a strong sense of self-worth is crucial as it determines how individuals perceive themselves and their ability to contribute positively to relationships. When we value ourselves, we attract partners who value us too.</p>
+<p>Low self-worth can lead to accepting less than we deserve — staying in relationships that don't serve us, tolerating unkind behaviour, or constantly seeking reassurance from others.</p>
+<p>Building self-worth takes time, but it begins with recognising your own value. You are enough, exactly as you are. A psychic reading can help you see the patterns holding you back and the strengths you already carry.</p>`
+  },
+  {
+    tag:'Wellbeing', date:'2023',
+    title:'Understanding and Dealing with Narcissistic Behaviour',
+    excerpt:'When you know you are dealing with narcissistic behaviour, whilst it can be challenging and frustrating, understanding the traits and learning effective strategies can help you manage interactions more effectively.',
+    body:`<p>Once you've identified narcissistic behaviour in someone you interact with, the challenge becomes managing those interactions while protecting your own wellbeing.</p>
+<p><strong>Set clear boundaries.</strong> Narcissists often push limits, so be clear about what you will and won't accept. Consistency is key — enforcing boundaries firmly but calmly.</p>
+<p><strong>Manage your expectations.</strong> Accept that you cannot change a narcissist. Focus on what you can control — your own responses and decisions.</p>
+<p><strong>Limit emotional investment.</strong> The more you engage emotionally, the more power is handed over. Stay calm, factual, and detached in confrontations.</p>
+<p><strong>Seek support.</strong> Whether from friends, a therapist, or a trusted psychic reader, having outside perspective helps enormously. You don't have to navigate this alone.</p>
+<p>Remember: protecting yourself is not selfish. It is necessary.</p>`
+  },
+  {
+    tag:'Wellbeing', date:'2023',
+    title:'10 Signs You Are Dealing with a Narcissist',
+    excerpt:'Narcissism is a personality trait characterised by an inflated sense of self-importance and a deep need for excessive attention and admiration. The first step to recovery is recognising when you are dealing with one.',
+    body:`<p>Recognising narcissistic behaviour is the first step to protecting yourself. Here are 10 key signs:</p>
+<p><strong>1. Grandiosity.</strong> An exaggerated sense of self-importance. They believe they are superior and expect special treatment.</p>
+<p><strong>2. Lack of empathy.</strong> Difficulty recognising or caring about the feelings of others.</p>
+<p><strong>3. Need for admiration.</strong> Constant need for praise, validation and attention.</p>
+<p><strong>4. Entitlement.</strong> Expecting automatic compliance and special treatment without earning it.</p>
+<p><strong>5. Exploitation.</strong> Taking advantage of others to achieve their own goals.</p>
+<p><strong>6. Envy.</strong> Either envying others or believing others envy them.</p>
+<p><strong>7. Arrogance.</strong> Haughty behaviour and attitudes.</p>
+<p><strong>8. Gaslighting.</strong> Making you question your own memory and perception of events.</p>
+<p><strong>9. Love-bombing followed by devaluation.</strong> Intense affection early on, then criticism and withdrawal.</p>
+<p><strong>10. Inability to take responsibility.</strong> Everything is always someone else's fault.</p>
+<p>If these patterns sound familiar, please reach out to a trusted friend, counsellor, or our psychic team for guidance.</p>`
+  },
+  {
+    tag:'Spiritual', date:'2023',
+    title:'Celebrating the Spring Equinox',
+    excerpt:'The spring equinox marks the transition from winter to spring — a momentous occasion when the sun crosses the celestial equator, resulting in nearly equal day and night across the globe.',
+    body:`<p>The spring equinox, also known as the vernal equinox, marks the transition from the cold, dark days of winter to the vibrant, life-affirming season of spring. This celestial event occurs when the sun crosses the celestial equator, resulting in nearly equal day and night across the globe. It typically falls around March 20–21.</p>
+<p>Spiritually, the equinox is a powerful time for renewal, planting seeds of intention, and releasing what no longer serves you. It represents balance — light and dark in perfect harmony — before the light begins to grow.</p>
+<p><strong>Ways to celebrate the Spring Equinox:</strong></p>
+<p>🌱 Plant seeds — both literal and metaphorical. Set intentions for the season ahead.</p>
+<p>🧹 Spring clean your home and your energy. Smudge with sage or diffuse cleansing oils like eucalyptus and lemon.</p>
+<p>🌸 Spend time in nature. Notice what is awakening around you.</p>
+<p>🕯️ Light a candle in a colour that represents your intention — green for growth, pink for love, yellow for clarity.</p>
+<p>This is a beautiful time for a psychic reading to understand what this new cycle holds for you.</p>`
+  },
+  {
+    tag:'Astrology', date:'2023',
+    title:'What Are Your Star Sign Qualities?',
+    excerpt:'Astrology has fascinated humanity for centuries, offering insights into personality traits and life paths through the zodiac. Each of the twelve star signs carries specific qualities and characteristics.',
+    body:`<p>Astrology has fascinated humanity for centuries, offering insights into personality traits and life paths through the zodiac. Here's a brief overview of the qualities associated with each sign:</p>
+<p><strong>♈ Aries (Mar 21 – Apr 19):</strong> Bold, ambitious, pioneering. Natural leaders with enormous energy.</p>
+<p><strong>♉ Taurus (Apr 20 – May 20):</strong> Reliable, patient, sensual. Deeply connected to beauty and comfort.</p>
+<p><strong>♊ Gemini (May 21 – Jun 20):</strong> Curious, adaptable, communicative. Masters of connection and ideas.</p>
+<p><strong>♋ Cancer (Jun 21 – Jul 22):</strong> Intuitive, nurturing, deeply feeling. Protectors of home and family.</p>
+<p><strong>♌ Leo (Jul 23 – Aug 22):</strong> Confident, creative, generous. Natural performers with a big heart.</p>
+<p><strong>♍ Virgo (Aug 23 – Sep 22):</strong> Analytical, practical, devoted. Detail-oriented perfectionists.</p>
+<p><strong>♎ Libra (Sep 23 – Oct 22):</strong> Diplomatic, fair, charming. Seekers of balance and beauty.</p>
+<p><strong>♏ Scorpio (Oct 23 – Nov 21):</strong> Intense, perceptive, transformative. Masters of depth and mystery.</p>
+<p><strong>♐ Sagittarius (Nov 22 – Dec 21):</strong> Adventurous, philosophical, free-spirited. Truth-seekers and explorers.</p>
+<p><strong>♑ Capricorn (Dec 22 – Jan 19):</strong> Disciplined, responsible, ambitious. Built for long-term success.</p>
+<p><strong>♒ Aquarius (Jan 20 – Feb 18):</strong> Innovative, humanitarian, independent. Visionaries ahead of their time.</p>
+<p><strong>♓ Pisces (Feb 19 – Mar 20):</strong> Empathic, artistic, spiritually aware. Old souls with deep intuition.</p>`
+  },
+  {
+    tag:'Angels & Spirit', date:'2022',
+    title:'Signs from Angels',
+    excerpt:'It is believed that angels send signs to guide, comfort and reassure us. These signs can be subtle and they often appear when we least expect them — here are the most common ones.',
+    body:`<p>It is believed that angels can send signs to guide, comfort, and reassure us. These signs often appear when we least expect them — and sometimes exactly when we need them most. Here are some of the most commonly reported angel signs:</p>
+<p><strong>🪶 Feathers.</strong> Finding feathers in unusual places is widely considered a sign of an angel's presence — especially white feathers, which symbolise peace and protection.</p>
+<p><strong>🦋 Butterflies and robins.</strong> Many people feel that a butterfly landing near them, or a robin appearing repeatedly, carries a message from a loved one or guiding angel.</p>
+<p><strong>💡 Flickering lights.</strong> Lights flickering without an electrical cause is often interpreted as a sign that spirit is nearby.</p>
+<p><strong>🔢 Repeating numbers.</strong> Seeing 111, 222, 333 or other number sequences repeatedly — on clocks, receipts, or number plates — are called angel numbers. Each sequence carries a specific message.</p>
+<p><strong>🌸 Scents.</strong> Unexplained fragrances — particularly flowers, perfume, or a familiar smell connected to someone passed — can indicate angelic presence.</p>
+<p><strong>💭 Dreams.</strong> Vivid, peaceful dreams featuring light, beings, or deceased loved ones are often thought to be angelic visitations.</p>
+<p>Trust your intuition. If something feels like a sign, it very likely is.</p>`
+  },
+  {
+    tag:'Psychic Readings', date:'2022',
+    title:"Psychic Readings Can Help When Going Through Life's Challenges",
+    excerpt:"Life is full of challenges that can leave us feeling lost and overwhelmed. Whether it's relationships, work, family or personal growth — a psychic reading can offer real clarity and direction.",
+    body:`<p>Life is full of challenges and obstacles that can sometimes leave us feeling lost and overwhelmed. Whether it's dealing with relationships, work pressures, family difficulties, or personal growth — navigating through these difficulties can be a daunting task.</p>
+<p>This is where psychic readings can genuinely help. Psychic readings have been used for centuries as a way to gain insight and clarity into life's most pressing questions. A gifted reader can offer a different perspective — one that goes beyond the limitations of logic and taps into energy, intuition, and spiritual guidance.</p>
+<p>At Crystal Heart Psychics, our readers specialise in:</p>
+<p>💜 Relationship and love guidance<br>💼 Career and financial clarity<br>🌿 Health and wellbeing direction<br>🕊️ Bereavement and spiritual connection<br>🔮 Life path and purpose readings</p>
+<p>A good psychic reading should never leave you feeling disempowered. It should offer clarity, comfort, and the confidence to move forward. Our readers are compassionate, honest and experienced — here when you need them most.</p>`
+  },
+  {
+    tag:'Crystal Healing', date:'2022',
+    title:'Crystal Healing & Crystal Energy',
+    excerpt:'Crystals are semi-precious minerals that hold a small electromagnetic charge. Depending on the crystal, the vibrational energy they emit can bring healing, clarity, protection and calm.',
+    body:`<p>Crystals are semi-precious minerals that are beautiful to look at, enhancing both the energy of a room and — with the additional benefit — they can be very pleasing to the eye. They do hold a small electromagnetic charge, and depending on the crystal, the vibrational energy it emits can have a profound effect.</p>
+<p>For most people who are sensitive to crystal healing, the results can be felt almost immediately. For others, it is a more subtle experience that builds over time.</p>
+<p><strong>Popular crystals and their properties:</strong></p>
+<p>💜 <strong>Amethyst:</strong> Protection, intuition, calm. Excellent for meditation and restful sleep.</p>
+<p>🌹 <strong>Rose Quartz:</strong> Love, compassion, emotional healing. The stone of unconditional love.</p>
+<p>⚫ <strong>Black Tourmaline:</strong> Grounding, protection from negative energy.</p>
+<p>💛 <strong>Citrine:</strong> Abundance, positivity, confidence. Known as the merchant's stone.</p>
+<p>💚 <strong>Malachite:</strong> Transformation, emotional release, healing.</p>
+<p>🔵 <strong>Lapis Lazuli:</strong> Wisdom, truth, communication. Opens the third eye.</p>
+<p>Placing crystals around your home, wearing them as jewellery, or meditating with them in your hands are all effective ways to work with their energy.</p>`
+  },
+  {
+    tag:'Aromatherapy', date:'2022',
+    title:'Rose Essential Oil – Aromatherapy and Healing',
+    excerpt:'Rose essential oil not only has a beautiful fragrance — it has remarkable health and wellbeing benefits for the skin, emotions and spirit.',
+    body:`<p>Rose essential oil has been treasured for centuries — not only for its exquisite fragrance, but for its remarkable healing properties. It is one of the most precious and complex essential oils in aromatherapy.</p>
+<p><strong>Skin benefits:</strong> Rose oil has been used for centuries to improve the appearance and health of the skin. It is a powerful antioxidant, helps maintain skin vitality, and is particularly beneficial for dry, sensitive or ageing skin. A few drops blended with a carrier oil makes a luxurious facial treatment.</p>
+<p><strong>Emotional healing:</strong> Rose oil is strongly associated with the heart chakra. It can help with grief, heartbreak, depression and anxiety. Its warm, floral scent has an immediately uplifting and comforting effect.</p>
+<p><strong>Spiritual connection:</strong> In many traditions, rose is considered a sacred flower — associated with divine love, the Virgin Mary, and Venus. Diffusing rose oil during meditation or prayer deepens spiritual connection.</p>
+<p><strong>How to use:</strong> Diffuse in an oil burner, blend with a carrier oil for massage, add a few drops to your bath, or dilute for a pulse-point perfume.</p>
+<p>A little goes a long way — rose oil is potent and precious. Even one or two drops create a profound effect.</p>`
+  },
+  {
+    tag:'Mindset', date:'2021',
+    title:'The F Word — Fear',
+    excerpt:'FEAR can be one of our biggest blockers to developing, learning and growing. Often when we are in a state of fear, we don\'t see opportunities or recognise that change can lead to greater choices.',
+    body:`<p>The F word. FEAR. It can be one of our biggest blockers to developing, learning and growing. Second to that is the fear of failure itself.</p>
+<p>Often when we are in a state of fear, we don't see opportunities, or recognise the fact that change can lead to greater choices. We stay stuck — because the unknown feels more dangerous than the discomfort we already know.</p>
+<p>Many times during our lives, fear will present itself as a wall. But walls can be doors if we choose to see them differently.</p>
+<p><strong>How to work with fear:</strong></p>
+<p>🌟 Name it. What exactly are you afraid of? Write it down. Making fear concrete makes it smaller.</p>
+<p>💜 Ask: "What is the worst that can actually happen?" Often, the reality is far less frightening than the imagination.</p>
+<p>🔮 Look for the growth. Every fear you face makes you stronger. Every challenge overcome builds resilience.</p>
+<p>🌱 Take small steps. You don't have to leap — you just have to move. One small action in the direction of what you want changes everything.</p>
+<p>You are braver than you believe. Sometimes a psychic reading can help you see what's waiting on the other side of your fear.</p>`
+  },
+  {
+    tag:'Mindfulness', date:'2021',
+    title:'Mindfulness and Meditation',
+    excerpt:'Meditation and mindfulness have many benefits to your health and wellbeing. Even just a few minutes each day can transform how you feel, think and respond to life.',
+    body:`<p>Meditation and mindfulness have many proven benefits to your health and wellbeing — mentally, emotionally, and physically.</p>
+<p><strong>Benefits of regular practice include:</strong></p>
+<p>🧠 Reduced stress and anxiety<br>💤 Improved sleep quality<br>💜 Greater emotional resilience<br>🎯 Improved focus and clarity<br>❤️ Lower blood pressure<br>🌟 Deeper sense of inner peace</p>
+<p>You don't need to meditate for hours to feel the benefits. Even 5–10 minutes each day can make a significant difference over time.</p>
+<p><strong>Simple ways to start:</strong></p>
+<p>🌬️ Breathe. Sit comfortably, close your eyes, and focus entirely on your breath. When your mind wanders, gently return to the breath. That's it.</p>
+<p>🎵 Use guided meditations. Caroline has recorded a range of meditations available on Crystal Heart Mind — covering sleep, anxiety, confidence, past life, and more.</p>
+<p>🕯️ Create a ritual. Light a candle, hold a crystal, put on peaceful music. Signal to your mind that this is sacred time.</p>
+<p>Visit <a href="https://crystalheartmind.app" style="color:var(--purple3)">Crystal Heart Mind</a> for Caroline's full library of guided meditations and hypnotherapy sessions.</p>`
+  },
+  {
+    tag:'Spiritual', date:'2021',
+    title:'Fate and Destiny',
+    excerpt:'Do you believe in fate and destiny? At Crystal Heart Psychics we believe in both fate and free will. A psychic reading should never disempower a person — it should guide and illuminate the path ahead.',
+    body:`<p>Do you believe in fate and destiny? At Crystal Heart Psychics we definitely believe in both fate and destiny — and we also believe in free will.</p>
+<p>For Caroline, our founder, a psychic reading should never disempower a person. Our job as healers and psychics is to give guidance — to provide clarity, illuminate the path ahead, and empower you to make the choices that align with your highest good.</p>
+<p>We believe that there are certain key moments and connections written into your soul's journey — a soulmate you are destined to meet, a path you came here to walk. But the timing, the choices, and the direction? That is where free will comes in.</p>
+<p>Fate gives you the map. Free will determines how you travel it.</p>
+<p>A reading can help you understand both — what appears to be destined, and where your choices are creating your future. It's not about taking away your power. It's about helping you use it wisely.</p>`
+  },
+  {
+    tag:'Aromatherapy', date:'2021',
+    title:'Lavender – Healing Properties',
+    excerpt:'Lavender is a powerful healing fragrance, renowned for its ability to create a relaxing atmosphere and reduce stress and anxiety — all without causing sedation.',
+    body:`<p>Lavender is one of the most versatile and beloved healing fragrances in aromatherapy. It smells absolutely amazing and is renowned for its ability to create a relaxing atmosphere.</p>
+<p>One of the most important benefits of lavender is that it can calm <em>without sedating</em>. This makes it perfect for daytime use when you need calm focus rather than sleepiness.</p>
+<p><strong>Key healing properties of lavender:</strong></p>
+<p>😌 <strong>Reduces stress and anxiety.</strong> Multiple studies confirm that inhaling lavender reduces cortisol levels and promotes a sense of calm.</p>
+<p>💤 <strong>Improves sleep quality.</strong> Diffuse in the bedroom at night or apply diluted to your pillow for deeper, more restful sleep.</p>
+<p>🌿 <strong>Skin healing.</strong> Lavender has natural antiseptic and anti-inflammatory properties. Diluted with a carrier oil, it can help with minor burns, insect bites, and blemishes.</p>
+<p>💜 <strong>Headache relief.</strong> Diluted lavender oil applied to the temples can ease tension headaches.</p>
+<p>🧘 <strong>Meditation aid.</strong> Diffusing lavender during meditation deepens relaxation and opens the crown and heart chakras.</p>
+<p>Whether you diffuse it, wear it, or add it to your bath — lavender is one of the most powerful tools in your wellbeing toolkit.</p>`
+  },
+  {
+    tag:'Bereavement', date:'2020',
+    title:'Coping with Loss',
+    excerpt:'The hardest thing to do sometimes is say goodbye. Coping with the loss of someone you love is both traumatic and stressful. Grief can leave us feeling very alone — but you don\'t have to face it that way.',
+    body:`<p>The hardest thing to do sometimes is say goodbye. Coping with the loss of someone you love is both traumatic and stressful, and navigating grief can feel overwhelming and isolating.</p>
+<p>Sometimes we have had time to prepare for a loss. Other times, it arrives without warning, leaving us shattered. Either way — grief is grief, and it deserves to be honoured.</p>
+<p>Grief is not linear. You may feel devastation, numbness, anger, relief, guilt — and none of these feelings are wrong. They are all part of love.</p>
+<p><strong>Things that can help:</strong></p>
+<p>🌸 Allow yourself to feel. Don't push grief away or put a timeline on it. It moves through you in its own time.</p>
+<p>🤝 Lean on others. Let people in. Isolation makes grief heavier.</p>
+<p>🙏 Create rituals of remembrance. Light a candle, tend a plant, visit a meaningful place. Keeping the connection alive in a healthy way supports healing.</p>
+<p>🔮 Consider a mediumship reading. Many people find immense comfort in connecting with a loved one through a gifted medium. It doesn't replace grief — but it can bring profound peace.</p>
+<p>At Crystal Heart Psychics, our mediums approach bereavement readings with the greatest care, compassion and sensitivity.</p>`
+  },
+  {
+    tag:'Mindset', date:'2020',
+    title:'Emotional Intelligence',
+    excerpt:'Emotional intelligence is being aware of another person\'s emotional state and having empathy toward them. It is a skill that can be learnt — and it transforms every relationship in your life.',
+    body:`<p>Emotional intelligence is being aware of another person's emotional state and having empathy towards how they are feeling. This is a skill that can be learnt if a person wishes to develop it — and doing so transforms every relationship in your life.</p>
+<p>The foundation of emotional intelligence begins with <strong>self-awareness</strong>. In order to help someone, or to navigate a difficult interaction, you must first be aware of your own emotions and how they are influencing your responses.</p>
+<p><strong>The five pillars of emotional intelligence:</strong></p>
+<p>1. <strong>Self-awareness</strong> — Knowing your own emotions as they arise.</p>
+<p>2. <strong>Self-regulation</strong> — Managing your emotions rather than reacting impulsively.</p>
+<p>3. <strong>Motivation</strong> — Being driven by internal values, not external rewards.</p>
+<p>4. <strong>Empathy</strong> — Genuinely feeling and understanding the emotions of others.</p>
+<p>5. <strong>Social skills</strong> — Managing relationships and interactions with care and skill.</p>
+<p>Developing emotional intelligence leads to better relationships, reduced conflict, greater career success, and a deeper sense of connection with the world around you. It is one of the most valuable personal development tools available.</p>`
+  },
+  {
+    tag:'Spiritual', date:'2020',
+    title:'Finding Your Tribe',
+    excerpt:'Finding your tribe means finding like-minded individuals who accept you for who you are. Many of us spend years trying to fit in — not realising that our tribe is waiting for us to stop hiding.',
+    body:`<p>Finding your tribe means finding like-minded individuals who accept you for who you are — unconditionally, without asking you to shrink yourself or fit a mould.</p>
+<p>Like many others, you may have spent a lot of your life trying to fit in — trying to find a group of people who will love and accept you, whilst staying true to yourself. It can be an exhausting and lonely search.</p>
+<p>But here's the truth: your tribe exists. And they are looking for you too.</p>
+<p><strong>How to find your tribe:</strong></p>
+<p>🔮 Follow what lights you up. Your passions are your compass. Go where the things you love are happening — and the people there will feel like home.</p>
+<p>🌟 Stop shrinking yourself to fit in. The right people will be drawn to your authentic self, not a version of you that's been edited for their comfort.</p>
+<p>💜 Spiritual communities — whether online or in person — are wonderful for finding like-minded souls. Crystal Heart Radio is built on exactly this principle.</p>
+<p>🌱 Be patient with yourself. Some of the most meaningful friendships and communities come to us when we stop searching and simply start being ourselves fully.</p>
+<p>You belong somewhere. You are not too much. You are exactly right for your tribe.</p>`
+  },
+  {
+    tag:'Crystal Healing', date:'2020',
+    title:'The Seven Crystals for Attracting Love',
+    excerpt:'In order to love another and maintain a healthy relationship, we must first love ourselves. These seven crystals can support you in opening your heart and attracting the love you deserve.',
+    body:`<p>In order to love another and maintain a healthy, balanced relationship, we must first love ourselves. It is our own self-worth and self-esteem that ensures we have a strong foundation from which to give and receive love.</p>
+<p>These seven crystals can support you on your journey to opening your heart:</p>
+<p>🌹 <strong>Rose Quartz</strong> — The most powerful love crystal. Opens the heart chakra, attracts romantic love, deepens self-love and compassion.</p>
+<p>💚 <strong>Malachite</strong> — Helps release emotional blockages and past hurts that are preventing love from flowing in.</p>
+<p>💜 <strong>Amethyst</strong> — Calms the mind, supports emotional balance, and deepens spiritual connection in relationships.</p>
+<p>🔴 <strong>Garnet</strong> — A stone of passion and commitment. Strengthens existing relationships and attracts devoted love.</p>
+<p>🌸 <strong>Rhodonite</strong> — The "rescue stone" — heals emotional wounds and opens the heart after heartbreak.</p>
+<p>💛 <strong>Citrine</strong> — Brings joy, confidence and positivity — essential ingredients for attracting the love you deserve.</p>
+<p>🌕 <strong>Moonstone</strong> — The stone of new beginnings and feminine energy. Heightens intuition and attracts loving connections.</p>
+<p>Carry them in your pocket, wear them close to your heart, or place them by your bed to invite love into your life.</p>`
+  },
+  {
+    tag:'Spiritual', date:'2019',
+    title:'Winter Solstice',
+    excerpt:'The winter solstice is where the balance between dark and light changes. The sun begins its return — and with it comes the quiet promise of spring, growth and new beginnings.',
+    body:`<p>The winter solstice — usually falling around 21st or 22nd December — is the shortest day of the year. This is when the sun moves to its southernmost point and the Northern Hemisphere experiences its longest night.</p>
+<p>Spiritually, the solstice is one of the most powerful days of the year. It marks the turning point — the moment when darkness peaks, and then begins to recede. The light starts to return. However slowly, however quietly — it is returning.</p>
+<p><strong>Ways to honour the Winter Solstice:</strong></p>
+<p>🕯️ Light candles at dusk to welcome the returning light. Each flame represents hope, warmth and the promise of brighter days.</p>
+<p>🌿 Create an altar with seasonal elements — pine, holly, crystals, a candle. Spend time in quiet reflection.</p>
+<p>📝 Write down what you are releasing as the darkness peaks — what no longer serves you, what you are ready to let go of.</p>
+<p>🌟 Set intentions for the returning light. What seeds do you want to plant as the days begin to lengthen?</p>
+<p>✨ Spend time in nature at dawn or dusk to mark the turning of the wheel.</p>
+<p>The solstice reminds us: even in the deepest darkness, the light is always on its way back. Always.</p>`
+  },
+  {
+    tag:'Seasonal', date:'2019',
+    title:"Merry Christmas from Crystal Heart Psychics",
+    excerpt:'As we move into a new year, we reflect on the cycles of change, the spiritual shifts of recent years, and the incredible journey that lies ahead for all of us.',
+    body:`<p>Crystal Heart Psychics wishes you all a wonderful Christmas and a joyful, abundant New Year.</p>
+<p>The years since 2012 have been a profound time of transition and change. Anyone following their spiritual path will know that we have been in an enormous transitional period — a shift in collective consciousness, a deepening of spiritual awareness across the world.</p>
+<p>We have seen immense challenges, but also immense growth. Communities like ours have come together across distances, and the hunger for genuine spiritual connection, guidance and healing has never been greater.</p>
+<p>As we move into each new year, we carry with us the lessons of what has passed and the excitement of what is yet to come. The angels are close, the universe is listening, and you are never alone on your path.</p>
+<p>From Caroline and everyone at Crystal Heart Psychics — thank you for your love, your trust, and your light. ✨💜</p>`
+  }
+];
 
-// Static bios per PIN (Inveroak feed doesn't include bios)
-const READER_BIOS = {
-  '4477': 'I am an intuitive healer — being born on a powerful cusp makes me the strongest empath of the zodiac. I work using my intuition, tarot cards, pendulum and astrology to provide clear and honest guidance.',
-  '4491': 'I am Clara, a gifted psychic and spiritual guide. I connect deeply with your energy to bring clarity and insight to the areas of your life that matter most to you.',
-  '4455': 'Jackie is Psychic, Clairsentient, and a Dream Analyst. Well known for her down to earth, straight-talking readings while being deeply compassionate and empathic towards your situation.',
-  '4468': 'I am a caring and experienced Clairvoyant Psychic who discovered my gift from quite a young age. I specialise in love and relationships and aim to empower and enlighten you on your path.',
-  '4467': 'I am an honest and compassionate Clairvoyant Psychic who can bring empowering insight and clarity to love, relationships, career and your spiritual path. I speak fluent English and Polish.',
-  '4476': 'Terry is an experienced psychic reader with exceptional skills in connecting with your energy. Warm, direct and deeply accurate — Terry brings real clarity to the questions that matter most.',
-  '4041': 'I am a Clairvoyant and Medium, using my Tarot Cards and spirit guides to conduct your readings. I have studied Mediumship at the College of Psychic Arts and genuinely love helping people find their path.',
-  '5330': 'Caroline is a Psychic Medium, Clairvoyant and naturally gifted healer. NLP Master Practitioner, CBT Therapist, Hypnotherapist and Past Life Regression Therapist. Reiki & Seichem Master Teacher. Featured in Soul & Spirit Magazine 2013, 2014 & 2016. Founder of Crystal Heart Psychics.',
+// ─── HOROSCOPES ───────────────────────────────────────────────────
+const SIGNS = [
+  {emoji:'♈',name:'Aries',dates:'Mar 21 – Apr 19',element:'Fire',ruler:'Mars'},
+  {emoji:'♉',name:'Taurus',dates:'Apr 20 – May 20',element:'Earth',ruler:'Venus'},
+  {emoji:'♊',name:'Gemini',dates:'May 21 – Jun 20',element:'Air',ruler:'Mercury'},
+  {emoji:'♋',name:'Cancer',dates:'Jun 21 – Jul 22',element:'Water',ruler:'Moon'},
+  {emoji:'♌',name:'Leo',dates:'Jul 23 – Aug 22',element:'Fire',ruler:'Sun'},
+  {emoji:'♍',name:'Virgo',dates:'Aug 23 – Sep 22',element:'Earth',ruler:'Mercury'},
+  {emoji:'♎',name:'Libra',dates:'Sep 23 – Oct 22',element:'Air',ruler:'Venus'},
+  {emoji:'♏',name:'Scorpio',dates:'Oct 23 – Nov 21',element:'Water',ruler:'Pluto'},
+  {emoji:'♐',name:'Sagittarius',dates:'Nov 22 – Dec 21',element:'Fire',ruler:'Jupiter'},
+  {emoji:'♑',name:'Capricorn',dates:'Dec 22 – Jan 19',element:'Earth',ruler:'Saturn'},
+  {emoji:'♒',name:'Aquarius',dates:'Jan 20 – Feb 18',element:'Air',ruler:'Uranus'},
+  {emoji:'♓',name:'Pisces',dates:'Feb 19 – Mar 20',element:'Water',ruler:'Neptune'},
+];
+
+const HORO_THEMES = [
+  ['love','career','spirit','health'],
+  ['relationships','finances','intuition','wellbeing'],
+  ['heart','abundance','inner wisdom','energy'],
+  ['connection','success','higher guidance','vitality'],
+];
+
+const HORO_TEXT = {
+  Aries:[
+    "Your fire is particularly bright right now. A new chapter is opening in your relationships — be willing to be vulnerable and let the right people in. Trust is the bridge.",
+    "Mars energises your ambitions. A project you've been holding back on deserves your full commitment today. Don't second-guess your instincts.",
+    "Your spirit is being called to something bigger. A conversation this week carries more significance than it first appears. Listen with your whole self.",
+    "Your energy levels are high — use them wisely. Physical activity and time outdoors will clear any lingering mental fog."
+  ],
+  Taurus:[
+    "Venus wraps you in her warmth. An existing relationship deepens beautifully — allow yourself to receive as well as give. You are worthy of great love.",
+    "Financial opportunities are circling. Your patience and practical nature are your greatest assets right now. A slow and steady approach brings lasting results.",
+    "The earth beneath your feet is speaking. Spend time in nature to hear the guidance you've been seeking. Your intuition is trustworthy.",
+    "Nourishment is the theme. What feeds your body, your soul and your joy? Prioritise those things unapologetically."
+  ],
+  Gemini:[
+    "Communication is your superpower this week. An important conversation — one you've been putting off — will bring enormous relief once you have it. Say what's true.",
+    "Mercury sharpens your mind beautifully. Ideas that have been forming beneath the surface are ready to emerge. Write them down — they have value.",
+    "Two paths appear before you. Your guides say: trust your first instinct. The mind creates doubt; the heart knows the answer.",
+    "Social energy is high. The connections you make this week carry seeds of longer-term significance. Be open, be yourself."
+  ],
+  Cancer:[
+    "The moon calls you home — to yourself. Your sensitivity is not weakness; it is your greatest gift. Someone close needs your gentle wisdom this week.",
+    "Your intuition about a financial matter is correct. Trust what you feel, not just what you can prove. Your instincts are your inner compass.",
+    "Spirit ancestors are close. If you have been asking for signs, the signs are already around you. Pay attention to the small moments.",
+    "Your wellbeing is asking for more gentleness. Rest is not laziness — it is how you refill what you give so freely to others."
+  ],
+  Leo:[
+    "The sun illuminates your heart. Love — whether romantic, familial or self-love — is expanding. You deserve all of it. Open your arms wide.",
+    "Your natural leadership is needed. Step forward without apology. Your confidence inspires others more than you realise.",
+    "Creative energy is building. A long-held artistic dream or project is trying to get your attention. Give it even one hour this week.",
+    "Vitality and magnetism are high. Show up fully — the world is ready to receive what only you can offer."
+  ],
+  Virgo:[
+    "You've been overthinking a relationship. Your guides say: lead with your heart this week, not your analysis. Love isn't a problem to solve.",
+    "Your careful planning is about to pay off. A practical matter resolves in your favour — you'll see why your patience was necessary.",
+    "Spirit is asking you to release perfectionism in one area of your life. 'Good enough and genuine' beats 'perfect and withheld' every time.",
+    "Health and routine deserve attention. A small, consistent change made now will have an outsize impact on your wellbeing by the end of the month."
+  ],
+  Libra:[
+    "Balance is returning to your relationships. A recent tension eases this week — choose peace, not because you're backing down, but because you've already won.",
+    "Financial balance is possible but requires one honest decision. Your scales know what's right. Trust them.",
+    "Your guides surround you with harmony. A creative or spiritual project that brings you joy is calling loudly. Answer it.",
+    "Body and soul want the same thing: less pressure. Build in more moments of genuine rest and pleasure this week."
+  ],
+  Scorpio:[
+    "Deep waters are moving. A transformation in your closest relationship is underway — it asks for your honesty and your trust simultaneously.",
+    "Your instincts about a financial opportunity are sharp. But research before you act — the full picture hasn't revealed itself yet.",
+    "Your psychic sensitivity is heightened this week. Pay close attention to dreams, hunches and unexplained feelings. Spirit is communicating.",
+    "Your intensity is a gift — but it can also burn. Make space for lightness this week. Laughter heals things that wisdom cannot."
+  ],
+  Sagittarius:[
+    "Adventure is calling — even if the adventure is internal. A new perspective on an old situation is available to you. Step outside your usual viewpoint.",
+    "Abundance is attracted to your optimism. Your belief that things will work out is not naive — it is magnetic. Keep the faith.",
+    "Truth and wisdom are your guiding lights this week. A teacher, book or conversation will arrive at exactly the right moment.",
+    "Your body wants movement and freedom. Don't let obligations crowd out the joy that keeps your spirit bright."
+  ],
+  Capricorn:[
+    "The mountain you've been climbing is closer to the top than it looks. A relationship provides unexpected support this week — receive it gracefully.",
+    "Your hard work is creating real results, even if they're not fully visible yet. Saturn says: keep going. The harvest is near.",
+    "Your ancestors and guides are proud of your determination. Ask for their support in prayer or meditation — it will strengthen your resolve.",
+    "Rest is as strategic as effort. Your body and mind need recovery time. Schedule it as you would any important appointment."
+  ],
+  Aquarius:[
+    "Your vision for the future is clearer than ever. Share it — the right people will recognise its value and join your journey.",
+    "An unconventional financial idea deserves more than a passing thought. What looks unusual from the outside may be exactly the right direction.",
+    "Uranus sparks unexpected insight. A solution to a long-standing problem appears — in a dream, in a random conversation, in a quiet moment. Stay open.",
+    "You give so much to collective causes — remember to tend your own garden too. Your wellbeing matters as much as the world you're working to build."
+  ],
+  Pisces:[
+    "The universe is whispering your name. Your spiritual sensitivity is especially heightened — lean into it. Messages are coming through clearly right now.",
+    "Neptune softens practical edges, but abundance flows to you through creative channels. A gift or opportunity arrives from an unexpected direction.",
+    "Your dreams this week carry messages. Keep a notebook by your bed. The symbols and feelings are guidance from your higher self and guides.",
+    "Rest, water, and beauty are what your soul needs. Protect your energy carefully — not everyone deserves access to your deepest self."
+  ]
 };
 
-const READER_SPECIALTIES = {
-  '4477': ['Clairvoyant','Tarot','Astrology','Numerology','Twin Flame'],
-  '4491': ['Clairvoyant','Psychic','Spiritual Guide','Life Coach'],
-  '4455': ['Psychic','Clairsentient','Dream Analyst'],
-  '4468': ['Clairvoyant','Counsellor','Tarot','Crystals','Pendulum'],
-  '4467': ['Clairvoyant','Clairsentient','Clairaudient','Reiki','Tarot'],
-  '4476': ['Psychic','Clairvoyant','Life Coach','Tarot'],
-  '4041': ['Clairvoyant','Medium','Clairsentient','Tarot'],
-  '5330': ['Clairvoyant','Medium','Psychic','Reiki Master','Hypnotherapy','NLP','Past Lives'],
-};
-
-const READER_VIDEOS = {
-  '4455': 'https://youtube.com/embed/ytTtT0OAfvg',
-  '4467': 'https://player.vimeo.com/video/881693455?h=afab44314a',
-};
-
-let allReaders = [];
-
-function stars(n) { return '★'.repeat(n) + '☆'.repeat(5-n); }
-
-function statusInfo(s) {
-  if(s==='available') return {cls:'s-available', label:'🟢 Available Now'};
-  if(s==='busy') return {cls:'s-busy', label:'🟡 With a Client'};
-  return {cls:'s-offline', label:'⚫ Offline'};
+function buildHoroscopeGrid() {
+  const grid = document.getElementById('horoscopeGrid');
+  grid.innerHTML = SIGNS.map(s => `
+    <div class="horoscope-card" onclick="openHoro('${s.name}')">
+      <div class="horo-sign">${s.emoji}</div>
+      <div class="horo-name">${s.name}</div>
+      <div class="horo-dates">${s.dates}</div>
+    </div>
+  `).join('');
 }
 
-function parseHTML(html) {
-  const blocks = html.split(/<div class="op op-/).slice(1);
-  const readers = [];
-  blocks.forEach(block => {
-    const pinM = block.match(/^(\d+) ([a-z\-]+)/);
-    if(!pinM) return;
-    const pin = pinM[1], status = pinM[2];
-    const nameM = block.match(/alt="([^"]+)"/);
-    const imgM = block.match(/readerimages\/images\/([^\s"]+)/);
-    const starCount = (block.match(/class="star"/g)||[]).length;
-    if(!nameM) return;
-    readers.push({
-      pin, status,
-      name: nameM[1],
-      img: imgM ? imgM[1] : `${pin}-1_lf`,
-      stars: starCount
+function openHoro(name) {
+  const s = SIGNS.find(x => x.name === name);
+  const texts = HORO_TEXT[name];
+  const themes = HORO_THEMES[Math.floor(Math.random()*HORO_THEMES.length)];
+  document.getElementById('horoModalSign').textContent = s.emoji;
+  document.getElementById('horoModalTitle').textContent = s.name;
+  document.getElementById('horoModalDates').textContent = `${s.dates} · ${s.element} · Ruled by ${s.ruler}`;
+  document.getElementById('horoModalBody').innerHTML = texts.map((t,i) => `
+    <div class="horo-section-label">${themes[i].toUpperCase()}</div>
+    <p>${t}</p>
+  `).join('');
+  document.getElementById('horoModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeHoroModal(){
+  document.getElementById('horoModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// ─── BLOG ─────────────────────────────────────────────────────────
+function buildBlog() {
+  const grid = document.getElementById('blogGrid');
+  grid.innerHTML = BLOGS.map((b,i) => `
+    <div class="blog-card" onclick="openBlog(${i})">
+      <div class="blog-card-body">
+        <div class="blog-tag">${b.tag}</div>
+        <div class="blog-title">${b.title}</div>
+        <div class="blog-excerpt">${b.excerpt}</div>
+      </div>
+      <div class="blog-card-footer">
+        <span class="blog-date">${b.date}</span>
+        <span class="read-more">Read More →</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openBlog(i) {
+  const b = BLOGS[i];
+  document.getElementById('blogModalTitle').textContent = b.title;
+  document.getElementById('blogModalBody').innerHTML = b.body;
+  document.getElementById('blogModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeBlogModal(){
+  document.getElementById('blogModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// ─── TAROT ────────────────────────────────────────────────────────
+const DECK = [
+  {name:'The Fool',emoji:'🌟',upright:'New beginnings, spontaneity, a leap of faith',reversed:'Recklessness, poor judgement, missed opportunity'},
+  {name:'The Magician',emoji:'🪄',upright:'Willpower, skill, manifestation, resourcefulness',reversed:'Manipulation, untapped talents, wasted potential'},
+  {name:'The High Priestess',emoji:'🌙',upright:'Intuition, inner knowledge, divine guidance',reversed:'Secrets withheld, disconnection from intuition'},
+  {name:'The Empress',emoji:'🌸',upright:'Abundance, nurturing, creativity, fertility',reversed:'Creative block, dependence, smothering energy'},
+  {name:'The Emperor',emoji:'👑',upright:'Authority, structure, stability, protection',reversed:'Rigidity, domination, inflexibility, control issues'},
+  {name:'The Hierophant',emoji:'⛪',upright:'Tradition, spiritual wisdom, guidance, ritual',reversed:'Rebellion, subversiveness, breaking free of convention'},
+  {name:'The Lovers',emoji:'💞',upright:'Love, harmony, alignment of values, union',reversed:'Disharmony, imbalance, misalignment in relationship'},
+  {name:'The Chariot',emoji:'🏆',upright:'Control, willpower, victory, determination',reversed:'Lack of control, aggression, scattered direction'},
+  {name:'Strength',emoji:'🦁',upright:'Courage, inner strength, patience, compassion',reversed:'Self-doubt, inner weakness, insecurity, fear'},
+  {name:'The Hermit',emoji:'🕯️',upright:'Soul-searching, introspection, wisdom, solitude',reversed:'Isolation, loneliness, withdrawal from guidance'},
+  {name:'Wheel of Fortune',emoji:'☸️',upright:'Good luck, karma, life cycles turning in your favour',reversed:'Bad luck, resistance to change, clinging to the past'},
+  {name:'Justice',emoji:'⚖️',upright:'Fairness, truth, cause and effect, integrity',reversed:'Unfairness, dishonesty, lack of accountability'},
+  {name:'The Hanged Man',emoji:'🙃',upright:'Pause, new perspective, letting go, surrender',reversed:'Delays, stalling, resisting necessary change'},
+  {name:'Death',emoji:'🦋',upright:'Endings, transformation, change, transition',reversed:'Resistance to change, inability to move on'},
+  {name:'Temperance',emoji:'🌈',upright:'Balance, moderation, patience, divine flow',reversed:'Imbalance, excess, lack of long-term vision'},
+  {name:'The Devil',emoji:'🔗',upright:'Shadow self, attachment, patterns, restriction',reversed:'Releasing limiting beliefs, breaking free, liberation'},
+  {name:'The Tower',emoji:'⚡',upright:'Sudden change, upheaval, revelation, awakening',reversed:'Personal transformation, fear of necessary change'},
+  {name:'The Star',emoji:'⭐',upright:'Hope, faith, healing, renewal, divine guidance',reversed:'Lack of faith, despair, blocked healing'},
+  {name:'The Moon',emoji:'🌕',upright:'Intuition, the unconscious, illusion, dreams',reversed:'Release of fear, emerging clarity, hidden truth revealed'},
+  {name:'The Sun',emoji:'☀️',upright:'Positivity, joy, vitality, success, abundance',reversed:'Overconfidence, blocked joy, needing to look within'},
+  {name:'Judgement',emoji:'📯',upright:'Awakening, reckoning, calling, transformation',reversed:'Ignoring the call, self-doubt, refusing to change'},
+  {name:'The World',emoji:'🌍',upright:'Completion, wholeness, achievement, new cycle',reversed:'Incompletion, no closure, short-cutting the journey'},
+  {name:'Ace of Cups',emoji:'💧',upright:'New love, emotional awakening, compassion, flow',reversed:'Blocked emotions, emotional avoidance, feeling empty'},
+  {name:'Two of Cups',emoji:'🥂',upright:'Partnership, attraction, deep connection, union',reversed:'Imbalance, communication breakdown, tension in bonds'},
+  {name:'Three of Cups',emoji:'🎉',upright:'Celebration, friendship, community, joy',reversed:'Independence needed, overindulgence, gossip'},
+  {name:'Four of Cups',emoji:'🪑',upright:'Contemplation, withdrawal, reassessing, pause',reversed:'Missed opportunity, apathy, emerging from reflection'},
+  {name:'Five of Cups',emoji:'😢',upright:'Loss, grief, focusing on what was lost',reversed:'Acceptance, moving on, finding peace in what remains'},
+  {name:'Six of Cups',emoji:'🌻',upright:'Nostalgia, reunion, innocence, past joy returning',reversed:'Living in the past, naivety, unfounded expectations'},
+  {name:'Seven of Cups',emoji:'💭',upright:'Choices, fantasy, illusion, imagination',reversed:'Clarity emerging, making a decision, facing reality'},
+  {name:'Nine of Cups',emoji:'😊',upright:'Contentment, wishes fulfilled, gratitude, bliss',reversed:'Dissatisfaction, greed, the wish unfulfilled yet'},
+  {name:'Ten of Cups',emoji:'🏠',upright:'Harmony, divine love, family joy, true fulfilment',reversed:'Disconnection, broken harmony, surface happiness'},
+  {name:'Ace of Pentacles',emoji:'💰',upright:'New abundance, opportunity, material beginnings',reversed:'Lost opportunity, scarcity mindset, poor planning'},
+  {name:'Ace of Wands',emoji:'🔥',upright:'Inspiration, creative spark, new passion, potential',reversed:'Delays, lack of motivation, creative blocks'},
+  {name:'Ace of Swords',emoji:'⚔️',upright:'Clarity, breakthrough, truth, mental power',reversed:'Confusion, chaos, using truth unkindly'},
+  {name:'Queen of Cups',emoji:'👸',upright:'Compassionate, intuitive, emotionally wise, loving',reversed:'Emotional insecurity, dependency, overwhelm'},
+  {name:'King of Cups',emoji:'🤴',upright:'Emotionally balanced, wise, compassionate, calm',reversed:'Emotional manipulation, moodiness, hidden feelings'},
+  {name:'Queen of Wands',emoji:'🌺',upright:'Confident, courageous, vibrant, independent spirit',reversed:'Self-doubt, jealousy, scattered energy'},
+  {name:'King of Wands',emoji:'🦁',upright:'Visionary leader, inspiring, bold, entrepreneurial',reversed:'Impulsive, overbearing, short-term thinking'},
+  {name:'Knight of Cups',emoji:'🐎',upright:'Romantic, creative, following the heart\'s calling',reversed:'Moodiness, illusion, emotional immaturity'},
+  {name:'Page of Wands',emoji:'🌱',upright:'Inspired beginnings, enthusiasm, exploring new ideas',reversed:'Scattered energy, lack of direction, hasty action'},
+];
+
+const POSITIONS=['Past','Present','Future'];
+let drawnCards=[],shuffled=false;
+
+function shuffleCards(){
+  const btn=document.getElementById('shuffleBtn');
+  const status=document.getElementById('shuffleStatus');
+  btn.disabled=true;
+  const syms=['✨','🌙','⭐','🔮','💜','🌟','🃏'];
+  let i=0;
+  const iv=setInterval(()=>{status.textContent=syms[i%syms.length]+' Shuffling…';i++;},150);
+  setTimeout(()=>{
+    clearInterval(iv);
+    status.textContent='✨ Click each card to reveal your reading';
+    const s=[...DECK].sort(()=>Math.random()-.5);
+    drawnCards=s.slice(0,3).map(c=>({...c,reversed:Math.random()<.3}));
+    [0,1,2].forEach(i=>{
+      document.getElementById('cardInner'+i).classList.remove('flipped');
+      const f=document.getElementById('tcardFront'+i);
+      f.innerHTML='';f.className='card-front';
     });
-  });
-  return readers;
+    document.getElementById('tarotReading').style.display='none';
+    shuffled=true;btn.disabled=false;
+    btn.textContent='✨ Shuffle Again';
+  },1800);
 }
 
-async function loadReaders() {
-  try {
-    const res = await fetch(FEED_URL);
-    const html = await res.json();
-    allReaders = parseHTML(html);
-    renderReaders(allReaders);
-  } catch(e) {
-    console.warn('Feed fetch failed:', e);
-    // Fallback to hardcoded
-    allReaders = [
-      {pin:'4477',status:'available',name:'Bronwen',img:'4477-3_lf',stars:5},
-      {pin:'4491',status:'available',name:'Clara',img:'4491-1_lf',stars:5},
-      {pin:'4455',status:'available',name:'Jackie',img:'4455-2_lf',stars:3},
-      {pin:'4468',status:'available',name:'Leonie',img:'4468-1_lf',stars:5},
-      {pin:'4467',status:'busy',name:'Avatah',img:'4467-1_lf',stars:5},
-      {pin:'4476',status:'busy',name:'Terry',img:'4476-3_lf',stars:5},
-      {pin:'5330',status:'logged-off',name:'Caroline',img:'5330-4_lf',stars:5,isFounder:true},
-    ];
-    renderReaders(allReaders);
+function flipCard(idx){
+  if(!shuffled||!drawnCards[idx])return;
+  const inner=document.getElementById('cardInner'+idx);
+  if(inner.classList.contains('flipped'))return;
+  const c=drawnCards[idx];
+  const f=document.getElementById('tcardFront'+idx);
+  if(c.reversed)f.classList.add('reversed');
+  f.innerHTML=`<div class="card-emoji">${c.emoji}</div><div class="card-name">${c.name}</div>${c.reversed?'<div class="card-reversed-tag">REVERSED</div>':''}<div class="card-meaning">${c.reversed?c.reversed:c.upright}</div>`;
+  inner.classList.add('flipped');
+  if([0,1,2].every(i=>document.getElementById('cardInner'+i).classList.contains('flipped')))showReading();
+}
+
+function showReading(){
+  const content=document.getElementById('readingContent');
+  const tpls=[
+    (n,p,m)=>`Your <strong>${p}</strong> card, <strong>${n}</strong>, speaks of ${m.toLowerCase()}. This energy has shaped your path and carries important lessons.`,
+    (n,p,m)=>`The <strong>${n}</strong> in the <strong>${p}</strong> position reveals ${m.toLowerCase()} — an energy that is active and present in your life right now.`,
+    (n,p,m)=>`Looking to your <strong>${p}</strong>, <strong>${n}</strong> brings the energy of ${m.toLowerCase()}. Trust what this reveals about the road ahead.`,
+  ];
+  content.innerHTML=drawnCards.map((c,i)=>{
+    const m=c.reversed?c.reversed:c.upright;
+    return `<div class="reading-card"><div class="reading-card-name">${c.emoji} ${c.name}${c.reversed?' (Reversed)':''} — ${POSITIONS[i]}</div><div class="reading-card-text">${tpls[i](c.name,POSITIONS[i],m)}</div></div>`;
+  }).join('');
+  document.getElementById('tarotReading').style.display='block';
+}
+
+function resetTarot(){
+  shuffled=false;drawnCards=[];
+  [0,1,2].forEach(i=>{
+    document.getElementById('cardInner'+i).classList.remove('flipped');
+    const f=document.getElementById('tcardFront'+i);
+    f.innerHTML='';f.className='card-front';
+  });
+  document.getElementById('tarotReading').style.display='none';
+  document.getElementById('shuffleStatus').textContent='';
+  document.getElementById('shuffleBtn').textContent='✨ Shuffle the Deck';
+}
+
+// ─── READER FEED ──────────────────────────────────────────────────
+const FEED_URL='https://www.crystalheartpsychics.com/wp-json/inveroak-feed/v1/feed/';
+const IMG_BASE='https://services.inveroak.co.uk/readerimages/images/';
+const PROFILE_BASE='https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
+
+const BIOS={
+  '4322':'A compassionate and gifted reader who connects deeply with spirit to bring messages of love, clarity and hope. Specialising in relationships and life path guidance.',
+  '6317':'A naturally gifted psychic with a warm, nurturing approach. Known for accuracy in love readings and the ability to tune into your energy quickly and clearly.',
+  '4476':'Terry is an experienced psychic reader with exceptional skills in connecting with your energy. Warm, direct and deeply accurate — bringing real clarity to the questions that matter most.',
+  '2556':'A highly intuitive reader who blends tarot and psychic ability to paint a vivid picture of your situation. Known for practical guidance you can act on.',
+  '5330':'Caroline is a Psychic Medium, Clairvoyant and naturally gifted healer. NLP Master Practitioner, CBT Therapist, Hypnotherapist and Past Life Regression Therapist. Reiki & Seichem Master Teacher. Featured in Soul & Spirit Magazine 2013, 2014 & 2016. Founder of Crystal Heart Psychics.',
+  '3349':'A gifted medium with a kind, gentle energy who specialises in spirit communication, past life regression and soul purpose readings.',
+};
+const SPECS={
+  '4322':['Clairvoyant','Love & Relationships','Life Path','Tarot'],
+  '6317':['Clairvoyant','Angel Cards','Love Readings','Energy Work'],
+  '4476':['Psychic Medium','Tarot','Career','Relationships'],
+  '2556':['Tarot','Psychic','Clairvoyant','Life Coaching'],
+  '5330':['Psychic Medium','Clairvoyant','Past Lives','Healing','NLP','Hypnotherapy'],
+  '3349':['Spirit Communication','Past Lives','Soul Purpose','Mediumship'],
+};
+
+let allReaders=[];
+
+function parseXML(html){
+  const blocks=html.split(/<div class="op op-/).slice(1);
+  return blocks.map(b=>{
+    const pM=b.match(/^(\d+) ([a-z\-]+)/);
+    if(!pM)return null;
+    const nM=b.match(/alt="([^"]+)"/);
+    const iM=b.match(/src="([^"]+)"/);
+    if(!nM)return null;
+    const name=nM[1].replace(/ - (Available|Busy|Offline)/g,'').trim();
+    return{pin:pM[1],status:pM[2],name,img:iM?iM[1].split('/').pop():null};
+  }).filter(Boolean);
+}
+
+async function loadReaders(){
+  try{
+    const res=await fetch(FEED_URL+'?t='+Date.now(),{cache:'no-cache'});
+    const text=await res.text();
+    let readers=[];
+    if(text.trim().startsWith('[')){
+      readers=JSON.parse(text).map(r=>({pin:String(r.pin||r.id||''),name:r.name||'Reader',status:r.status||'logged-off',img:r.image_file||null}));
+    } else {
+      readers=parseXML(text);
+    }
+    allReaders=readers;
+    renderReaders(readers);
+  } catch(e){
+    renderFallback();
   }
 }
 
-function renderReaders(list) {
-  const grid = document.getElementById('readersGrid');
-  if(!list.length) { grid.innerHTML='<div class="loading"><p>No readers found.</p></div>'; return; }
-
-  const sorted = [...list].sort((a,b)=>{
-    const o={available:0,busy:1,'logged-off':2};
-    return (o[a.status]??2)-(o[b.status]??2);
-  });
-
-  grid.innerHTML = sorted.map(r => {
-    const si = statusInfo(r.status);
-    const bio = READER_BIOS[r.pin] || 'An experienced and gifted psychic reader ready to help guide you on your path.';
-    const specs = (READER_SPECIALTIES[r.pin]||[]).slice(0,4).map(s=>`<span class="tag">${s}</span>`).join('');
-    const vid = READER_VIDEOS[r.pin];
-    const vidBtn = vid ? `<a href="#" class="btn-s" onclick="openVid('${vid}');return false;">▶ Video</a>` : '';
-    const chrBtn = r.isFounder ? `<a href="https://crystalheartradio.app" target="_blank" class="btn-s">📻 CHR</a>` : '';
-    const founderBadge = r.isFounder ? `<div style="margin-top:5px;background:linear-gradient(135deg,rgba(244,196,48,0.2),rgba(157,78,221,0.2));border:1px solid rgba(244,196,48,0.4);color:#f4c430;padding:2px 9px;border-radius:20px;font-size:10px;letter-spacing:1px;display:inline-block">👑 FOUNDER</div>` : '';
-    const ctaLabel = r.status==='available' ? '📞 Speak to Me Now' : '📅 Book a Reading';
-    const imgUrl = `${IMG_BASE}${r.img}`;
-
-    return `<div class="reader-card" data-status="${r.status}">
+function renderReaders(readers){
+  const grid=document.getElementById('readersGrid');
+  if(!readers.length){renderFallback();return;}
+  grid.innerHTML=readers.map(r=>{
+    const bio=BIOS[r.pin]||'A gifted and experienced reader here to guide you with clarity, compassion and insight.';
+    const specs=SPECS[r.pin]||['Psychic','Tarot','Clairvoyant'];
+    const imgUrl=r.img?IMG_BASE+r.img:null;
+    const badgeClass=r.status==='available'?'s-available':r.status==='busy'?'s-busy':'s-offline';
+    const badgeText=r.status==='available'?'🟢 Available':r.status==='busy'?'🟡 Busy':'⚫ Offline';
+    const iid='img_'+r.pin,fid='fb_'+r.pin;
+    return`<div class="reader-card" data-status="${r.status}">
       <div class="reader-card-top">
-        <img src="${imgUrl}" alt="${r.name}" class="reader-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="reader-photo-fallback">🔮</div>
+        ${imgUrl?`<img class="reader-photo" id="${iid}" src="${imgUrl}" alt="${r.name}" onerror="document.getElementById('${iid}').style.display='none';document.getElementById('${fid}').style.display='flex'"><div class="reader-photo-fallback" id="${fid}">🔮</div>`:`<div class="reader-photo-fallback" style="display:flex">🔮</div>`}
         <div class="reader-info">
           <div class="reader-name">${r.name}</div>
           <div class="reader-pin">PIN: ${r.pin}</div>
-          <div class="stars">${stars(r.stars)}</div>
-          <span class="status-badge ${si.cls}">${si.label}</span>
-          ${founderBadge}
+          <div class="stars">★★★★★</div>
+          <span class="status-badge ${badgeClass}">${badgeText}</span>
         </div>
       </div>
       <div class="reader-card-body">
         <div class="reader-bio">${bio}</div>
-        <div class="specialty-wrap">${specs}</div>
+        <div class="specialty-wrap">${specs.map(s=>`<span class="tag">${s}</span>`).join('')}</div>
       </div>
       <div class="card-footer">
-        <a href="${PROFILE_BASE}${r.pin}" target="_blank" class="btn-p">${ctaLabel}</a>
-        ${vidBtn}${chrBtn}
+        <a href="${PROFILE_BASE}${r.pin}" target="_blank" class="btn-p">📞 Book a Reading</a>
       </div>
     </div>`;
   }).join('');
 }
 
-function filterReaders(status, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  renderReaders(status==='all' ? allReaders : allReaders.filter(r=>r.status===status));
+function renderFallback(){
+  allReaders=[{pin:'5330',name:'Caroline',status:'available'},{pin:'4476',name:'Terry',status:'offline'},{pin:'4322',name:'Spirit Guide',status:'offline'}];
+  renderReaders(allReaders);
 }
 
-function openVid(url) { document.getElementById('vidFrame').src=url; document.getElementById('vidModal').classList.add('open'); }
-function closeVid() { document.getElementById('vidFrame').src=''; document.getElementById('vidModal').classList.remove('open'); }
-document.getElementById('vidModal').addEventListener('click', e=>{ if(e.target===document.getElementById('vidModal')) closeVid(); });
+function filterReaders(status,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const f=status==='all'?allReaders:allReaders.filter(r=>{
+    if(status==='available')return r.status==='available';
+    if(status==='busy')return r.status==='busy';
+    return r.status!=='available'&&r.status!=='busy';
+  });
+  renderReaders(f);
+}
 
-// Load on start, refresh every 2 minutes
+// ─── INIT ─────────────────────────────────────────────────────────
+buildBlog();
+buildHoroscopeGrid();
 loadReaders();
-setInterval(loadReaders, 2*60*1000);
+setInterval(loadReaders,120000);
 </script>
 </body>
 </html>
