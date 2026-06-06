@@ -282,6 +282,30 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
 .booking-iframe-wrap iframe{display:block;width:100%;height:680px;border:none}
 .booking-modal-footer{padding:16px 24px;background:var(--bg3);border-top:1px solid var(--border);text-align:center;font-size:11px;color:var(--muted)}
 
+
+/* ── Reader Profile Modal ─────────────────────────────────── */
+.reader-modal{position:fixed;inset:0;z-index:9000;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .25s}
+.reader-modal.open{opacity:1;pointer-events:all}
+.reader-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px)}
+.reader-modal-box{position:relative;z-index:1;background:linear-gradient(160deg,#1a0a35 0%,#0d0520 100%);border:1px solid rgba(139,92,246,.5);border-radius:20px;max-width:560px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(124,58,237,.4)}
+.rmp-hero{position:relative;height:260px;overflow:hidden;border-radius:20px 20px 0 0}
+.rmp-hero img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.rmp-hero-fallback{width:100%;height:100%;background:linear-gradient(160deg,#2d1060,#0d0520);display:flex;align-items:center;justify-content:center;font-size:80px}
+.rmp-status{position:absolute;top:14px;right:14px;padding:5px 14px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.5px;backdrop-filter:blur(8px)}
+.rmp-close{position:absolute;top:12px;left:12px;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+.rmp-body{padding:24px 28px 32px}
+.rmp-name{font-family:'Cinzel',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:4px}
+.rmp-starsign{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:12px;letter-spacing:.5px}
+.rmp-pin-badge{display:inline-block;background:rgba(139,92,246,.3);border:1px solid rgba(167,139,250,.6);color:var(--gold);font-family:'Cinzel',serif;font-size:16px;font-weight:700;letter-spacing:3px;padding:7px 18px;border-radius:8px;margin-bottom:16px}
+.rmp-stars{color:#fbbf24;font-size:18px;letter-spacing:3px;margin-bottom:16px}
+.rmp-bio{font-size:14px;color:rgba(255,255,255,.75);line-height:1.8;margin-bottom:20px;white-space:pre-line}
+.rmp-video{margin-bottom:20px;border-radius:10px;overflow:hidden}
+.rmp-video iframe{width:100%;height:220px;border:none;display:block}
+.rmp-actions{display:flex;gap:10px;flex-wrap:wrap}
+.rmp-btn{flex:1;min-width:140px;padding:13px 20px;border-radius:10px;font-weight:700;font-size:14px;text-align:center;cursor:pointer;border:none;text-decoration:none;display:block}
+.rmp-btn-primary{background:linear-gradient(135deg,#7c3aed,#9d4edd);color:#fff}
+.rmp-btn-secondary{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.15)!important}
+.rmp-btn:hover{opacity:.88}
 </style>
 </head>
 <body>
@@ -1246,11 +1270,14 @@ async function loadReaderStatuses(){
       const pin=get('Pin');
       const status=(get('Status')||'').toLowerCase();
       const pic=get('Picture');
+      const vid=get('Video');
       return{
         pin,
         name:get('Name'),
         bio:get('Description').replace(/\s+/g,' ').trim(),
         status,
+        starSign:get('StarSign')||'',
+        video:(vid&&vid!=='None')?vid:'',
         photo:PHOTO_OVERRIDES[pin]||(pic&&pic!=='None'?pic:''),
         rating:parseInt(get('Rating'))||100
       };
@@ -1280,7 +1307,7 @@ function renderReaders(){
     const photoHtml=r.photo
       ?`<img src="${r.photo}" alt="${r.name} - Crystal Heart Psychic" loading="lazy" onerror="this.style.display='none'">`
       :`<div style="width:100%;height:100%;background:linear-gradient(160deg,#2d1060,#0d0520);display:flex;align-items:center;justify-content:center;font-size:64px">🔮</div>`;
-    return`<div class="reader-card">
+    return`<div class="reader-card" onclick="openReaderModal('${r.pin}')">
       <div class="reader-photo-wrap">
         ${photoHtml}
         <div class="reader-photo-overlay"></div>
@@ -1320,6 +1347,64 @@ function closeBookingModal() {
   document.body.style.overflow = '';
 }
 
+
+// ── Reader Profile Modal ──────────────────────────────────────────
+function openReaderModal(pin){
+  var r=null;
+  for(var i=0;i<liveReaders.length;i++){if(liveReaders[i].pin===pin){r=liveReaders[i];break;}}
+  if(!r)return;
+  var isAvail=r.status==='available';
+  var isBusy=r.status==='busy';
+  var statusClass=isAvail?'s-available':isBusy?'s-busy':'s-offline';
+  var statusText=isAvail?'&#127374; Available Now':isBusy?'&#128993; With a Client':'&#9899; Offline';
+  var hero=document.getElementById('rmpHero');
+  if(r.photo){
+    hero.innerHTML='<img src="'+r.photo+'" onerror="this.outerHTML='<div class=rmp-hero-fallback>&#128302;</div>'"><span class="rmp-status '+statusClass+'">'+statusText+'</span><button class="rmp-close" onclick="closeReaderModal()">&#10005;</button>';
+  } else {
+    hero.innerHTML='<div class="rmp-hero-fallback">&#128302;</div><span class="rmp-status '+statusClass+'">'+statusText+'</span><button class="rmp-close" onclick="closeReaderModal()">&#10005;</button>';
+  }
+  document.getElementById('rmpName').textContent=r.name;
+  document.getElementById('rmpStarsign').textContent=r.starSign?'Star Sign: '+r.starSign:'Crystal Heart Psychic';
+  document.getElementById('rmpPin').textContent='PIN: '+r.pin;
+  document.getElementById('rmpBio').textContent=r.bio||'A gifted and experienced Crystal Heart reader.';
+  var vidEl=document.getElementById('rmpVideo');
+  if(r.video){
+    vidEl.style.display='block';
+    vidEl.innerHTML='<iframe src="'+r.video+'" allow="autoplay; fullscreen" allowfullscreen></iframe>';
+  } else {
+    vidEl.style.display='none';
+    vidEl.innerHTML='';
+  }
+  var ctaHref=(isAvail||isBusy)?'https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin='+r.pin:'mailto:info@crystalheartpsychics.com?subject=Reading Request - '+encodeURIComponent(r.name);
+  var ctaText=isAvail?'Book a Reading Now':isBusy?'Join the Queue':'Leave a Message';
+  var ctaTarget=(isAvail||isBusy)?'_blank':'_self';
+  document.getElementById('rmpActions').innerHTML='<a href="'+ctaHref+'" target="'+ctaTarget+'" class="rmp-btn rmp-btn-primary">'+ctaText+'</a><button class="rmp-btn rmp-btn-secondary" onclick="closeReaderModal()">Close</button>';
+  document.getElementById('readerModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeReaderModal(){
+  document.getElementById('readerModal').classList.remove('open');
+  document.body.style.overflow='';
+  document.getElementById('rmpVideo').innerHTML='';
+}
+
 </script>
+
+<!-- Reader Profile Modal -->
+<div class="reader-modal" id="readerModal" onclick="if(event.target.classList.contains('reader-modal-backdrop'))closeReaderModal()">
+  <div class="reader-modal-backdrop"></div>
+  <div class="reader-modal-box" id="readerModalBox">
+    <div class="rmp-hero" id="rmpHero"></div>
+    <div class="rmp-body">
+      <div class="rmp-name" id="rmpName"></div>
+      <div class="rmp-starsign" id="rmpStarsign"></div>
+      <div class="rmp-pin-badge" id="rmpPin"></div>
+      <div class="rmp-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="rmp-bio" id="rmpBio"></div>
+      <div class="rmp-video" id="rmpVideo" style="display:none"></div>
+      <div class="rmp-actions" id="rmpActions"></div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
