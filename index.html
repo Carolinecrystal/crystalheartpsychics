@@ -96,22 +96,29 @@ nav a:hover{color:var(--purple3);border-bottom-color:var(--purple)}
 .filter-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:7px 18px;border-radius:999px;font-size:11px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif}
 .filter-btn:hover,.filter-btn.active{background:rgba(124,58,237,.2);border-color:var(--purple2);color:var(--purple3)}
 
+
+/* readers section emphasis */
+#readers.section-hdr{background:linear-gradient(180deg,rgba(124,58,237,.08) 0%,transparent 100%);padding:70px 20px 40px;border-top:1px solid rgba(124,58,237,.2)}
 /* reader cards */
-.readers-section{padding:0 20px 50px;max-width:1200px;margin:0 auto}
-.readers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-.reader-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .25s,box-shadow .25s}
-.reader-card:hover{border-color:var(--border2);box-shadow:0 8px 32px rgba(124,58,237,.18)}
-.reader-card-top{display:flex;align-items:center;padding:16px;gap:14px;border-bottom:1px solid var(--border)}
-.reader-photo{width:76px;height:106px;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--border2);flex-shrink:0}
-.reader-photo-fallback{width:76px;height:106px;border-radius:8px;background:var(--bg3);border:1px solid var(--border2);display:none;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}
-.reader-name{font-family:'Cinzel',serif;font-size:17px;font-weight:600;color:var(--white);margin-bottom:3px}
-.reader-pin{font-size:11px;color:var(--muted);letter-spacing:1px;margin-bottom:6px}
-.stars{color:var(--gold);font-size:12px;margin-bottom:6px}
-.status-badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
-.s-available{background:rgba(0,200,100,.12);color:#00e676;border:1px solid rgba(0,200,100,.3)}
-.s-busy{background:rgba(255,170,0,.12);color:#ffaa00;border:1px solid rgba(255,170,0,.3)}
-.s-offline{background:rgba(100,80,140,.12);color:var(--muted);border:1px solid var(--border)}
-.reader-card-body{padding:14px 16px}
+.readers-section{padding:0 20px 60px;max-width:1200px;margin:0 auto}
+.readers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.reader-card{background:linear-gradient(160deg,#1a0a35 0%,#0d0520 100%);border:1px solid rgba(124,58,237,.4);border-radius:16px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;cursor:pointer}
+.reader-card:hover{transform:translateY(-4px);border-color:rgba(167,139,250,.7);box-shadow:0 12px 40px rgba(124,58,237,.35)}
+.reader-photo-wrap{position:relative;width:100%;height:260px;overflow:hidden}
+.reader-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.reader-photo-overlay{position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,#0d0520)}
+.reader-status-float{position:absolute;top:12px;right:12px;padding:4px 12px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;backdrop-filter:blur(8px)}
+.reader-card-body{padding:16px 18px 20px}
+.reader-name{font-family:'Cinzel',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:2px}
+.reader-pin{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:1px;margin-bottom:8px}
+.reader-stars{color:#fbbf24;font-size:14px;margin-bottom:8px;letter-spacing:2px}
+.reader-bio{font-size:13px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.reader-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.reader-tag{background:rgba(124,58,237,.2);color:#c4b5fd;border:1px solid rgba(124,58,237,.3);padding:3px 10px;border-radius:999px;font-size:11px}
+.reader-cta{display:block;text-align:center;background:linear-gradient(135deg,#7c3aed,#9d4edd);color:#fff;font-weight:600;font-size:14px;padding:11px 20px;border-radius:10px;text-decoration:none;transition:opacity .2s;letter-spacing:.3px}
+.reader-cta:hover{opacity:.88}
+.reader-cta-offline{background:rgba(255,255,255,.08);color:rgba(255,255,255,.4);cursor:default}
+.reader-card-body
 .reader-bio{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .specialty-wrap{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
 .tag{background:rgba(124,58,237,.12);border:1px solid var(--border2);color:var(--purple3);padding:2px 9px;border-radius:999px;font-size:10px}
@@ -289,8 +296,8 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
 </header>
 
 <nav>
+  <a href="#readers">🔮 Our Readers</a>
   <a href="#booking">Book a Reading</a>
-  <a href="#readers">Our Readers</a>
   <a href="#blog">Blog</a>
   <a href="#horoscopes">Horoscopes</a>
   <a href="#tarot">Tarot</a>
@@ -342,6 +349,19 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
 <div class="disclaimer">
   All services 18+. 0906 calls cost £1.50 per min plus your phone provider's access charge. Calls recorded. Bill payer's permission required. Entertainment only.<br>
   SMS costs £1.50 per reply, max 3 replies per message. To opt out call helpline. SP: Inveroak.com, PO Box 10015 CM1 9HH. Helpline: <a href="tel:03301140300">0330 114 0300</a>
+</div>
+
+<!-- Readers — THE HEART OF THE SITE -->
+<div class="section-hdr" id="readers">
+  <h2>🔮 Our Psychic Readers</h2>
+  <div class="divider"></div>
+  <p style="font-size:16px;max-width:600px;margin:0 auto">Every reader is personally vetted by Caroline. Genuine, gifted, and available 24/7.</p>
+  <p style="font-size:13px;color:rgba(255,255,255,.4);margin-top:8px">Live availability updates every 90 seconds</p>
+</div>
+<div class="readers-section">
+  <div class="readers-grid" id="readersGrid">
+    <div class="loading"><div class="spinner"></div><p>Loading our readers…</p></div>
+  </div>
 </div>
 
 <!-- Booking -->
@@ -431,24 +451,6 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
     <div class="booking-modal-footer">
       🔒 Secure payment · Powered by Inveroak · You will receive a call from your reader after booking
     </div>
-  </div>
-</div>
-
-<!-- Readers -->
-<div class="section-hdr" id="readers">
-  <h2>Our Psychic Readers</h2>
-  <div class="divider"></div>
-  <p>All readers are personally vetted by Caroline. Call, text or book online.</p>
-</div>
-<div class="filter-bar">
-  <button class="filter-btn active" onclick="filterReaders('all',this)">All Readers</button>
-  <button class="filter-btn" onclick="filterReaders('available',this)">🟢 Available Now</button>
-  <button class="filter-btn" onclick="filterReaders('busy',this)">🟡 Busy</button>
-  <button class="filter-btn" onclick="filterReaders('logged-off',this)">⚫ Offline</button>
-</div>
-<div class="readers-section">
-  <div class="readers-grid" id="readersGrid">
-    <div class="loading"><div class="spinner"></div><p>Connecting to our readers…</p></div>
   </div>
 </div>
 
@@ -1224,115 +1226,128 @@ function resetTarot(){
 }
 
 // ─── READER FEED ──────────────────────────────────────────────────
-const FEED_URL='https://corsproxy.io/?url=https://www.crystalheartpsychics.com/wp-json/inveroak-feed/v1/feed/';
-const IMG_BASE='https://services.inveroak.co.uk/readerimages/images/';
 const PROFILE_BASE='https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
+const FEED_URL='https://corsproxy.io/?url=https://www.crystalheartpsychics.com/wp-json/inveroak-feed/v1/feed/';
 
-const BIOS={
-  '4322':'A compassionate and gifted reader who connects deeply with spirit to bring messages of love, clarity and hope. Specialising in relationships and life path guidance.',
-  '6317':'A naturally gifted psychic with a warm, nurturing approach. Known for accuracy in love readings and the ability to tune into your energy quickly and clearly.',
-  '4476':'Terry is an experienced psychic reader with exceptional skills in connecting with your energy. Warm, direct and deeply accurate — bringing real clarity to the questions that matter most.',
-  '2556':'A highly intuitive reader who blends tarot and psychic ability to paint a vivid picture of your situation. Known for practical guidance you can act on.',
-  '5330':'Caroline is a Psychic Medium, Clairvoyant and naturally gifted healer. NLP Master Practitioner, CBT Therapist, Hypnotherapist and Past Life Regression Therapist. Reiki & Seichem Master Teacher. Featured in Soul & Spirit Magazine 2013, 2014 & 2016. Founder of Crystal Heart Psychics.',
-  '3349':'A gifted medium with a kind, gentle energy who specialises in spirit communication, past life regression and soul purpose readings.',
-};
-const SPECS={
-  '4322':['Clairvoyant','Love & Relationships','Life Path','Tarot'],
-  '6317':['Clairvoyant','Angel Cards','Love Readings','Energy Work'],
-  '4476':['Psychic Medium','Tarot','Career','Relationships'],
-  '2556':['Tarot','Psychic','Clairvoyant','Life Coaching'],
-  '5330':['Psychic Medium','Clairvoyant','Past Lives','Healing','NLP','Hypnotherapy'],
-  '3349':['Spirit Communication','Past Lives','Soul Purpose','Mediumship'],
-};
+// ── Static reader data (photos + bios always show) ──
+const READERS_STATIC=[
+  {
+    pin:'5330',
+    name:'Caroline',
+    title:'Psychic Medium & Founder',
+    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b68e4e496_generated_image.png',
+    bio:'Caroline is the founder of Crystal Heart Psychics. A gifted Psychic Medium, Clairvoyant and healer with over 17 years of experience. NLP Master Practitioner, CBT Therapist, Hypnotherapist and Past Life Regression Therapist. Reiki & Seichem Master Teacher. Featured in Soul & Spirit Magazine 2013, 2014 & 2016.',
+    specs:['Psychic Medium','Clairvoyant','Past Lives','NLP','Hypnotherapy','Healing'],
+    stars:5,
+    // Caroline does NOT take live calls — she books privately
+    forceOffline:true
+  },
+  {
+    pin:'4322',
+    name:'Serena',
+    title:'Clairvoyant & Medium',
+    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/c43c3e9a9_generated_image.png',
+    bio:'A compassionate and gifted reader who connects deeply with spirit to bring messages of love, clarity and hope. Specialising in relationships and life path guidance.',
+    specs:['Clairvoyant','Love & Relationships','Life Path','Tarot'],
+    stars:5
+  },
+  {
+    pin:'6317',
+    name:'Lydia',
+    title:'Angel Card Reader',
+    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b0baacd1c_generated_image.png',
+    bio:'A naturally gifted psychic with a warm, nurturing approach. Known for accuracy in love readings and the ability to tune into your energy quickly and clearly.',
+    specs:['Clairvoyant','Angel Cards','Love Readings','Energy Work'],
+    stars:5
+  },
+  {
+    pin:'4476',
+    name:'Terry',
+    title:'Psychic Medium & Tarot',
+    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/a7c70a14a_generated_image.png',
+    bio:'An experienced psychic reader with exceptional skills in connecting with your energy. Warm, direct and deeply accurate — bringing real clarity to the questions that matter most.',
+    specs:['Psychic Medium','Tarot','Career','Relationships'],
+    stars:5
+  },
+  {
+    pin:'2556',
+    name:'Luna',
+    title:'Tarot & Psychic Intuitive',
+    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b2832b9c2_generated_image.png',
+    bio:'A highly intuitive reader who blends tarot and psychic ability to paint a vivid picture of your situation. Known for practical guidance you can act on.',
+    specs:['Tarot','Psychic','Clairvoyant','Life Coaching'],
+    stars:5
+  },
+  {
+    pin:'3349',
+    name:'Miriam',
+    title:'Spirit Medium & Past Life',
+    photo:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/9548a2dc7_generated_image.png',
+    bio:'A gifted medium with a kind, gentle energy who specialises in spirit communication, past life regression and soul purpose readings.',
+    specs:['Spirit Communication','Past Lives','Soul Purpose','Mediumship'],
+    stars:5
+  },
+];
 
-let allReaders=[];
+let liveStatuses={};
 
-function parseXML(html){
-  const blocks=html.split(/<div class="op op-/).slice(1);
-  return blocks.map(b=>{
-    const pM=b.match(/^(\d+) ([a-z\-]+)/);
-    if(!pM)return null;
-    const nM=b.match(/alt="([^"]+)"/);
-    const iM=b.match(/src="([^"]+)"/);
-    if(!nM)return null;
-    const name=nM[1].replace(/ - (Available|Busy|Offline)/g,'').trim();
-    return{pin:pM[1],status:pM[2],name,img:iM?iM[1].split('/').pop():null};
-  }).filter(Boolean);
-}
-
-async function loadReaders(){
+async function loadReaderStatuses(){
   try{
     const res=await fetch(FEED_URL+'?t='+Date.now(),{cache:'no-cache'});
     const text=await res.text();
-    let readers=[];
     if(text.trim().startsWith('[')){
-      readers=JSON.parse(text).map(r=>({pin:String(r.pin||r.id||''),name:r.name||'Reader',status:r.status||'logged-off',img:r.image_file||null}));
+      const data=JSON.parse(text);
+      data.forEach(r=>{liveStatuses[String(r.pin||r.id||'')]=r.status||'logged-off';});
     } else {
-      readers=parseXML(text);
+      // Parse HTML feed format
+      const blocks=text.split(/<div class="op op-/).slice(1);
+      blocks.forEach(b=>{
+        const pM=b.match(/^(\d+) ([a-z\-]+)/);
+        if(pM)liveStatuses[pM[1]]=pM[2];
+      });
     }
-    allReaders=readers;
-    renderReaders(readers);
   } catch(e){
-    renderFallback();
+    // Feed unavailable — statuses stay unknown (show as offline)
   }
+  renderReaders();
 }
 
-function renderReaders(readers){
+function renderReaders(){
   const grid=document.getElementById('readersGrid');
-  if(!readers.length){renderFallback();return;}
-  grid.innerHTML=readers.map(r=>{
-    const bio=BIOS[r.pin]||'A gifted and experienced reader here to guide you with clarity, compassion and insight.';
-    const specs=SPECS[r.pin]||['Psychic','Tarot','Clairvoyant'];
-    const imgUrl=r.img?IMG_BASE+r.img:null;
-    const badgeClass=r.status==='available'?'s-available':r.status==='busy'?'s-busy':'s-offline';
-    const badgeText=r.status==='available'?'🟢 Available':r.status==='busy'?'🟡 Busy':'⚫ Offline';
-    const iid='img_'+r.pin,fid='fb_'+r.pin;
-    return`<div class="reader-card" data-status="${r.status}">
-      <div class="reader-card-top">
-        ${imgUrl?`<img class="reader-photo" id="${iid}" src="${imgUrl}" alt="${r.name}" crossorigin="anonymous" onerror="document.getElementById('${iid}').style.display='none';document.getElementById('${fid}').style.display='flex'"><div class="reader-photo-fallback" id="${fid}">🔮</div>`:`<div class="reader-photo-fallback" style="display:flex">🔮</div>`}
-        <div class="reader-info">
-          <div class="reader-name">${r.name}</div>
-          <div class="reader-pin">PIN: ${r.pin}</div>
-          <div class="stars">★★★★★</div>
-          <span class="status-badge ${badgeClass}">${badgeText}</span>
-        </div>
+  grid.innerHTML=READERS_STATIC.map(r=>{
+    const live=r.forceOffline?'logged-off':(liveStatuses[r.pin]||'logged-off');
+    const isAvail=live==='available';
+    const isBusy=live==='busy';
+    const statusClass=isAvail?'s-available':isBusy?'s-busy':'s-offline';
+    const statusText=isAvail?'🟢 Available Now':isBusy?'🟡 With a Client':'⚫ Offline';
+    const ctaClass=isAvail||isBusy?'reader-cta':'reader-cta reader-cta-offline';
+    const ctaText=isAvail?'📞 Book a Reading':isBusy?'⏳ Join Queue':'📅 Leave a Message';
+    const ctaHref=isAvail||isBusy?PROFILE_BASE+r.pin:'mailto:info@crystalheartpsychics.com?subject=Reading Request - '+encodeURIComponent(r.name);
+    const ctaTarget=isAvail||isBusy?'_blank':'_self';
+    const stars='★'.repeat(r.stars||5)+'☆'.repeat(5-(r.stars||5));
+    return\`<div class="reader-card">
+      <div class="reader-photo-wrap">
+        <img src="\${r.photo}" alt="\${r.name} - Crystal Heart Psychic Reader" loading="lazy">
+        <div class="reader-photo-overlay"></div>
+        <span class="reader-status-float \${statusClass}">\${statusText}</span>
       </div>
       <div class="reader-card-body">
-        <div class="reader-bio">${bio}</div>
-        <div class="specialty-wrap">${specs.map(s=>`<span class="tag">${s}</span>`).join('')}</div>
+        <div class="reader-name">\${r.name}</div>
+        <div class="reader-pin">\${r.title} · PIN: \${r.pin}</div>
+        <div class="reader-stars">\${stars}</div>
+        <div class="reader-bio">\${r.bio}</div>
+        <div class="reader-tags">\${r.specs.map(s=>\`<span class="reader-tag">\${s}</span>\`).join('')}</div>
+        <a href="\${ctaHref}" target="\${ctaTarget}" class="\${ctaClass}">\${ctaText}</a>
       </div>
-      <div class="card-footer">
-        <a href="${PROFILE_BASE}${r.pin}" target="_blank" class="btn-p">📞 Book a Reading</a>
-      </div>
-    </div>`;
+    </div>\`;
   }).join('');
 }
 
-function renderFallback(){
-  const grid=document.getElementById('readersGrid');
-  grid.innerHTML=`<div style="text-align:center;padding:60px 20px;color:var(--muted)">
-    <div style="font-size:40px;margin-bottom:16px">🔮</div>
-    <p style="font-size:14px;margin-bottom:8px">Our readers are currently unavailable online.</p>
-    <p style="font-size:12px">Call us directly: <strong style="color:var(--gold)">0207 754 5333</strong></p>
-  </div>`;
-}
-
-function filterReaders(status,btn){
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  const f=status==='all'?allReaders:allReaders.filter(r=>{
-    if(status==='available')return r.status==='available';
-    if(status==='busy')return r.status==='busy';
-    return r.status!=='available'&&r.status!=='busy';
-  });
-  renderReaders(f);
-}
-
-// ─── INIT ─────────────────────────────────────────────────────────
+// ─── INIT ───// ─── INIT ─────────────────────────────────────────────────────────
 buildBlog();
 buildHoroscopeGrid();
-loadReaders();
-setInterval(loadReaders,120000);
+loadReaderStatuses();
+setInterval(loadReaderStatuses,90000);
 
 // ─── BOOKING ──────────────────────────────────────────────────────
 function openBooking(product, mins, price, perMin) {
