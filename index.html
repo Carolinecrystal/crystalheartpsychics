@@ -306,6 +306,11 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
 .rmp-btn-primary{background:linear-gradient(135deg,#7c3aed,#9d4edd);color:#fff}
 .rmp-btn-secondary{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.15)!important}
 .rmp-btn:hover{opacity:.88}
+.rmp-skills-label{font-family:'Cinzel',serif;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:8px;opacity:.8}
+.rmp-tag{display:inline-block;background:rgba(124,58,237,.25);border:1px solid rgba(139,92,246,.4);color:rgba(255,255,255,.75);font-size:11px;padding:3px 9px;border-radius:20px;margin:2px 2px 2px 0;line-height:1.6}
+.rmp-tag-sub{background:rgba(16,185,129,.15);border-color:rgba(16,185,129,.35);color:rgba(167,243,208,.85)}
+.rmp-tag-tool{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.3);color:rgba(252,211,77,.85)}
+
 </style>
 </head>
 <body>
@@ -1348,6 +1353,36 @@ function closeBookingModal() {
 }
 
 
+
+// Skills, Subjects & Tools per reader PIN (sourced from Inveroak profiles)
+const READER_SKILLS={
+  '5330':{
+    skills:['Clairvoyant','Clairsentient','Clairaudient','Life Coach','Medium','Psychic','Reiki Healer'],
+    subjects:['Love/Relationships','Career/Work','Pets/Animals','Destiny/Life Path','Lost People/Pets','Past Lives','Deceased Loved Ones'],
+    tools:['Tarot Cards','Crystals','Pendulum','Oracle Cards','Angel Cards']
+  },
+  '4013':{
+    skills:['Intuitive Psychic','Clairvoyant','Empath','Energy Reader'],
+    subjects:['Love/Relationships','Career/Work','Life Path','Spiritual Guidance'],
+    tools:['Tarot Cards','Oracle Cards','Intuition']
+  },
+  '4046':{
+    skills:['Psychic','Clairvoyant','Clairsentient','Clairaudient'],
+    subjects:['Love/Relationships','Career/Work','Spiritual Guidance','Past Lives'],
+    tools:['Pendulum','Angel Cards','Channelling']
+  },
+  '4493':{
+    skills:['Intuitive Empath','Light Worker','Psychic','Clairvoyant'],
+    subjects:['Love/Relationships','Emotional Guidance','Life Path','Spiritual Growth'],
+    tools:['Tarot Cards','Oracle Cards','Crystals']
+  },
+  '4067':{
+    skills:['Intuitive Psychic','Life Coach','Numerologist','Astrologer'],
+    subjects:['Love/Relationships','Career/Work','Life Path','Future Guidance'],
+    tools:['Numerology','Astrology','Tarot Cards']
+  }
+};
+
 // ── Reader Profile Modal ──────────────────────────────────────────
 function openReaderModal(pin){
   var r=null;
@@ -1379,6 +1414,15 @@ function openReaderModal(pin){
   var ctaText=isAvail?'Book a Reading Now':isBusy?'Join the Queue':'Leave a Message';
   var ctaTarget=(isAvail||isBusy)?'_blank':'_self';
   document.getElementById('rmpActions').innerHTML='<a href="'+ctaHref+'" target="'+ctaTarget+'" class="rmp-btn rmp-btn-primary">'+ctaText+'</a><button class="rmp-btn rmp-btn-secondary" onclick="closeReaderModal()">Close</button>';
+  // Skills / Subjects / Tools
+  var sk=READER_SKILLS[pin]||{};
+  var skEl=document.getElementById('rmpSkills');
+  if(sk.skills){
+    skEl.style.display='grid';
+    document.getElementById('rmpSkillsList').innerHTML=sk.skills.map(function(s){return'<span class="rmp-tag">'+s+'</span>';}).join('');
+    document.getElementById('rmpSubjectsList').innerHTML=sk.subjects.map(function(s){return'<span class="rmp-tag rmp-tag-sub">'+s+'</span>';}).join('');
+    document.getElementById('rmpToolsList').innerHTML=sk.tools.map(function(s){return'<span class="rmp-tag rmp-tag-tool">'+s+'</span>';}).join('');
+  } else { skEl.style.display='none'; }
   document.getElementById('readerModal').classList.add('open');
   document.body.style.overflow='hidden';
 }
@@ -1402,6 +1446,20 @@ function closeReaderModal(){
       <div class="rmp-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <div class="rmp-bio" id="rmpBio"></div>
       <div class="rmp-video" id="rmpVideo" style="display:none"></div>
+      <div class="rmp-skills-grid" id="rmpSkills" style="display:none;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px">
+        <div>
+          <div class="rmp-skills-label">Skills</div>
+          <div id="rmpSkillsList"></div>
+        </div>
+        <div>
+          <div class="rmp-skills-label">Subjects</div>
+          <div id="rmpSubjectsList"></div>
+        </div>
+        <div>
+          <div class="rmp-skills-label">Tools</div>
+          <div id="rmpToolsList"></div>
+        </div>
+      </div>
       <div class="rmp-actions" id="rmpActions"></div>
     </div>
   </div>
