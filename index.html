@@ -947,7 +947,7 @@ function resetTarot(){
 }
 
 // ─── READER FEED ──────────────────────────────────────────────────
-const FEED_URL='https://www.crystalheartpsychics.com/wp-json/inveroak-feed/v1/feed/';
+const FEED_URL='https://corsproxy.io/?url=https://www.crystalheartpsychics.com/wp-json/inveroak-feed/v1/feed/';
 const IMG_BASE='https://services.inveroak.co.uk/readerimages/images/';
 const PROFILE_BASE='https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
 
@@ -1012,7 +1012,7 @@ function renderReaders(readers){
     const iid='img_'+r.pin,fid='fb_'+r.pin;
     return`<div class="reader-card" data-status="${r.status}">
       <div class="reader-card-top">
-        ${imgUrl?`<img class="reader-photo" id="${iid}" src="${imgUrl}" alt="${r.name}" onerror="document.getElementById('${iid}').style.display='none';document.getElementById('${fid}').style.display='flex'"><div class="reader-photo-fallback" id="${fid}">🔮</div>`:`<div class="reader-photo-fallback" style="display:flex">🔮</div>`}
+        ${imgUrl?`<img class="reader-photo" id="${iid}" src="${imgUrl}" alt="${r.name}" crossorigin="anonymous" onerror="document.getElementById('${iid}').style.display='none';document.getElementById('${fid}').style.display='flex'"><div class="reader-photo-fallback" id="${fid}">🔮</div>`:`<div class="reader-photo-fallback" style="display:flex">🔮</div>`}
         <div class="reader-info">
           <div class="reader-name">${r.name}</div>
           <div class="reader-pin">PIN: ${r.pin}</div>
@@ -1032,7 +1032,7 @@ function renderReaders(readers){
 }
 
 function renderFallback(){
-  allReaders=[{pin:'5330',name:'Caroline',status:'available'},{pin:'4476',name:'Terry',status:'offline'},{pin:'4322',name:'Spirit Guide',status:'offline'}];
+  allReaders=[{pin:'5330',name:'Caroline',status:'offline'},{pin:'4476',name:'Terry',status:'offline'},{pin:'4322',name:'Spirit Guide',status:'offline'}];
   renderReaders(allReaders);
 }
 
