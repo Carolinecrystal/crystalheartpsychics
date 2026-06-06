@@ -1,0 +1,663 @@
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --purple-dark: #0d0618; --purple-deep: #1a0a2e; --purple-mid: #2d1054;
+    --purple-bright: #7b2fff; --purple-glow: #9d4edd; --purple-light: #c77dff;
+    --pink-soft: #e040fb; --gold: #f4c430; --white: #ffffff;
+    --text-light: #e0d0f0; --text-muted: #a89bc0;
+  }
+  body { background: var(--purple-dark); color: var(--text-light); font-family: 'Raleway', sans-serif; line-height: 1.6; }
+
+  .legal-top { background: #0a0015; border-bottom: 1px solid #3a1060; padding: 7px 20px; text-align: center; font-size: 11px; color: var(--text-muted); letter-spacing: 0.3px; }
+
+  header { background: linear-gradient(180deg, #0a0015 0%, var(--purple-deep) 100%); border-bottom: 1px solid #3a1060; padding: 24px 20px; text-align: center; }
+  .logo { font-family: 'Cinzel', serif; font-size: clamp(26px, 5vw, 50px); font-weight: 700; letter-spacing: 6px; background: linear-gradient(135deg, #c77dff, #ffffff, #f4c430, #c77dff); background-size: 300%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+  .logo .heart { -webkit-text-fill-color: var(--pink-soft); filter: drop-shadow(0 0 8px var(--pink-soft)); }
+  @keyframes shimmer { 0%{background-position:0% 50%} 100%{background-position:300% 50%} }
+  .tagline { font-size: 12px; letter-spacing: 3px; color: var(--text-muted); text-transform: uppercase; margin-top: 6px; }
+
+  nav { background: var(--purple-mid); border-bottom: 2px solid var(--purple-glow); display: flex; justify-content: center; flex-wrap: wrap; }
+  nav a { color: var(--text-light); text-decoration: none; padding: 13px 18px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: all 0.3s; border-bottom: 3px solid transparent; }
+  nav a:hover { color: var(--purple-light); border-bottom-color: var(--purple-glow); background: rgba(123,47,255,0.15); }
+
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2px; background: #0a0015; padding: 2px; }
+  .contact-box { background: linear-gradient(135deg, var(--purple-deep), var(--purple-mid)); padding: 18px 12px; text-align: center; border: 1px solid #3a1060; cursor: pointer; transition: all 0.3s; }
+  .contact-box:hover { background: linear-gradient(135deg, var(--purple-mid), #3d1570); border-color: var(--purple-glow); transform: translateY(-2px); }
+  .contact-box .flag { font-size: 18px; margin-bottom: 4px; }
+  .contact-box .label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; }
+  .contact-box .number { font-family: 'Cinzel', serif; font-size: clamp(16px, 2.5vw, 22px); font-weight: 700; color: var(--gold); text-shadow: 0 0 15px rgba(244,196,48,0.4); letter-spacing: 1px; }
+  .contact-box .sublabel { font-size: 9.5px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+
+  .disclaimer { background: #070010; border-top: 1px solid #2a0840; border-bottom: 1px solid #2a0840; padding: 12px 20px; text-align: center; font-size: 10px; color: #8070a0; line-height: 1.9; }
+
+  .section-hdr { text-align: center; padding: 46px 20px 24px; }
+  .section-hdr h2 { font-family: 'Cinzel', serif; font-size: clamp(20px, 3.5vw, 34px); font-weight: 600; letter-spacing: 4px; color: var(--purple-light); text-transform: uppercase; margin-bottom: 8px; }
+  .section-hdr p { color: var(--text-muted); font-size: 14px; max-width: 600px; margin: 0 auto; }
+  .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--purple-glow), transparent); margin: 12px auto; }
+
+  .filter-bar { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; padding: 0 20px 28px; }
+  .filter-btn { background: rgba(123,47,255,0.15); border: 1px solid #3a1060; color: var(--text-muted); padding: 8px 20px; border-radius: 25px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.3s; font-family: 'Raleway', sans-serif; }
+  .filter-btn:hover, .filter-btn.active { background: rgba(123,47,255,0.4); border-color: var(--purple-glow); color: var(--purple-light); }
+
+  .readers-section { padding: 0 20px 40px; max-width: 1200px; margin: 0 auto; }
+  .readers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+
+  .reader-card { background: linear-gradient(145deg, #1a0a2e, #110820); border: 1px solid #3a1060; border-radius: 16px; overflow: hidden; transition: all 0.4s; }
+  .reader-card:hover { border-color: var(--purple-glow); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(123,47,255,0.25); }
+  .reader-card-top { display: flex; align-items: center; padding: 18px; gap: 14px; background: linear-gradient(135deg, rgba(123,47,255,0.1), transparent); border-bottom: 1px solid #2a0840; }
+  .reader-photo { width: 80px; height: 110px; object-fit: cover; object-position: top; border-radius: 10px; border: 2px solid var(--purple-glow); box-shadow: 0 0 18px rgba(157,78,221,0.35); flex-shrink: 0; }
+  .reader-photo-fallback { width: 80px; height: 110px; border-radius: 10px; background: linear-gradient(135deg, var(--purple-mid), var(--purple-bright)); border: 2px solid var(--purple-glow); display: none; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; }
+  .reader-info { flex: 1; }
+  .reader-name { font-family: 'Cinzel', serif; font-size: 19px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+  .reader-pin { font-size: 11px; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 7px; }
+  .stars { color: var(--gold); font-size: 13px; margin-bottom: 7px; }
+  .status-badge { display: inline-block; padding: 3px 11px; border-radius: 20px; font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+  .s-available { background: rgba(0,200,100,0.2); color: #00e676; border: 1px solid rgba(0,200,100,0.4); animation: pg 2s infinite; }
+  .s-busy { background: rgba(255,170,0,0.2); color: #ffaa00; border: 1px solid rgba(255,170,0,0.4); }
+  .s-offline { background: rgba(120,100,150,0.2); color: #9880b0; border: 1px solid rgba(120,100,150,0.3); }
+  @keyframes pg { 0%,100%{box-shadow:0 0 5px rgba(0,200,100,0.3)} 50%{box-shadow:0 0 14px rgba(0,200,100,0.6)} }
+
+  .reader-card-body { padding: 14px 18px; }
+  .reader-bio { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .specialty-wrap { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+  .tag { background: rgba(123,47,255,0.2); border: 1px solid rgba(123,47,255,0.4); color: var(--purple-light); padding: 2px 9px; border-radius: 20px; font-size: 10px; }
+  .card-footer { padding: 12px 18px; border-top: 1px solid #2a0840; display: flex; gap: 9px; }
+  .btn-p { flex: 1; background: linear-gradient(135deg, var(--purple-bright), var(--purple-glow)); color: white; border: none; padding: 11px; border-radius: 8px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; text-decoration: none; display: block; text-align: center; transition: all 0.3s; font-family: 'Raleway', sans-serif; }
+  .btn-p:hover { background: linear-gradient(135deg, #9d4edd, #b968ff); box-shadow: 0 4px 20px rgba(123,47,255,0.5); }
+  .btn-s { background: transparent; color: var(--text-muted); border: 1px solid #3a1060; padding: 11px 14px; border-radius: 8px; font-size: 11px; cursor: pointer; text-decoration: none; display: block; text-align: center; transition: all 0.3s; white-space: nowrap; font-family: 'Raleway', sans-serif; }
+  .btn-s:hover { border-color: var(--purple-glow); color: var(--purple-light); }
+
+  .loading { text-align: center; padding: 60px 20px; color: var(--text-muted); }
+  .spinner { width: 46px; height: 46px; border: 3px solid #3a1060; border-top-color: var(--purple-glow); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 18px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .chr-section { background: linear-gradient(135deg, #0a001a, #1a0535); border-top: 2px solid var(--purple-glow); border-bottom: 2px solid var(--purple-glow); padding: 50px 20px; text-align: center; }
+  .chr-section h2 { font-family: 'Cinzel', serif; font-size: clamp(19px, 3vw, 30px); color: var(--purple-light); letter-spacing: 4px; margin-bottom: 8px; }
+  .chr-section p { color: var(--text-muted); max-width: 580px; margin: 0 auto 28px; font-size: 14px; }
+  .chr-btn { display: inline-block; background: linear-gradient(135deg, var(--purple-bright), var(--pink-soft)); color: white; padding: 15px 38px; border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.3s; box-shadow: 0 4px 25px rgba(224,64,251,0.3); }
+  .chr-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(224,64,251,0.5); }
+
+  .quick-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; padding: 40px 20px; }
+  .quick-btn { background: linear-gradient(135deg, var(--purple-deep), var(--purple-mid)); border: 1px solid #3a1060; color: var(--text-light); padding: 18px 28px; border-radius: 12px; text-decoration: none; text-align: center; transition: all 0.3s; min-width: 160px; }
+  .quick-btn:hover { border-color: var(--purple-glow); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(123,47,255,0.2); }
+  .quick-btn .icon { font-size: 28px; display: block; margin-bottom: 8px; }
+  .quick-btn .label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); }
+
+  footer { background: #040008; border-top: 1px solid #2a0840; padding: 40px 20px; text-align: center; }
+  .footer-logo { font-family: 'Cinzel', serif; font-size: 20px; color: var(--purple-light); letter-spacing: 4px; margin-bottom: 18px; }
+  .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin-bottom: 20px; }
+  .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--purple-light); }
+  .footer-legal { font-size: 10px; color: #5a4870; max-width: 800px; margin: 0 auto; line-height: 1.9; }
+  .footer-copy { font-size: 11px; color: #5a4870; margin-top: 18px; }
+
+  /* Modal */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; }
+  .modal-overlay.open { display: flex; }
+  .modal-box { background: var(--purple-deep); border: 1px solid var(--purple-glow); border-radius: 16px; padding: 20px; max-width: 680px; width: 90%; position: relative; }
+  .modal-close { position: absolute; top: 10px; right: 14px; background: none; border: none; color: var(--text-muted); font-size: 22px; cursor: pointer; }
+  .modal-close:hover { color: white; }
+  iframe.vid { width: 100%; height: 340px; border: none; border-radius: 8px; }
+
+  @media(max-width:600px) { .contact-grid{grid-template-columns:repeat(2,1fr)} nav a{padding:10px 10px;font-size:10px} .readers-grid{grid-template-columns:1fr} }
+
+  /* --- Tarot App Styles --- */
+
+  .tarot-wrap { background: linear-gradient(135deg, #0d0020 0%, #1a0035 100%); border-radius: 16px; padding: 40px 20px; text-align: center; font-family: 'Georgia', serif; max-width: 700px; margin: 0 auto; }
+  .tarot-spread { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0; }
+  .tarot-position { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .position-label { color: #d4af37; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+  .card-slot { width: 110px; height: 190px; border-radius: 10px; cursor: pointer; perspective: 1000px; }
+  .card-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.7s ease; border-radius: 10px; }
+  .card-inner.flipped { transform: rotateY(180deg); }
+  .card-front, .card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px; box-sizing: border-box; }
+  .card-back { background: linear-gradient(135deg, #2d0060, #4a1080); border: 2px solid #6a30a0; }
+  .card-back-pattern { font-size: 40px; opacity: 0.6; }
+  .card-back-text { color: #8060a0; font-size: 8px; letter-spacing: 2px; margin-top: 8px; text-align: center; }
+  .card-front { background: linear-gradient(135deg, #1a0035, #2d0060); border: 2px solid #d4af37; transform: rotateY(180deg); }
+  .card-front.reversed { transform: rotateY(180deg) rotate(180deg); }
+  .card-emoji { font-size: 36px; margin-bottom: 6px; }
+  .card-name { color: #d4af37; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; text-align: center; line-height: 1.4; }
+  .card-reversed-tag { color: #ff8080; font-size: 8px; letter-spacing: 1px; margin-top: 3px; }
+  .card-meaning { color: #c0a0e0; font-size: 9px; text-align: center; margin-top: 5px; line-height: 1.4; }
+  .tarot-btn { background: linear-gradient(135deg, #6a0dad, #9b30d0); color: white; border: none; padding: 14px 36px; border-radius: 30px; font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 2px; cursor: pointer; margin: 10px 8px; transition: all 0.3s; box-shadow: 0 4px 20px rgba(106,13,173,0.4); }
+  .tarot-btn:hover { background: linear-gradient(135deg, #9b30d0, #c060f0); transform: translateY(-2px); }
+  .tarot-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+  .tarot-reading { background: rgba(255,255,255,0.04); border: 1px solid #3a1060; border-radius: 12px; padding: 24px; margin-top: 24px; text-align: left; display: none; }
+  .reading-title { color: #d4af37; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; text-align: center; }
+  .reading-card { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #2a0840; }
+  .reading-card:last-child { border-bottom: none; margin-bottom: 0; }
+  .reading-card-name { color: #d4af37; font-size: 12px; letter-spacing: 1px; margin-bottom: 6px; }
+  .reading-card-text { color: #c0a0e0; font-size: 12px; line-height: 1.7; }
+  .shuffle-status { color: #8060a0; font-size: 11px; letter-spacing: 1px; margin: 10px 0; min-height: 20px; }
+  .tarot-disclaimer { color: #5a4070; font-size: 10px; margin-top: 20px; font-style: italic; }
+  .reset-btn { background: linear-gradient(135deg,#2d0060,#4a1080) !important; }
+
+
+</style>
+
+<div class="legal-top">🔮 Genuine Psychic Readings &nbsp;|&nbsp; 18+ Only &nbsp;|&nbsp; Entertainment Purposes &nbsp;|&nbsp; Bill Payer's Permission Required</div>
+
+<header style="background:#1a0535;padding:0;text-align:center;border-bottom:2px solid #3a1060;">
+  <img src="https://media.base44.com/images/public/69ef12132b7c75ed36aea371/15803e7e1_ChatGPTImageJun6202602_02_56PM.png"
+    alt="Crystal Heart Psychics"
+    style="width:100%;max-width:1200px;height:auto;display:block;margin:0 auto;">
+</header>
+
+<nav>
+  <a href="#readers">Our Readers</a>
+  <a href="#horoscopes">Horoscopes</a>
+  <a href="#tarot">Tarot</a>
+  <a href="https://crystalheartradio.app" target="_blank">📻 Live Radio</a>
+  <a href="https://www.crystalheartacademy.com" target="_blank">Academy</a>
+  <a href="https://crystalheartmind.app" target="_blank">🧘 Meditation</a>
+  <a href="mailto:info@crystalheartpsychics.com">Contact</a>
+</nav>
+
+<div class="contact-grid">
+  <div class="contact-box" onclick="window.location='tel:02077545333'">
+    <div class="flag">🇬🇧</div>
+    <div class="label">Credit or Debit Card</div>
+    <div class="number">0207 754 5333</div>
+    <div class="sublabel">From £1.50/min</div>
+  </div>
+  <div class="contact-box" onclick="window.location='tel:09066364550'">
+    <div class="flag">🇬🇧</div>
+    <div class="label">Pay on Phone Bill</div>
+    <div class="number">0906 636 4550</div>
+    <div class="sublabel">Calls cost £1.50 per minute plus your phone provider's access charge. 18+ only. Bill payer's permission required.</div>
+  </div>
+  <div class="contact-box">
+    <div class="flag">🇬🇧</div>
+    <div class="label">Text HEART + Question To</div>
+    <div class="number">78887</div>
+    <div class="sublabel">£1.50 per text plus standard network rate. Max 3 msgs per reply (3 x £1.50). 18+ only.</div>
+  </div>
+  <div class="contact-box" onclick="window.location='tel:8555460126'">
+    <div class="flag">🇺🇸</div>
+    <div class="label">American Callers</div>
+    <div class="number">855-546-0126</div>
+    <div class="sublabel">$2.00/min. Credit Card</div>
+  </div>
+  <div class="contact-box" onclick="window.location='tel:1800689373'">
+    <div class="flag">🇦🇺</div>
+    <div class="label">Australia — Card</div>
+    <div class="number">1800 689 373</div>
+    <div class="sublabel">From $3.90/min</div>
+  </div>
+  <div class="contact-box">
+    <div class="flag">🇦🇺</div>
+    <div class="label">🇦🇺 Text HEART + Question To</div>
+    <div class="number">1977 1977</div>
+    <div class="sublabel">25¢/msg sent. $3.50/reply. Max 3 texts per reply. 18+ only.</div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  All services 18+. Calls recorded. Bill payer's permission required. Entertainment only. SMS costs 25¢ per msg sent, $3.50 per reply. Maximum of 3 replies per message sent (standard network charges apply for message sent). To opt out of free promo msgs call Helpline 1800 050 829. SP: InverOak.com, PO Box 10015 CM1 9HH (UK). &nbsp;|&nbsp; <a href="#terms" style="color:#b090d0;">Full T&amp;Cs</a> &nbsp;|&nbsp; <a href="tel:03301140300" style="color:#b090d0;">Helpline: 0330 114 0300</a>
+</div>
+
+<div class="section-hdr" id="readers">
+  <h2>Our Psychic Readers</h2>
+  <div class="divider"></div>
+  <p>Speak to one of our gifted readers today. All readers are personally vetted by Caroline.</p>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterReaders('all',this)">All Readers</button>
+  <button class="filter-btn" onclick="filterReaders('available',this)">🟢 Available Now</button>
+  <button class="filter-btn" onclick="filterReaders('busy',this)">🟡 Busy</button>
+  <button class="filter-btn" onclick="filterReaders('logged-off',this)">⚫ Offline</button>
+</div>
+
+<div class="readers-section">
+  <div class="readers-grid" id="readersGrid">
+    <div class="loading"><div class="spinner"></div><p>Connecting to our readers...</p></div>
+  </div>
+</div>
+
+<div class="chr-section">
+  <h2>📻 Crystal Heart Radio</h2>
+  <div class="divider"></div>
+  <p>Join us live for psychic shows, meditations, and spiritual guidance. Tune in free — or book a private reading with your favourite host.</p>
+  <a href="https://crystalheartradio.app" target="_blank" class="chr-btn">🔮 Tune In Live</a>
+</div>
+
+<div class="section-hdr" id="horoscopes" style="padding-bottom:10px">
+  <h2>Daily Horoscopes</h2>
+  <div class="divider"></div>
+  <p>Your daily cosmic guidance — updated every morning.</p>
+</div>
+<div class="quick-links">
+  <a href="https://www.astrology.com/horoscope/daily.html" target="_blank" class="quick-btn">
+    <span class="icon">♈</span><span class="label">Daily Horoscopes</span>
+  </a>
+  <a href="#tarot" class="quick-btn">
+    <span class="icon">🃏</span><span class="label">Free Tarot Reading</span>
+  </a>
+  <a href="https://crystalheartradio.app" target="_blank" class="quick-btn">
+    <span class="icon">✍️</span><span class="label">Psychic Blog</span>
+  </a>
+  <a href="https://crystalheartmind.app" target="_blank" class="quick-btn">
+    <span class="icon">🧘</span><span class="label">Meditation &amp; Hypnosis</span>
+  </a>
+  <a href="https://www.crystalheartacademy.com" target="_blank" class="quick-btn">
+    <span class="icon">🎓</span><span class="label">Crystal Heart Academy</span>
+  </a>
+</div>
+
+
+<section id="tarot" style="background:#07000f;padding:40px 20px;border-top:2px solid #2a0840;">
+  <div class="section-hdr">
+    <h2>🃏 Free Tarot Reading</h2>
+    <div class="divider"></div>
+    <p>Focus on your question, shuffle the deck and draw your three cards</p>
+  </div>
+
+
+
+<div class="tarot-wrap">
+  <button class="tarot-btn" id="shuffleBtn" onclick="shuffleCards()">✨ Shuffle the Deck</button>
+  <button class="tarot-btn" id="drawBtn" onclick="drawCards()" disabled>🃏 Draw Your Cards</button>
+  <div class="shuffle-status" id="shuffleStatus"></div>
+
+  <div class="tarot-spread">
+    <div class="tarot-position">
+      <div class="position-label">Past</div>
+      <div class="card-slot" onclick="flipCard(0)">
+        <div class="card-inner" id="tcard0">
+          <div class="card-back"><div class="card-back-pattern">🔮</div><div class="card-back-text">CRYSTAL HEART<br>PSYCHICS</div></div>
+          <div class="card-front" id="tcardFront0"></div>
+        </div>
+      </div>
+    </div>
+    <div class="tarot-position">
+      <div class="position-label">Present</div>
+      <div class="card-slot" onclick="flipCard(1)">
+        <div class="card-inner" id="tcard1">
+          <div class="card-back"><div class="card-back-pattern">🔮</div><div class="card-back-text">CRYSTAL HEART<br>PSYCHICS</div></div>
+          <div class="card-front" id="tcardFront1"></div>
+        </div>
+      </div>
+    </div>
+    <div class="tarot-position">
+      <div class="position-label">Future</div>
+      <div class="card-slot" onclick="flipCard(2)">
+        <div class="card-inner" id="tcard2">
+          <div class="card-back"><div class="card-back-pattern">🔮</div><div class="card-back-text">CRYSTAL HEART<br>PSYCHICS</div></div>
+          <div class="card-front" id="tcardFront2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarot-reading" id="tarotReading">
+    <div class="reading-title">✨ Your Reading</div>
+    <div id="readingContent"></div>
+  </div>
+
+  <button class="tarot-btn reset-btn" id="resetBtn" onclick="resetReading()" style="display:none;">🔄 New Reading</button>
+  <div class="tarot-disclaimer">For entertainment purposes only. 18+ only. Crystal Heart Psychics © 2026</div>
+</div>
+
+<script>
+(function() {
+const DECK = [
+  {name:"The Fool",e:"🌟",u:"New beginnings and a leap of faith. The universe supports your fresh start — trust the journey ahead.",r:"Recklessness or naivety. Pause and think before you act."},
+  {name:"The Magician",e:"🪄",u:"You have all the tools you need. Willpower and focus will manifest your desires into reality.",r:"Manipulation or untapped talent. Are you truly using your gifts?"},
+  {name:"The High Priestess",e:"🌙",u:"Trust your intuition above all else. Sacred knowledge and inner wisdom are your greatest guides right now.",r:"Secrets or disconnection from your intuition. Something is hidden — look deeper."},
+  {name:"The Empress",e:"🌺",u:"Abundance, creativity and nurturing energy surround you. A time of beautiful growth is at hand.",r:"Creative blocks or over-dependence. Reconnect with yourself and nature."},
+  {name:"The Emperor",e:"👑",u:"Take authority and establish structure. A solid foundation built now will stand the test of time.",r:"Rigidity or loss of control. Examine who truly holds power in your situation."},
+  {name:"The Hierophant",e:"⛪",u:"Seek wisdom from a trusted guide or tradition. Spiritual counsel will illuminate your path forward.",r:"Question convention. It is time to find your own truth beyond what you have been taught."},
+  {name:"The Lovers",e:"💕",u:"A significant choice must be made from the heart. Love, harmony and alignment are yours when you choose wisely.",r:"Imbalance in a relationship. Are you being true to yourself and your values?"},
+  {name:"The Chariot",e:"🏆",u:"Victory through sheer determination. Stay focused — your willpower will carry you to success.",r:"Loss of direction or control. Reclaim your focus before moving forward."},
+  {name:"Strength",e:"🦁",u:"Inner courage and compassion are your greatest strengths. Gentle persistence overcomes every obstacle.",r:"Self-doubt is holding you back. You are far stronger than you believe."},
+  {name:"The Hermit",e:"🕯️",u:"Withdraw and reflect. The answers you seek are found in solitude and honest self-examination.",r:"Isolation or withdrawal from life. Are you hiding from something that needs facing?"},
+  {name:"Wheel of Fortune",e:"☸️",u:"Fate turns in your favour. Embrace the change — this cycle brings new and positive opportunities.",r:"Resistance to change brings stagnation. What you resist persists."},
+  {name:"Justice",e:"⚖️",u:"Truth and fairness prevail. An honest outcome is on its way — trust that what is right will be done.",r:"Dishonesty or imbalance in a situation. Seek the full truth before judging."},
+  {name:"The Hanged Man",e:"🌀",u:"Pause and surrender. A new perspective gained through stillness will change everything.",r:"Delays caused by your own resistance. Let go of what you cannot control."},
+  {name:"Death",e:"🌹",u:"A powerful transformation is underway. Something must end so something far better can begin.",r:"You are clinging to what no longer serves you. Release it with love and move forward."},
+  {name:"Temperance",e:"🌊",u:"Balance and moderation bring harmony. Flow with life rather than against it — patience is rewarded.",r:"Excess or imbalance is causing disruption. Find your centre and restore equilibrium."},
+  {name:"The Devil",e:"⛓️",u:"Examine what chains you. You have far more power to break free than you currently believe.",r:"Liberation is within reach. Reclaim your power — the chains are loosening."},
+  {name:"The Tower",e:"⚡",u:"Sudden change clears the path for truth. What falls was built on false foundations — trust the process.",r:"Avoid disaster by heeding the warning signs already present in your situation."},
+  {name:"The Star",e:"⭐",u:"Hope, renewal and faith. After the storm comes serenity — the universe has a beautiful plan for you.",r:"Reconnect with hope. Your inner light has not gone out — let it shine again."},
+  {name:"The Moon",e:"🌕",u:"Not everything is as it appears. Trust your deepest instincts to navigate the illusion before you.",r:"Confusion is lifting. Clarity and truth are beginning to emerge from the shadows."},
+  {name:"The Sun",e:"☀️",u:"Joy, vitality and success flow toward you. Embrace the warmth — this is a wonderfully positive time.",r:"A temporary cloud covers the sun. Joy is on its way — hold on through this passing moment."},
+  {name:"Judgement",e:"📯",u:"A profound awakening calls you forward. Reflect honestly and step boldly into your next chapter.",r:"Self-doubt or refusing to learn from the past is blocking your growth. Forgive and move on."},
+  {name:"The World",e:"🌍",u:"Completion and wholeness. You have come full circle — celebrate your achievement and honour how far you have come.",r:"Something is unfinished. Tie up loose ends before moving on to what comes next."},
+  {name:"Ace of Cups",e:"💧",u:"New love, compassion and emotional new beginnings flow toward you. Open your heart to receive.",r:"Blocked emotions or a missed emotional opportunity. Allow yourself to feel and to heal."},
+  {name:"Two of Cups",e:"💑",u:"A powerful union of hearts. Partnership, mutual love and deep connection are forming around you.",r:"Imbalance in a relationship. Are both parties truly giving and receiving equally?"},
+  {name:"Three of Cups",e:"🎉",u:"Celebration and friendship. Joyful times with those you love are on their way — embrace the happiness.",r:"Overindulgence or drama within your social circle. Step back and nurture genuine connections."},
+  {name:"Six of Cups",e:"🌸",u:"A nostalgic and comforting energy surrounds you. Childhood memories or an old friend brings joy.",r:"Living too much in the past is preventing your present happiness. Take the lessons and look forward."},
+  {name:"Nine of Cups",e:"🌟",u:"Your wish is coming true. The universe is conspiring in your favour — contentment and satisfaction await.",r:"Gratitude for what you already have will open the door to even more abundance."},
+  {name:"Ten of Cups",e:"🏠",u:"True happiness in love, family and home. Divine love and lasting harmony are yours to embrace.",r:"Misaligned values in a relationship or family situation. Real happiness must come from within."},
+  {name:"Ace of Pentacles",e:"💰",u:"A golden new beginning in finances or career. Abundance and opportunity are being offered to you now.",r:"A missed financial opportunity. Ensure your foundations are solid before proceeding."},
+  {name:"Six of Pentacles",e:"🤝",u:"Generosity and giving. What you put out into the world returns to you multiplied — share freely.",r:"Strings attached to generosity. Examine the motives of those offering or receiving help."},
+  {name:"Ten of Pentacles",e:"🏰",u:"Long-term wealth, security and a lasting legacy. Family prosperity and financial stability are assured.",r:"Instability in financial or family matters. Revisit your long-term foundations."},
+  {name:"Ace of Wands",e:"🔥",u:"Creative inspiration and passionate new beginnings. Act on your ideas now — the energy is electric.",r:"Creative blocks or delays. The spark is still within you — nurture it back to life."},
+  {name:"Three of Wands",e:"🚀",u:"Your plans are taking flight. Expansion, foresight and exciting opportunities are opening before you.",r:"Obstacles to progress. Adjust your strategy and persist — your destination is still ahead."},
+  {name:"Seven of Wands",e:"🛡️",u:"Stand your ground with confidence. You have earned your position — defend it with courage.",r:"Feeling overwhelmed or giving up too easily. Choose your battles wisely and protect what matters."},
+  {name:"Ace of Swords",e:"⚔️",u:"Breakthrough and clarity cut through confusion. A moment of powerful revelation is coming your way.",r:"Miscommunication or mental confusion. Think very carefully before you speak or decide."},
+  {name:"Three of Swords",e:"💔",u:"Heartbreak and grief are part of this journey. Allow yourself to feel — healing always follows honest pain.",r:"Recovery and forgiveness are within reach. The worst of this pain is now behind you."},
+  {name:"Queen of Cups",e:"👸",u:"Lead with compassion and emotional wisdom. Your empathy and intuition will guide you perfectly.",r:"Emotional insecurity or over-giving. You must nurture yourself before you can truly help others."},
+  {name:"King of Wands",e:"🦅",u:"Bold visionary leadership. Your passion and charisma inspire everyone — trust your instincts and lead.",r:"Impulsiveness or setting impossibly high expectations. Lead with wisdom as well as fire."},
+  {name:"Knight of Pentacles",e:"🌾",u:"Steady, reliable progress through hard work and dedication. Slow and steady truly wins this race.",r:"Boredom or stagnation. Break the routine and reignite your motivation to move forward."},
+  {name:"Page of Cups",e:"🐠",u:"An unexpected and beautiful message is coming. Stay open — your intuition is delivering something magical.",r:"Emotional immaturity or creative blocks. Lead from the heart and trust what you feel."},
+  {name:"Five of Cups",e:"😢",u:"Grieve what was lost, but do not forget what still remains. Healing and hope are present even now.",r:"Moving on and acceptance. It is now safe to release this grief and find your peace."},
+  {name:"Seven of Cups",e:"✨",u:"Many possibilities appear before you. Choose wisely — not everything that glitters is truly gold.",r:"Cut through confusion and make a clear, grounded decision. Clarity is available to you now."},
+  {name:"Eight of Cups",e:"🚶",u:"Walk away from what no longer feeds your soul. Courage to leave creates space for something far better.",r:"Fear of moving on is keeping you stuck. Ask yourself honestly — is hope here truly justified?"},
+  {name:"Four of Cups",e:"😔",u:"Look more carefully at what is being offered to you right now. A gift you have overlooked awaits.",r:"Withdrawal and apathy are causing you to miss real opportunities. Return to the present moment."}
+];
+
+const POSITIONS = ["Past","Present","Future"];
+let shuffled = false, drawn = [], flipped = [false,false,false];
+
+window.shuffleCards = function() {
+  const btn = document.getElementById('shuffleBtn');
+  const status = document.getElementById('shuffleStatus');
+  btn.disabled = true;
+  status.textContent = '🔮 Shuffling the deck...';
+  const syms = ['✨','🌙','⭐','🔮','💜','🌟','🃏'];
+  let count = 0;
+  const iv = setInterval(() => {
+    status.textContent = syms[count%syms.length] + ' Shuffling... ' + syms[(count+3)%syms.length];
+    count++;
+    if (count > 14) {
+      clearInterval(iv);
+      shuffled = true;
+      status.textContent = '✨ The deck is ready. Draw your cards when you feel called.';
+      document.getElementById('drawBtn').disabled = false;
+      btn.textContent = '✨ Shuffle Again';
+      btn.disabled = false;
+    }
+  }, 120);
+};
+
+window.drawCards = function() {
+  if (!shuffled) return;
+  flipped = [false,false,false];
+  for (let i=0;i<3;i++) {
+    document.getElementById('tcard'+i).classList.remove('flipped');
+    const f = document.getElementById('tcardFront'+i);
+    f.classList.remove('reversed');
+    f.innerHTML = '';
+  }
+  document.getElementById('tarotReading').style.display = 'none';
+  document.getElementById('resetBtn').style.display = 'none';
+  const deck = [...DECK].sort(() => Math.random()-0.5);
+  drawn = deck.slice(0,3).map(c => ({...c, rev: Math.random() > 0.72}));
+  for (let i=0;i<3;i++) {
+    const f = document.getElementById('tcardFront'+i);
+    const c = drawn[i];
+    f.innerHTML = '<div class="card-emoji">'+c.e+'</div><div class="card-name">'+c.name+'</div>'+(c.rev?'<div class="card-reversed-tag">REVERSED</div>':'')+'<div class="card-meaning">'+(c.rev?c.r:c.u).split('.')[0]+'.</div>';
+    if (c.rev) f.classList.add('reversed'); else f.classList.remove('reversed');
+  }
+  document.getElementById('shuffleStatus').textContent = '🃏 Click each card to reveal it...';
+  document.getElementById('drawBtn').disabled = true;
+};
+
+window.flipCard = function(i) {
+  if (!drawn.length || flipped[i]) return;
+  document.getElementById('tcard'+i).classList.add('flipped');
+  flipped[i] = true;
+  if (flipped.every(f=>f)) setTimeout(showReading, 700);
+};
+
+function showReading() {
+  const content = document.getElementById('readingContent');
+  content.innerHTML = drawn.map((c,i) => '<div class="reading-card"><div class="reading-card-name">'+c.e+' '+POSITIONS[i]+': '+c.name+(c.rev?' (Reversed)':'')+'</div><div class="reading-card-text">'+(c.rev?c.r:c.u)+'</div></div>').join('');
+  document.getElementById('tarotReading').style.display = 'block';
+  document.getElementById('resetBtn').style.display = 'inline-block';
+  document.getElementById('shuffleStatus').textContent = '✨ Your reading is complete. Trust what resonates.';
+  document.getElementById('tarotReading').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+window.resetReading = function() {
+  drawn = []; flipped = [false,false,false]; shuffled = false;
+  for (let i=0;i<3;i++) {
+    document.getElementById('tcard'+i).classList.remove('flipped');
+    const f = document.getElementById('tcardFront'+i);
+    f.classList.remove('reversed'); f.innerHTML='';
+  }
+  document.getElementById('tarotReading').style.display='none';
+  document.getElementById('resetBtn').style.display='none';
+  document.getElementById('shuffleBtn').textContent='✨ Shuffle the Deck';
+  document.getElementById('shuffleBtn').disabled=false;
+  document.getElementById('drawBtn').disabled=true;
+  document.getElementById('shuffleStatus').textContent='';
+};
+})();
+</script>
+</section>
+
+
+<section id="terms" style="background:#0a0018;border-top:2px solid #3a1060;padding:50px 20px;max-width:900px;margin:0 auto;">
+  <h2 style="font-family:'Cinzel',serif;color:#d4af37;font-size:24px;letter-spacing:3px;text-align:center;margin-bottom:30px;">TERMS &amp; CONDITIONS</h2>
+
+  <div style="color:#c0a8e0;font-size:13px;line-height:1.9;">
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">1. ENTERTAINMENT PURPOSES ONLY</h3>
+    <p>All readings, horoscopes, tarot interpretations and psychic services provided by Crystal Heart Psychics are for entertainment purposes only. Nothing on this website or provided by our readers constitutes professional advice of any nature including but not limited to medical, legal, financial, psychological or therapeutic advice. You must not rely on any reading as a substitute for professional advice.</p>
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">2. AGE RESTRICTION</h3>
+    <p>You must be 18 years of age or over to use any of our premium rate telephone services or to make purchases on this website. By using this service you confirm that you are 18 or over and that you have the permission of the bill payer if the telephone account or payment method is not in your name.</p>
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">3. PREMIUM RATE TELEPHONE SERVICES</h3>
+    <p><strong>0906 636 4550:</strong> Calls cost £1.50 per minute plus your phone provider's network access charge. Calls are recorded. Maximum call duration may apply. You must be 18 or over and have the bill payer's permission.<br><br>
+    <strong>0207 754 5333:</strong> Standard rate line. Readings charged per minute by credit or debit card. You must be 18 or over.<br><br>
+    <strong>Text 78887:</strong> UK SMS service. Texts cost £1.50 per reply. Maximum of 3 replies per message sent. Standard network charges may apply. To stop receiving promotional messages, call our helpline on 0330 114 0300.<br><br>
+    Service Provider: Inveroak.com, PO Box 10015, CM1 9HH. This service is regulated under the PSA Code of Practice (Code 15). For queries or complaints about premium rate services contact the PSA at <a href="https://www.psauthority.org.uk" target="_blank" style="color:#b090d0;">psauthority.org.uk</a>.</p>
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">4. READER STANDARDS</h3>
+    <p>All Crystal Heart Psychics readers are personally vetted by Caroline, founder of Crystal Heart Visions Ltd. Readers are independent contractors. Crystal Heart Psychics makes no warranty as to the accuracy of any reading. Results vary by individual.</p>
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">5. PROHIBITED CONTENT</h3>
+    <p>Our readers will not, under any circumstances: predict death or serious illness; make statements about infidelity without clear client instigation; predict the gender or health of unborn children; claim to remove curses or spells; use fear-based messaging; guarantee outcomes of any kind; or provide readings to persons who appear to be under 18.</p>
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">6. VULNERABLE CALLERS</h3>
+    <p>Crystal Heart Psychics takes the welfare of callers seriously. Our readers are trained to recognise signs of distress and will follow our safeguarding protocol where required. If you are in crisis, please contact the Samaritans on <strong>116 123</strong> (free, 24/7) or visit <a href="https://www.samaritans.org" target="_blank" style="color:#b090d0;">samaritans.org</a>.</p>
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">7. INTELLECTUAL PROPERTY</h3>
+    <p>Crystal Heart® is a registered trademark of Crystal Heart Visions Ltd (UK Reg No: 98011089), registered in Classes 016 and 045, and also registered in the USA and Australia. All website content, branding, imagery and materials are the copyright of Crystal Heart Visions Ltd © 2026. Unauthorised use is strictly prohibited.</p>
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">8. PRIVACY</h3>
+    <p>We process your personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. We do not sell your data to third parties. For full details please see our <a href="#terms" target="_blank" style="color:#b090d0;">Privacy Policy</a>.</p>
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">9. COMPLAINTS</h3>
+    <p>To make a complaint about our service, please contact us at <a href="mailto:info@crystalheartpsychics.com" style="color:#b090d0;">info@crystalheartpsychics.com</a>. For complaints about premium rate telephone services, contact Inveroak.com on 0330 114 0300 or the PSA at <a href="https://www.psauthority.org.uk" target="_blank" style="color:#b090d0;">psauthority.org.uk</a>.</p>
+
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">10. GOVERNING LAW</h3>
+    <p>These terms are governed by the laws of England and Wales. Crystal Heart Psychics is a trading name of Crystal Heart Visions Ltd, registered in England and Wales. These terms were last updated: June 2026.</p>
+
+  </div>
+</section>
+
+<section id="privacy" style="background:#07000f;border-top:1px solid #2a0840;padding:40px 20px;max-width:900px;margin:0 auto;">
+  <h2 style="font-family:'Cinzel',serif;color:#d4af37;font-size:24px;letter-spacing:3px;text-align:center;margin-bottom:30px;">PRIVACY POLICY</h2>
+  <div style="color:#c0a8e0;font-size:13px;line-height:1.9;">
+    <p>Crystal Heart Visions Ltd ("we", "us", "our") is committed to protecting your privacy in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">WHAT DATA WE COLLECT</h3>
+    <p>When you use our services we may collect: your name, telephone number, email address, payment information (processed securely by our payment providers), and call/session data for billing and quality purposes.</p>
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">HOW WE USE YOUR DATA</h3>
+    <p>We use your data to: provide the services you have requested; process payments; comply with legal obligations; prevent fraud; and improve our services. We do not sell your personal data to third parties.</p>
+    <h3 style="color:#d4af37;font-size:15px;letter-spacing:2px;margin:24px 0 8px;">YOUR RIGHTS</h3>
+    <p>You have the right to access, correct, or request deletion of your personal data. To exercise your rights or for any privacy queries, contact us at <a href="mailto:info@crystalheartpsychics.com" style="color:#b090d0;">info@crystalheartpsychics.com</a>.</p>
+    <p style="margin-top:16px;">For complaints about data processing, you may contact the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank" style="color:#b090d0;">ico.org.uk</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">CRYSTAL ♥ PSYCHICS</div>
+  <div class="footer-links">
+    <a href="#readers">Our Readers</a>
+    <a href="mailto:info@crystalheartpsychics.com">About Us</a>
+    <a href="https://crystalheartradio.app">Blog</a>
+    <a href="#terms">Terms & Privacy</a>
+    <a href="https://crystalheartradio.app" target="_blank">Crystal Heart Radio</a>
+    <a href="https://crystalheartmind.app" target="_blank">Meditation &amp; Hypnosis</a>
+    <a href="https://www.crystalheartacademy.com" target="_blank">Crystal Heart Academy</a>
+    <a href="mailto:info@crystalheartpsychics.com">Contact Us</a>
+  </div>
+  <div class="footer-legal">
+    For entertainment purposes only. 18+ only. Bill payer's permission required. All calls are recorded and may be monitored for training purposes.<br>
+    0906 calls cost £1.50/min plus network access charge. SMS: £1.50/reply, max 3 replies. Standard network charges apply.<br>
+    SP: Inveroak.com, PO Box 10015, CM1 9HH. Customer Helpline: 0330 114 0300 (Mon–Sun 8am–10pm).<br>
+    Crystal Heart Psychics is a trading name of Crystal Heart Visions Ltd. Registered in England &amp; Wales.<br>
+    Crystal Heart® is a registered trademark (UK Reg No: 98011089), Classes 016 &amp; 045. Regulated under PSA Code of Practice 15.
+  </div>
+  <div class="footer-copy">© 2026 Crystal Heart Visions Ltd. All rights reserved.</div>
+</footer>
+
+<div class="modal-overlay" id="vidModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeVid()">✕</button>
+    <iframe class="vid" id="vidFrame" src="" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+const FEED_URL = 'https://www.crystalheartpsychics.com/wp-json/inveroak-feed/v1/feed/';
+const IMG_BASE = 'https://services.inveroak.co.uk/readerimages/images/';
+const PROFILE_BASE = 'https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
+
+// Static bios per PIN (Inveroak feed doesn't include bios)
+const READER_BIOS = {
+  '4477': 'I am an intuitive healer — being born on a powerful cusp makes me the strongest empath of the zodiac. I work using my intuition, tarot cards, pendulum and astrology to provide clear and honest guidance.',
+  '4491': 'I am Clara, a gifted psychic and spiritual guide. I connect deeply with your energy to bring clarity and insight to the areas of your life that matter most to you.',
+  '4455': 'Jackie is Psychic, Clairsentient, and a Dream Analyst. Well known for her down to earth, straight-talking readings while being deeply compassionate and empathic towards your situation.',
+  '4468': 'I am a caring and experienced Clairvoyant Psychic who discovered my gift from quite a young age. I specialise in love and relationships and aim to empower and enlighten you on your path.',
+  '4467': 'I am an honest and compassionate Clairvoyant Psychic who can bring empowering insight and clarity to love, relationships, career and your spiritual path. I speak fluent English and Polish.',
+  '4476': 'Terry is an experienced psychic reader with exceptional skills in connecting with your energy. Warm, direct and deeply accurate — Terry brings real clarity to the questions that matter most.',
+  '4041': 'I am a Clairvoyant and Medium, using my Tarot Cards and spirit guides to conduct your readings. I have studied Mediumship at the College of Psychic Arts and genuinely love helping people find their path.',
+  '5330': 'Caroline is a Psychic Medium, Clairvoyant and naturally gifted healer. NLP Master Practitioner, CBT Therapist, Hypnotherapist and Past Life Regression Therapist. Reiki & Seichem Master Teacher. Featured in Soul & Spirit Magazine 2013, 2014 & 2016. Founder of Crystal Heart Psychics.',
+};
+
+const READER_SPECIALTIES = {
+  '4477': ['Clairvoyant','Tarot','Astrology','Numerology','Twin Flame'],
+  '4491': ['Clairvoyant','Psychic','Spiritual Guide','Life Coach'],
+  '4455': ['Psychic','Clairsentient','Dream Analyst'],
+  '4468': ['Clairvoyant','Counsellor','Tarot','Crystals','Pendulum'],
+  '4467': ['Clairvoyant','Clairsentient','Clairaudient','Reiki','Tarot'],
+  '4476': ['Psychic','Clairvoyant','Life Coach','Tarot'],
+  '4041': ['Clairvoyant','Medium','Clairsentient','Tarot'],
+  '5330': ['Clairvoyant','Medium','Psychic','Reiki Master','Hypnotherapy','NLP','Past Lives'],
+};
+
+const READER_VIDEOS = {
+  '4455': 'https://youtube.com/embed/ytTtT0OAfvg',
+  '4467': 'https://player.vimeo.com/video/881693455?h=afab44314a',
+};
+
+let allReaders = [];
+
+function stars(n) { return '★'.repeat(n) + '☆'.repeat(5-n); }
+
+function statusInfo(s) {
+  if(s==='available') return {cls:'s-available', label:'🟢 Available Now'};
+  if(s==='busy') return {cls:'s-busy', label:'🟡 With a Client'};
+  return {cls:'s-offline', label:'⚫ Offline'};
+}
+
+function parseHTML(html) {
+  const blocks = html.split(/<div class="op op-/).slice(1);
+  const readers = [];
+  blocks.forEach(block => {
+    const pinM = block.match(/^(\d+) ([a-z\-]+)/);
+    if(!pinM) return;
+    const pin = pinM[1], status = pinM[2];
+    const nameM = block.match(/alt="([^"]+)"/);
+    const imgM = block.match(/readerimages\/images\/([^\s"]+)/);
+    const starCount = (block.match(/class="star"/g)||[]).length;
+    if(!nameM) return;
+    readers.push({
+      pin, status,
+      name: nameM[1],
+      img: imgM ? imgM[1] : `${pin}-1_lf`,
+      stars: starCount
+    });
+  });
+  return readers;
+}
+
+async function loadReaders() {
+  try {
+    const res = await fetch(FEED_URL);
+    const html = await res.json();
+    allReaders = parseHTML(html);
+    renderReaders(allReaders);
+  } catch(e) {
+    console.warn('Feed fetch failed:', e);
+    // Fallback to hardcoded
+    allReaders = [
+      {pin:'4477',status:'available',name:'Bronwen',img:'4477-3_lf',stars:5},
+      {pin:'4491',status:'available',name:'Clara',img:'4491-1_lf',stars:5},
+      {pin:'4455',status:'available',name:'Jackie',img:'4455-2_lf',stars:3},
+      {pin:'4468',status:'available',name:'Leonie',img:'4468-1_lf',stars:5},
+      {pin:'4467',status:'busy',name:'Avatah',img:'4467-1_lf',stars:5},
+      {pin:'4476',status:'busy',name:'Terry',img:'4476-3_lf',stars:5},
+      {pin:'5330',status:'logged-off',name:'Caroline',img:'5330-4_lf',stars:5,isFounder:true},
+    ];
+    renderReaders(allReaders);
+  }
+}
+
+function renderReaders(list) {
+  const grid = document.getElementById('readersGrid');
+  if(!list.length) { grid.innerHTML='<div class="loading"><p>No readers found.</p></div>'; return; }
+
+  const sorted = [...list].sort((a,b)=>{
+    const o={available:0,busy:1,'logged-off':2};
+    return (o[a.status]??2)-(o[b.status]??2);
+  });
+
+  grid.innerHTML = sorted.map(r => {
+    const si = statusInfo(r.status);
+    const bio = READER_BIOS[r.pin] || 'An experienced and gifted psychic reader ready to help guide you on your path.';
+    const specs = (READER_SPECIALTIES[r.pin]||[]).slice(0,4).map(s=>`<span class="tag">${s}</span>`).join('');
+    const vid = READER_VIDEOS[r.pin];
+    const vidBtn = vid ? `<a href="#" class="btn-s" onclick="openVid('${vid}');return false;">▶ Video</a>` : '';
+    const chrBtn = r.isFounder ? `<a href="https://crystalheartradio.app" target="_blank" class="btn-s">📻 CHR</a>` : '';
+    const founderBadge = r.isFounder ? `<div style="margin-top:5px;background:linear-gradient(135deg,rgba(244,196,48,0.2),rgba(157,78,221,0.2));border:1px solid rgba(244,196,48,0.4);color:#f4c430;padding:2px 9px;border-radius:20px;font-size:10px;letter-spacing:1px;display:inline-block">👑 FOUNDER</div>` : '';
+    const ctaLabel = r.status==='available' ? '📞 Speak to Me Now' : '📅 Book a Reading';
+    const imgUrl = `${IMG_BASE}${r.img}`;
+
+    return `<div class="reader-card" data-status="${r.status}">
+      <div class="reader-card-top">
+        <img src="${imgUrl}" alt="${r.name}" class="reader-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="reader-photo-fallback">🔮</div>
+        <div class="reader-info">
+          <div class="reader-name">${r.name}</div>
+          <div class="reader-pin">PIN: ${r.pin}</div>
+          <div class="stars">${stars(r.stars)}</div>
+          <span class="status-badge ${si.cls}">${si.label}</span>
+          ${founderBadge}
+        </div>
+      </div>
+      <div class="reader-card-body">
+        <div class="reader-bio">${bio}</div>
+        <div class="specialty-wrap">${specs}</div>
+      </div>
+      <div class="card-footer">
+        <a href="${PROFILE_BASE}${r.pin}" target="_blank" class="btn-p">${ctaLabel}</a>
+        ${vidBtn}${chrBtn}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterReaders(status, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderReaders(status==='all' ? allReaders : allReaders.filter(r=>r.status===status));
+}
+
+function openVid(url) { document.getElementById('vidFrame').src=url; document.getElementById('vidModal').classList.add('open'); }
+function closeVid() { document.getElementById('vidFrame').src=''; document.getElementById('vidModal').classList.remove('open'); }
+document.getElementById('vidModal').addEventListener('click', e=>{ if(e.target===document.getElementById('vidModal')) closeVid(); });
+
+// Load on start, refresh every 2 minutes
+loadReaders();
+setInterval(loadReaders, 2*60*1000);
+</script>
