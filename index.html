@@ -1267,10 +1267,8 @@ function resetTarot(){
 const PROFILE_BASE='https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
 const XML_FEED='https://api.allorigins.win/raw?url=https://services.inveroak.co.uk/readerimages/livepanel/91232.xml';
 
-// Static photo overrides (keyed by PIN) — used when Inveroak Picture URL is unreliable
-const PHOTO_OVERRIDES={
-  '5330':'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b68e4e496_generated_image.png'
-};
+// No photo overrides — use live Inveroak feed photos directly
+const PHOTO_OVERRIDES={};
 
 let liveReaders=[];
 
