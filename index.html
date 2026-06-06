@@ -239,6 +239,44 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
 
 @media(max-width:720px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.contact-grid{grid-template-columns:1fr};nav a{padding:10px 8px;font-size:10px};.readers-grid,.blog-grid{grid-template-columns:1fr}}
+
+/* ── BOOKING SECTION ──────────────────────────────────────── */
+.booking-section{padding:80px 20px;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
+.booking-intro{text-align:center;max-width:680px;margin:0 auto 50px}
+.booking-intro p{color:var(--text);font-size:15px;line-height:1.8}
+.booking-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;max-width:960px;margin:0 auto 50px}
+.pkg-card{background:var(--bg2);border:1px solid var(--border2);border-radius:16px;padding:32px 24px;text-align:center;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
+.pkg-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(149,76,233,.08),transparent);opacity:0;transition:opacity .3s}
+.pkg-card:hover,.pkg-card.selected{border-color:var(--purple);transform:translateY(-4px);box-shadow:0 12px 40px rgba(149,76,233,.25)}
+.pkg-card:hover::before,.pkg-card.selected::before{opacity:1}
+.pkg-card.selected{border-color:#c77dff;box-shadow:0 0 0 2px rgba(199,125,255,.3),0 12px 40px rgba(149,76,233,.3)}
+.pkg-badge{display:inline-block;background:linear-gradient(135deg,var(--purple),#9d4edd);color:#fff;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px;font-family:'Raleway',sans-serif}
+.pkg-card.popular .pkg-badge{background:linear-gradient(135deg,#ff6b9d,#c77dff)}
+.pkg-mins{font-family:'Cinzel',serif;font-size:42px;color:var(--white);line-height:1;margin-bottom:4px}
+.pkg-mins span{font-size:16px;color:var(--muted);font-family:'Raleway',sans-serif}
+.pkg-price{font-size:26px;font-weight:700;color:#c77dff;margin-bottom:8px;font-family:'Raleway',sans-serif}
+.pkg-permm{font-size:11px;color:var(--muted);margin-bottom:20px}
+.pkg-features{list-style:none;padding:0;margin:0 0 24px;text-align:left}
+.pkg-features li{font-size:12px;color:var(--text);padding:4px 0;padding-left:18px;position:relative}
+.pkg-features li::before{content:'✓';position:absolute;left:0;color:#c77dff;font-weight:700}
+.pkg-btn{display:block;width:100%;padding:12px;border-radius:10px;background:linear-gradient(135deg,var(--purple),#9d4edd);color:#fff;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;font-family:'Raleway',sans-serif;transition:all .25s}
+.pkg-btn:hover{opacity:.85;transform:scale(1.02)}
+.pkg-card.selected .pkg-btn{background:linear-gradient(135deg,#ff6b9d,#c77dff)}
+.booking-note{text-align:center;max-width:600px;margin:0 auto;font-size:12px;color:var(--muted);line-height:1.8}
+.booking-note a{color:var(--purple-light);text-decoration:none}
+/* Modal */
+.booking-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;overflow-y:auto;padding:20px}
+.booking-modal.open{display:flex;align-items:flex-start;justify-content:center}
+.booking-modal-box{background:var(--bg2);border:1px solid var(--border2);border-radius:18px;width:100%;max-width:700px;overflow:hidden;position:relative;margin:auto}
+.booking-modal-header{background:linear-gradient(135deg,var(--purple),#9d4edd);padding:28px 32px;text-align:center}
+.booking-modal-header h3{font-family:'Cinzel',serif;font-size:22px;color:#fff;margin-bottom:4px}
+.booking-modal-header p{color:rgba(255,255,255,.8);font-size:13px}
+.booking-modal-close{position:absolute;top:16px;right:20px;background:none;border:none;color:rgba(255,255,255,.7);font-size:22px;cursor:pointer;line-height:1}
+.booking-modal-close:hover{color:#fff}
+.booking-iframe-wrap{padding:0}
+.booking-iframe-wrap iframe{display:block;width:100%;height:680px;border:none}
+.booking-modal-footer{padding:16px 24px;background:var(--bg3);border-top:1px solid var(--border);text-align:center;font-size:11px;color:var(--muted)}
+
 </style>
 </head>
 <body>
@@ -251,6 +289,7 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
 </header>
 
 <nav>
+  <a href="#booking">Book a Reading</a>
   <a href="#readers">Our Readers</a>
   <a href="#blog">Blog</a>
   <a href="#horoscopes">Horoscopes</a>
@@ -303,6 +342,96 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
 <div class="disclaimer">
   All services 18+. 0906 calls cost £1.50 per min plus your phone provider's access charge. Calls recorded. Bill payer's permission required. Entertainment only.<br>
   SMS costs £1.50 per reply, max 3 replies per message. To opt out call helpline. SP: Inveroak.com, PO Box 10015 CM1 9HH. Helpline: <a href="tel:03301140300">0330 114 0300</a>
+</div>
+
+<!-- Booking -->
+<div id="booking" class="booking-section">
+  <div class="section-hdr">
+    <h2>Book a Phone Reading</h2>
+    <div class="divider"></div>
+    <p>Choose your package and book your personal psychic reading with Caroline and our gifted team</p>
+  </div>
+
+  <div class="booking-intro">
+    <p>🔮 All readings are conducted by telephone. Once you complete your booking you will receive a call from your chosen reader. Readings are for entertainment purposes. You must be 18 or over.</p>
+  </div>
+
+  <div class="booking-cards">
+    <!-- 10 mins -->
+    <div class="pkg-card" onclick="openBooking('10 mins @ £15.00','10','£15.00','£1.50')">
+      <div class="pkg-badge">Starter</div>
+      <div class="pkg-mins">10<span> mins</span></div>
+      <div class="pkg-price">£15.00</div>
+      <div class="pkg-permm">£1.50 per minute</div>
+      <ul class="pkg-features">
+        <li>Personal phone reading</li>
+        <li>One focused question</li>
+        <li>Ideal for a quick insight</li>
+      </ul>
+      <button class="pkg-btn">Book Now</button>
+    </div>
+    <!-- 20 mins -->
+    <div class="pkg-card" onclick="openBooking('20 mins @ £30.00','20','£30.00','£1.50')">
+      <div class="pkg-badge">Popular</div>
+      <div class="pkg-mins">20<span> mins</span></div>
+      <div class="pkg-price">£30.00</div>
+      <div class="pkg-permm">£1.50 per minute</div>
+      <ul class="pkg-features">
+        <li>Personal phone reading</li>
+        <li>Love, career or life path</li>
+        <li>Time for deeper guidance</li>
+      </ul>
+      <button class="pkg-btn">Book Now</button>
+    </div>
+    <!-- 30 mins -->
+    <div class="pkg-card popular" onclick="openBooking('30 mins @ £45.00','30','£45.00','£1.50')">
+      <div class="pkg-badge">⭐ Best Value</div>
+      <div class="pkg-mins">30<span> mins</span></div>
+      <div class="pkg-price">£45.00</div>
+      <div class="pkg-permm">£1.50 per minute</div>
+      <ul class="pkg-features">
+        <li>Personal phone reading</li>
+        <li>Full life overview</li>
+        <li>Our most popular choice</li>
+      </ul>
+      <button class="pkg-btn">Book Now</button>
+    </div>
+    <!-- 60 mins -->
+    <div class="pkg-card" onclick="openBooking('60 mins @ £90.00','60','£90.00','£1.50')">
+      <div class="pkg-badge">Full Reading</div>
+      <div class="pkg-mins">60<span> mins</span></div>
+      <div class="pkg-price">£90.00</div>
+      <div class="pkg-permm">£1.50 per minute</div>
+      <ul class="pkg-features">
+        <li>Personal phone reading</li>
+        <li>Complete in-depth reading</li>
+        <li>Multiple areas covered</li>
+      </ul>
+      <button class="pkg-btn">Book Now</button>
+    </div>
+  </div>
+
+  <div class="booking-note">
+    <p>🔒 Secure card payment processed by <strong>Inveroak</strong> · GDPR compliant · 18+ only<br>
+    By booking you confirm you are 18 or over and accept our <a href="#terms">Terms & Conditions</a></p>
+  </div>
+</div>
+
+<!-- Booking Modal -->
+<div class="booking-modal" id="bookingModal" onclick="if(event.target===this)closeBookingModal()">
+  <div class="booking-modal-box">
+    <div class="booking-modal-header">
+      <button class="booking-modal-close" onclick="closeBookingModal()">✕</button>
+      <h3 id="bookingModalTitle">Book Your Reading</h3>
+      <p id="bookingModalSubtitle">Complete your details below to confirm your booking</p>
+    </div>
+    <div class="booking-iframe-wrap">
+      <iframe id="bookingIframe" src="about:blank" title="Book a Reading" allow="payment"></iframe>
+    </div>
+    <div class="booking-modal-footer">
+      🔒 Secure payment · Powered by Inveroak · You will receive a call from your reader after booking
+    </div>
+  </div>
 </div>
 
 <!-- Readers -->
@@ -1222,6 +1351,24 @@ buildBlog();
 buildHoroscopeGrid();
 loadReaders();
 setInterval(loadReaders,120000);
+
+// ─── BOOKING ──────────────────────────────────────────────────────
+function openBooking(product, mins, price, perMin) {
+  document.getElementById('bookingModalTitle').textContent = mins + ' Minute Reading — ' + price;
+  document.getElementById('bookingModalSubtitle').textContent = 'Your ' + mins + '-minute personal psychic reading · ' + price + ' total';
+  // Load Inveroak with product pre-selected via URL param if supported, else plain URL
+  const iframe = document.getElementById('bookingIframe');
+  iframe.src = 'https://cc.inveroak.co.uk/bookings/crystalheart.aspx';
+  document.getElementById('bookingModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBookingModal() {
+  document.getElementById('bookingModal').classList.remove('open');
+  document.getElementById('bookingIframe').src = 'about:blank';
+  document.body.style.overflow = '';
+}
+
 </script>
 </body>
 </html>
