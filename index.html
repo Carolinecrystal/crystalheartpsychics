@@ -211,7 +211,7 @@ nav a:hover{color:var(--purple3);border-bottom-color:var(--purple)}
 .card-back-text{display:none}
 .card-front{background:linear-gradient(180deg,#0d0520 0%,#1a0a35 100%);border:1px solid var(--gold);transform:rotateY(180deg);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;overflow:hidden;padding:0}
 .card-front.reversed{transform:rotateY(180deg) rotate(180deg)}
-.card-img{width:100%;height:58%;object-fit:cover;border-radius:6px 6px 0 0;display:block;flex-shrink:0}
+.card-img{width:100%;height:100%;object-fit:cover;border-radius:6px;display:block}
 .card-name{color:var(--gold);font-family:'Cinzel',serif;font-size:9px;letter-spacing:.5px;text-transform:uppercase;text-align:center;line-height:1.3;padding:5px 5px 2px;font-weight:600}
 .card-reversed-tag{color:#ff8080;font-size:7px;letter-spacing:1px;text-transform:uppercase;padding:1px 0}
 .card-meaning{color:#d4aaff;font-size:7.5px;text-align:center;padding:2px 5px 5px;line-height:1.4;font-style:italic}
@@ -1135,28 +1135,28 @@ function closeBlogModal(){
 
 // ─── TAROT ────────────────────────────────────────────────────────
 const DECK = [
-  {name:'The Fool',img:'https://www.trustedtarot.com/img/cards/the-fool.png',upright:'New beginnings, spontaneity, a leap of faith',reversed:'Recklessness, poor judgement, missed opportunity'},
-  {name:'The Magician',img:'https://www.trustedtarot.com/img/cards/the-magician.png',upright:'Willpower, skill, manifestation, resourcefulness',reversed:'Manipulation, untapped talents, wasted potential'},
-  {name:'The High Priestess',img:'https://www.trustedtarot.com/img/cards/the-high-priestess.png',upright:'Intuition, inner knowledge, divine guidance',reversed:'Secrets withheld, disconnection from intuition'},
-  {name:'The Empress',img:'https://www.trustedtarot.com/img/cards/the-empress.png',upright:'Abundance, nurturing, creativity, fertility',reversed:'Creative block, dependence, smothering energy'},
-  {name:'The Emperor',img:'https://www.trustedtarot.com/img/cards/the-emperor.png',upright:'Authority, structure, stability, protection',reversed:'Rigidity, domination, inflexibility, control issues'},
-  {name:'The Hierophant',img:'https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg',upright:'Tradition, spiritual wisdom, guidance, ritual',reversed:'Rebellion, subversiveness, breaking free of convention'},
-  {name:'The Lovers',img:'https://www.trustedtarot.com/img/cards/the-lovers.png',upright:'Love, harmony, alignment of values, union',reversed:'Disharmony, imbalance, misalignment in relationship'},
-  {name:'The Chariot',img:'https://www.trustedtarot.com/img/cards/the-chariot.png',upright:'Control, willpower, victory, determination',reversed:'Lack of control, aggression, scattered direction'},
-  {name:'Strength',img:'https://www.trustedtarot.com/img/cards/strength.png',upright:'Courage, inner strength, patience, compassion',reversed:'Self-doubt, inner weakness, insecurity, fear'},
-  {name:'The Hermit',img:'https://www.trustedtarot.com/img/cards/the-hermit.png',upright:'Soul-searching, introspection, wisdom, solitude',reversed:'Isolation, loneliness, withdrawal from guidance'},
-  {name:'Wheel of Fortune',img:'https://www.trustedtarot.com/img/cards/wheel-of-fortune.png',upright:'Good luck, karma, life cycles turning in your favour',reversed:'Bad luck, resistance to change, clinging to the past'},
-  {name:'Justice',img:'https://www.trustedtarot.com/img/cards/justice.png',upright:'Fairness, truth, cause and effect, integrity',reversed:'Unfairness, dishonesty, lack of accountability'},
-  {name:'The Hanged Man',img:'https://www.trustedtarot.com/img/cards/the-hanged-man.png',upright:'Pause, new perspective, letting go, surrender',reversed:'Delays, stalling, resisting necessary change'},
-  {name:'Death',img:'https://www.trustedtarot.com/img/cards/death.png',upright:'Endings, transformation, change, transition',reversed:'Resistance to change, inability to move on'},
-  {name:'Temperance',img:'https://www.trustedtarot.com/img/cards/temperance.png',upright:'Balance, moderation, patience, divine flow',reversed:'Imbalance, excess, lack of long-term vision'},
-  {name:'The Devil',img:'https://www.trustedtarot.com/img/cards/the-devil.png',upright:'Shadow self, attachment, patterns, restriction',reversed:'Releasing limiting beliefs, breaking free, liberation'},
-  {name:'The Tower',img:'https://www.trustedtarot.com/img/cards/the-tower.png',upright:'Sudden change, upheaval, revelation, awakening',reversed:'Personal transformation, fear of necessary change'},
-  {name:'The Star',img:'https://www.trustedtarot.com/img/cards/the-star.png',upright:'Hope, faith, healing, renewal, divine guidance',reversed:'Lack of faith, despair, blocked healing'},
-  {name:'The Moon',img:'https://www.trustedtarot.com/img/cards/the-moon.png',upright:'Intuition, the unconscious, illusion, dreams',reversed:'Release of fear, emerging clarity, hidden truth revealed'},
-  {name:'The Sun',img:'https://www.trustedtarot.com/img/cards/the-sun.png',upright:'Positivity, joy, vitality, success, abundance',reversed:'Overconfidence, blocked joy, needing to look within'},
-  {name:'Judgement',img:'https://www.trustedtarot.com/img/cards/judgement.png',upright:'Reflection, reckoning, awakening, inner calling',reversed:'Self-doubt, refusing the call, inner critic'},
-  {name:'The World',img:'https://www.trustedtarot.com/img/cards/the-world.png',upright:'Completion, integration, accomplishment, wholeness',reversed:'Seeking closure, incomplete cycles, stagnation'}
+  {name:'The Fool',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/eaf8fbe14_generated_image.png',upright:'New beginnings, spontaneity, a leap of faith',reversed:'Recklessness, poor judgement, missed opportunity'},
+  {name:'The Magician',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/e97af1283_generated_image.png',upright:'Willpower, skill, manifestation, resourcefulness',reversed:'Manipulation, untapped talents, wasted potential'},
+  {name:'The High Priestess',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/e493da77b_generated_image.png',upright:'Intuition, inner knowledge, divine guidance',reversed:'Secrets withheld, disconnection from intuition'},
+  {name:'The Empress',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/368b5f8b0_generated_image.png',upright:'Abundance, nurturing, creativity, fertility',reversed:'Creative block, dependence, smothering energy'},
+  {name:'The Emperor',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/f8c25eef6_generated_image.png',upright:'Authority, structure, stability, protection',reversed:'Rigidity, domination, inflexibility, control issues'},
+  {name:'The Hierophant',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/748161cb6_generated_image.png',upright:'Tradition, spiritual wisdom, guidance, ritual',reversed:'Rebellion, subversiveness, breaking free of convention'},
+  {name:'The Lovers',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/6650b3850_generated_image.png',upright:'Love, harmony, alignment of values, union',reversed:'Disharmony, imbalance, misalignment in relationship'},
+  {name:'The Chariot',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/28fda9c38_generated_image.png',upright:'Control, willpower, victory, determination',reversed:'Lack of control, aggression, scattered direction'},
+  {name:'Strength',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/c775b5b7e_generated_image.png',upright:'Courage, inner strength, patience, compassion',reversed:'Self-doubt, inner weakness, insecurity, fear'},
+  {name:'The Hermit',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/106cfd59e_generated_image.png',upright:'Soul-searching, introspection, wisdom, solitude',reversed:'Isolation, loneliness, withdrawal from guidance'},
+  {name:'Wheel of Fortune',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/bc272263a_generated_image.png',upright:'Good luck, karma, life cycles turning in your favour',reversed:'Bad luck, resistance to change, clinging to the past'},
+  {name:'Justice',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/669546aa8_generated_image.png',upright:'Fairness, truth, cause and effect, integrity',reversed:'Unfairness, dishonesty, lack of accountability'},
+  {name:'The Hanged Man',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b3adcdf3d_generated_image.png',upright:'Pause, new perspective, letting go, surrender',reversed:'Delays, stalling, resisting necessary change'},
+  {name:'Death',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/1f2b19b66_generated_image.png',upright:'Endings, transformation, change, transition',reversed:'Resistance to change, inability to move on'},
+  {name:'Temperance',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/26ace1872_generated_image.png',upright:'Balance, moderation, patience, divine flow',reversed:'Imbalance, excess, lack of long-term vision'},
+  {name:'The Devil',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/ea9b8efc3_generated_image.png',upright:'Shadow self, attachment, patterns, restriction',reversed:'Releasing limiting beliefs, breaking free, liberation'},
+  {name:'The Tower',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/a6fa8ea6e_generated_image.png',upright:'Sudden change, upheaval, revelation, awakening',reversed:'Personal transformation, fear of necessary change'},
+  {name:'The Star',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/d9a8749f8_generated_image.png',upright:'Hope, faith, healing, renewal, divine guidance',reversed:'Lack of faith, despair, blocked healing'},
+  {name:'The Moon',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/a798ccf56_generated_image.png',upright:'Intuition, the unconscious, illusion, dreams',reversed:'Release of fear, emerging clarity, hidden truth revealed'},
+  {name:'The Sun',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/3cff3f667_generated_image.png',upright:'Positivity, joy, vitality, success, abundance',reversed:'Overconfidence, blocked joy, needing to look within'},
+  {name:'Judgement',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/d71fb80a2_generated_image.png',upright:'Reflection, reckoning, awakening, inner calling',reversed:'Self-doubt, refusing the call, inner critic'},
+  {name:'The World',img:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/d4c136cd1_generated_image.png',upright:'Completion, integration, accomplishment, wholeness',reversed:'Seeking closure, incomplete cycles, stagnation'},
 ];
 
 const POSITIONS=['Past','Present','Future'];
@@ -1192,7 +1192,7 @@ function flipCard(idx){
   const c=drawnCards[idx];
   const f=document.getElementById('tcardFront'+idx);
   if(c.reversed)f.classList.add('reversed');
-  f.innerHTML=`<img class="card-img" src="${c.img}" alt="${c.name}" loading="lazy"><div class="card-name">${c.name}</div>${c.reversed?'<div class="card-reversed-tag">↩ Reversed</div>':''}<div style="width:60%;height:1px;background:rgba(200,150,255,.3);margin:2px auto"></div><div class="card-meaning">${c.reversed?c.reversed:c.upright}</div>`;
+  f.innerHTML=`<img class="card-img" src="${c.img}" alt="${c.name}" loading="lazy">${c.reversed?'<div class="card-reversed-tag" style="position:absolute;bottom:6px;left:0;right:0;text-align:center;background:rgba(0,0,0,.6);padding:3px 0">↩ Reversed</div>':''}`; f.style.position='relative';
   inner.classList.add('flipped');
   if([0,1,2].every(i=>document.getElementById('cardInner'+i).classList.contains('flipped')))showReading();
 }
