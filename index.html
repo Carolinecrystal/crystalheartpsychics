@@ -136,6 +136,8 @@ nav a:hover{color:var(--purple3);border-bottom-color:var(--purple)}
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
 .blog-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .25s,box-shadow .25s;cursor:pointer}
 .blog-card:hover{border-color:var(--border2);box-shadow:0 8px 28px rgba(124,58,237,.15)}
+.blog-card-img{width:100%;height:160px;object-fit:cover;display:block}
+.blog-card-img-placeholder{width:100%;height:160px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:36px}
 .blog-card-body{padding:20px}
 .blog-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--purple3);margin-bottom:8px}
 .blog-title{font-family:'Cinzel',serif;font-size:15px;font-weight:600;color:var(--white);margin-bottom:10px;line-height:1.4}
@@ -424,6 +426,7 @@ const BLOGS = [
   {
     tag:'Psychic Insights', date:'2024',
     title:'Why People Seek Psychic Guidance at Night',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/c2f17ee17_generated_image.png',
     excerpt:'For many people, nighttime is when emotions feel strongest. The distractions of the day become quieter, thoughts become louder, and unresolved feelings often surface more clearly.',
     body:`<p>For many people, nighttime is when emotions feel strongest. The distractions of the day become quieter, thoughts become louder, and unresolved feelings often surface more clearly. This is one reason why late night psychic readings continue growing in popularity across the UK.</p>
 <p>Whether someone is dealing with relationship uncertainty, emotional stress, career worries, grief, or personal transitions — the quiet hours of the night can make these concerns feel more pressing.</p>
@@ -433,6 +436,7 @@ const BLOGS = [
   {
     tag:'Relationships', date:'2023',
     title:'The Importance of Self-Worth in Relationships',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/b81df6ea3_generated_image.png',
     excerpt:'Self-worth refers to the intrinsic value and respect one holds for themselves. Cultivating a strong sense of self-worth is crucial as it determines how we perceive ourselves and our ability to love and be loved.',
     body:`<p>Self-worth, often interchangeable with self-esteem, refers to the intrinsic value and respect one holds for themselves. It is not dependent on external validation but rather stems from an internal sense of self-appreciation.</p>
 <p>Cultivating a strong sense of self-worth is crucial as it determines how individuals perceive themselves and their ability to contribute positively to relationships. When we value ourselves, we attract partners who value us too.</p>
@@ -442,6 +446,7 @@ const BLOGS = [
   {
     tag:'Wellbeing', date:'2023',
     title:'Understanding and Dealing with Narcissistic Behaviour',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/67766090d_generated_image.png',
     excerpt:'When you know you are dealing with narcissistic behaviour, whilst it can be challenging and frustrating, understanding the traits and learning effective strategies can help you manage interactions more effectively.',
     body:`<p>Once you've identified narcissistic behaviour in someone you interact with, the challenge becomes managing those interactions while protecting your own wellbeing.</p>
 <p><strong>Set clear boundaries.</strong> Narcissists often push limits, so be clear about what you will and won't accept. Consistency is key — enforcing boundaries firmly but calmly.</p>
@@ -453,6 +458,7 @@ const BLOGS = [
   {
     tag:'Wellbeing', date:'2023',
     title:'10 Signs You Are Dealing with a Narcissist',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/66c3e1902_generated_image.png',
     excerpt:'Narcissism is a personality trait characterised by an inflated sense of self-importance and a deep need for excessive attention and admiration. The first step to recovery is recognising when you are dealing with one.',
     body:`<p>Recognising narcissistic behaviour is the first step to protecting yourself. Here are 10 key signs:</p>
 <p><strong>1. Grandiosity.</strong> An exaggerated sense of self-importance. They believe they are superior and expect special treatment.</p>
@@ -470,6 +476,7 @@ const BLOGS = [
   {
     tag:'Spiritual', date:'2023',
     title:'Celebrating the Spring Equinox',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/56415f401_generated_image.png',
     excerpt:'The spring equinox marks the transition from winter to spring — a momentous occasion when the sun crosses the celestial equator, resulting in nearly equal day and night across the globe.',
     body:`<p>The spring equinox, also known as the vernal equinox, marks the transition from the cold, dark days of winter to the vibrant, life-affirming season of spring. This celestial event occurs when the sun crosses the celestial equator, resulting in nearly equal day and night across the globe. It typically falls around March 20–21.</p>
 <p>Spiritually, the equinox is a powerful time for renewal, planting seeds of intention, and releasing what no longer serves you. It represents balance — light and dark in perfect harmony — before the light begins to grow.</p>
@@ -483,6 +490,7 @@ const BLOGS = [
   {
     tag:'Astrology', date:'2023',
     title:'What Are Your Star Sign Qualities?',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/c24afd2b5_generated_image.png',
     excerpt:'Astrology has fascinated humanity for centuries, offering insights into personality traits and life paths through the zodiac. Each of the twelve star signs carries specific qualities and characteristics.',
     body:`<p>Astrology has fascinated humanity for centuries, offering insights into personality traits and life paths through the zodiac. Here's a brief overview of the qualities associated with each sign:</p>
 <p><strong>♈ Aries (Mar 21 – Apr 19):</strong> Bold, ambitious, pioneering. Natural leaders with enormous energy.</p>
@@ -501,6 +509,7 @@ const BLOGS = [
   {
     tag:'Angels & Spirit', date:'2022',
     title:'Signs from Angels',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/48728f508_generated_image.png',
     excerpt:'It is believed that angels send signs to guide, comfort and reassure us. These signs can be subtle and they often appear when we least expect them — here are the most common ones.',
     body:`<p>It is believed that angels can send signs to guide, comfort, and reassure us. These signs often appear when we least expect them — and sometimes exactly when we need them most. Here are some of the most commonly reported angel signs:</p>
 <p><strong>🪶 Feathers.</strong> Finding feathers in unusual places is widely considered a sign of an angel's presence — especially white feathers, which symbolise peace and protection.</p>
@@ -514,6 +523,7 @@ const BLOGS = [
   {
     tag:'Psychic Readings', date:'2022',
     title:"Psychic Readings Can Help When Going Through Life's Challenges",
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/f3cfb5a0a_generated_image.png',
     excerpt:"Life is full of challenges that can leave us feeling lost and overwhelmed. Whether it's relationships, work, family or personal growth — a psychic reading can offer real clarity and direction.",
     body:`<p>Life is full of challenges and obstacles that can sometimes leave us feeling lost and overwhelmed. Whether it's dealing with relationships, work pressures, family difficulties, or personal growth — navigating through these difficulties can be a daunting task.</p>
 <p>This is where psychic readings can genuinely help. Psychic readings have been used for centuries as a way to gain insight and clarity into life's most pressing questions. A gifted reader can offer a different perspective — one that goes beyond the limitations of logic and taps into energy, intuition, and spiritual guidance.</p>
@@ -524,6 +534,7 @@ const BLOGS = [
   {
     tag:'Crystal Healing', date:'2022',
     title:'Crystal Healing & Crystal Energy',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/543e84082_generated_image.png',
     excerpt:'Crystals are semi-precious minerals that hold a small electromagnetic charge. Depending on the crystal, the vibrational energy they emit can bring healing, clarity, protection and calm.',
     body:`<p>Crystals are semi-precious minerals that are beautiful to look at, enhancing both the energy of a room and — with the additional benefit — they can be very pleasing to the eye. They do hold a small electromagnetic charge, and depending on the crystal, the vibrational energy it emits can have a profound effect.</p>
 <p>For most people who are sensitive to crystal healing, the results can be felt almost immediately. For others, it is a more subtle experience that builds over time.</p>
@@ -539,6 +550,7 @@ const BLOGS = [
   {
     tag:'Aromatherapy', date:'2022',
     title:'Rose Essential Oil – Aromatherapy and Healing',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/f6b046eb9_generated_image.png',
     excerpt:'Rose essential oil not only has a beautiful fragrance — it has remarkable health and wellbeing benefits for the skin, emotions and spirit.',
     body:`<p>Rose essential oil has been treasured for centuries — not only for its exquisite fragrance, but for its remarkable healing properties. It is one of the most precious and complex essential oils in aromatherapy.</p>
 <p><strong>Skin benefits:</strong> Rose oil has been used for centuries to improve the appearance and health of the skin. It is a powerful antioxidant, helps maintain skin vitality, and is particularly beneficial for dry, sensitive or ageing skin. A few drops blended with a carrier oil makes a luxurious facial treatment.</p>
@@ -550,6 +562,7 @@ const BLOGS = [
   {
     tag:'Mindset', date:'2021',
     title:'The F Word — Fear',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/2e8d42628_generated_image.png',
     excerpt:'FEAR can be one of our biggest blockers to developing, learning and growing. Often when we are in a state of fear, we don\'t see opportunities or recognise that change can lead to greater choices.',
     body:`<p>The F word. FEAR. It can be one of our biggest blockers to developing, learning and growing. Second to that is the fear of failure itself.</p>
 <p>Often when we are in a state of fear, we don't see opportunities, or recognise the fact that change can lead to greater choices. We stay stuck — because the unknown feels more dangerous than the discomfort we already know.</p>
@@ -564,6 +577,7 @@ const BLOGS = [
   {
     tag:'Mindfulness', date:'2021',
     title:'Mindfulness and Meditation',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/5f235cfd1_generated_image.png',
     excerpt:'Meditation and mindfulness have many benefits to your health and wellbeing. Even just a few minutes each day can transform how you feel, think and respond to life.',
     body:`<p>Meditation and mindfulness have many proven benefits to your health and wellbeing — mentally, emotionally, and physically.</p>
 <p><strong>Benefits of regular practice include:</strong></p>
@@ -578,6 +592,7 @@ const BLOGS = [
   {
     tag:'Spiritual', date:'2021',
     title:'Fate and Destiny',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/4db60115d_generated_image.png',
     excerpt:'Do you believe in fate and destiny? At Crystal Heart Psychics we believe in both fate and free will. A psychic reading should never disempower a person — it should guide and illuminate the path ahead.',
     body:`<p>Do you believe in fate and destiny? At Crystal Heart Psychics we definitely believe in both fate and destiny — and we also believe in free will.</p>
 <p>For Caroline, our founder, a psychic reading should never disempower a person. Our job as healers and psychics is to give guidance — to provide clarity, illuminate the path ahead, and empower you to make the choices that align with your highest good.</p>
@@ -588,6 +603,7 @@ const BLOGS = [
   {
     tag:'Aromatherapy', date:'2021',
     title:'Lavender – Healing Properties',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/14f3b634c_generated_image.png',
     excerpt:'Lavender is a powerful healing fragrance, renowned for its ability to create a relaxing atmosphere and reduce stress and anxiety — all without causing sedation.',
     body:`<p>Lavender is one of the most versatile and beloved healing fragrances in aromatherapy. It smells absolutely amazing and is renowned for its ability to create a relaxing atmosphere.</p>
 <p>One of the most important benefits of lavender is that it can calm <em>without sedating</em>. This makes it perfect for daytime use when you need calm focus rather than sleepiness.</p>
@@ -602,6 +618,7 @@ const BLOGS = [
   {
     tag:'Bereavement', date:'2020',
     title:'Coping with Loss',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/4760d844b_generated_image.png',
     excerpt:'The hardest thing to do sometimes is say goodbye. Coping with the loss of someone you love is both traumatic and stressful. Grief can leave us feeling very alone — but you don\'t have to face it that way.',
     body:`<p>The hardest thing to do sometimes is say goodbye. Coping with the loss of someone you love is both traumatic and stressful, and navigating grief can feel overwhelming and isolating.</p>
 <p>Sometimes we have had time to prepare for a loss. Other times, it arrives without warning, leaving us shattered. Either way — grief is grief, and it deserves to be honoured.</p>
@@ -616,6 +633,7 @@ const BLOGS = [
   {
     tag:'Mindset', date:'2020',
     title:'Emotional Intelligence',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/6aa38de99_generated_image.png',
     excerpt:'Emotional intelligence is being aware of another person\'s emotional state and having empathy toward them. It is a skill that can be learnt — and it transforms every relationship in your life.',
     body:`<p>Emotional intelligence is being aware of another person's emotional state and having empathy towards how they are feeling. This is a skill that can be learnt if a person wishes to develop it — and doing so transforms every relationship in your life.</p>
 <p>The foundation of emotional intelligence begins with <strong>self-awareness</strong>. In order to help someone, or to navigate a difficult interaction, you must first be aware of your own emotions and how they are influencing your responses.</p>
@@ -630,6 +648,7 @@ const BLOGS = [
   {
     tag:'Spiritual', date:'2020',
     title:'Finding Your Tribe',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/616c1e976_generated_image.png',
     excerpt:'Finding your tribe means finding like-minded individuals who accept you for who you are. Many of us spend years trying to fit in — not realising that our tribe is waiting for us to stop hiding.',
     body:`<p>Finding your tribe means finding like-minded individuals who accept you for who you are — unconditionally, without asking you to shrink yourself or fit a mould.</p>
 <p>Like many others, you may have spent a lot of your life trying to fit in — trying to find a group of people who will love and accept you, whilst staying true to yourself. It can be an exhausting and lonely search.</p>
@@ -644,6 +663,7 @@ const BLOGS = [
   {
     tag:'Crystal Healing', date:'2020',
     title:'The Seven Crystals for Attracting Love',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/8807aa030_generated_image.png',
     excerpt:'In order to love another and maintain a healthy relationship, we must first love ourselves. These seven crystals can support you in opening your heart and attracting the love you deserve.',
     body:`<p>In order to love another and maintain a healthy, balanced relationship, we must first love ourselves. It is our own self-worth and self-esteem that ensures we have a strong foundation from which to give and receive love.</p>
 <p>These seven crystals can support you on your journey to opening your heart:</p>
@@ -659,6 +679,7 @@ const BLOGS = [
   {
     tag:'Spiritual', date:'2019',
     title:'Winter Solstice',
+    image:'https://media.base44.com/images/public/69ef12132b7c75ed36aea371/4fac18210_generated_image.png',
     excerpt:'The winter solstice is where the balance between dark and light changes. The sun begins its return — and with it comes the quiet promise of spring, growth and new beginnings.',
     body:`<p>The winter solstice — usually falling around 21st or 22nd December — is the shortest day of the year. This is when the sun moves to its southernmost point and the Northern Hemisphere experiences its longest night.</p>
 <p>Spiritually, the solstice is one of the most powerful days of the year. It marks the turning point — the moment when darkness peaks, and then begins to recede. The light starts to return. However slowly, however quietly — it is returning.</p>
@@ -816,6 +837,7 @@ function buildBlog() {
   const grid = document.getElementById('blogGrid');
   grid.innerHTML = BLOGS.map((b,i) => `
     <div class="blog-card" onclick="openBlog(${i})">
+      ${b.image ? `<img class="blog-card-img" src="${b.image}" alt="${b.title}" loading="lazy">` : `<div class="blog-card-img-placeholder">🔮</div>`}
       <div class="blog-card-body">
         <div class="blog-tag">${b.tag}</div>
         <div class="blog-title">${b.title}</div>
