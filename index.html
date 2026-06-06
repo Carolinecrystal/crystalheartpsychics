@@ -64,8 +64,8 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-
 .legal-top{background:#08050f;border-bottom:1px solid var(--border);padding:7px 20px;text-align:center;font-size:11px;color:var(--muted);letter-spacing:.3px}
 
 /* header */
-header{background:var(--bg);border-bottom:1px solid var(--border);text-align:center}
-header img{width:100%;max-height:160px;display:block;object-fit:contain;object-position:center}
+header{background:var(--bg);border-bottom:1px solid var(--border);text-align:center;overflow:hidden;padding:0;margin:0}
+header img{width:100%;max-height:220px;display:block;object-fit:cover;object-position:center top}
 
 /* nav */
 nav{background:var(--bg2);border-bottom:1px solid var(--border);display:flex;justify-content:center;flex-wrap:wrap;position:sticky;top:0;z-index:200}
@@ -1227,7 +1227,7 @@ function resetTarot(){
 
 // ─── READER FEED ──────────────────────────────────────────────────
 const PROFILE_BASE='https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
-const FEED_URL='https://corsproxy.io/?url=https://services.inveroak.co.uk/readerimages/livepanel/91232.xml';
+const FEED_URL='https://corsproxy.io/?url=https://www.crystalheartpsychics.com/wp-json/inveroak-feed/v1/feed/';
 
 // ── Static reader data (photos + bios always show) ──
 const READERS_STATIC=[
@@ -1290,28 +1290,22 @@ const READERS_STATIC=[
 ];
 
 let liveStatuses={};
-let feedPhotos={};
 
 async function loadReaderStatuses(){
   try{
-    const res=await fetch(FEED_URL+'&t='+Date.now(),{cache:'no-cache'});
+    const res=await fetch(FEED_URL+'?t='+Date.now(),{cache:'no-cache'});
     const text=await res.text();
-    const parser=new DOMParser();
-    const xml=parser.parseFromString(text,'text/xml');
-    const readers=xml.querySelectorAll('Reader');
-    readers.forEach(r=>{
-      const pin=(r.querySelector('Pin')||{}).textContent||'';
-      const status=((r.querySelector('Status')||{}).textContent||'').toLowerCase().trim();
-      if(pin){
-        // Map Inveroak statuses: Available, Busy, Logged Off
-        if(status==='available') liveStatuses[pin]='available';
-        else if(status==='busy') liveStatuses[pin]='busy';
-        else liveStatuses[pin]='logged-off';
-        // Also grab live photo from feed if available
-        const pic=(r.querySelector('Picture')||{}).textContent||'';
-        if(pic) feedPhotos[pin]=pic;
-      }
-    });
+    if(text.trim().startsWith('[')){
+      const data=JSON.parse(text);
+      data.forEach(r=>{liveStatuses[String(r.pin||r.id||'')]=r.status||'logged-off';});
+    } else {
+      // Parse HTML feed format
+      const blocks=text.split(/<div class="op op-/).slice(1);
+      blocks.forEach(b=>{
+        const pM=b.match(/^(\d+) ([a-z\-]+)/);
+        if(pM)liveStatuses[pM[1]]=pM[2];
+      });
+    }
   } catch(e){
     // Feed unavailable — statuses stay unknown (show as offline)
   }
@@ -1322,7 +1316,6 @@ function renderReaders(){
   const grid=document.getElementById('readersGrid');
   grid.innerHTML=READERS_STATIC.map(r=>{
     const live=r.forceOffline?'logged-off':(liveStatuses[r.pin]||'logged-off');
-    const photo=feedPhotos[r.pin]||r.photo;
     const isAvail=live==='available';
     const isBusy=live==='busy';
     const statusClass=isAvail?'s-available':isBusy?'s-busy':'s-offline';
