@@ -104,9 +104,9 @@ nav a:hover{color:var(--purple3);border-bottom-color:var(--purple)}
 .readers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
 .reader-card{background:linear-gradient(160deg,#1a0a35 0%,#0d0520 100%);border:1px solid rgba(124,58,237,.4);border-radius:16px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;cursor:pointer}
 .reader-card:hover{transform:translateY(-4px);border-color:rgba(167,139,250,.7);box-shadow:0 12px 40px rgba(124,58,237,.35)}
-.reader-photo-wrap{position:relative;width:100%;height:280px;overflow:hidden}
-.reader-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
-.reader-photo-overlay{position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,#0d0520)}
+.reader-photo-wrap{position:relative;width:100%;height:220px;overflow:hidden;background:#0d0520}
+.reader-photo-wrap img{width:100%;height:100%;object-fit:contain;object-position:center top;display:block}
+.reader-photo-overlay{position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(transparent,#0d0520)}
 .reader-status-float{position:absolute;top:12px;right:12px;padding:4px 12px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;backdrop-filter:blur(8px)}
 .reader-card-body{padding:16px 18px 20px}
 .reader-name{font-family:'Cinzel',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:2px}
