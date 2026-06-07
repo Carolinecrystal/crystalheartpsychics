@@ -1605,8 +1605,19 @@ function renderReaders(){
 // ─── INIT ───// ─── INIT ─────────────────────────────────────────────────────────
 buildBlog();
 buildHoroscopeGrid();
-loadReaderStatuses();
-setInterval(loadReaderStatuses,90000);
+
+// First load: use cached profiles instantly if available, then refresh from feed
+(async()=>{
+  const cached=getCachedProfiles();
+  if(cached && cached.length){
+    liveReaders=cached;
+    renderReaders(); // instant render from cache
+  }
+  await loadReaderStatuses(); // then fetch fresh data + live status
+})();
+
+// Every 90s: only poll for status changes (fast, lightweight)
+setInterval(loadStatusOnly, 90000);
 
 // ─── BOOKING ──────────────────────────────────────────────────────
 function openBooking(product, mins, price, perMin) {
