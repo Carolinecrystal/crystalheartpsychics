@@ -1658,6 +1658,7 @@ async function loadReaderStatuses(){
   }catch(e){
     // Feed failed — keep previous data if any
   }
+  setCachedProfiles(liveReaders);
   renderReaders();
 }
 
@@ -1697,7 +1698,49 @@ function renderReaders(){
   }).join('');
 }
 
-// ─── INIT ───// ─── INIT ─────────────────────────────────────────────────────────
+
+// ─── CACHE HELPERS ────────────────────────────────────────────────
+const CACHE_KEY = 'chr_readers_cache';
+const CACHE_TTL = 3600000; // 1 hour
+
+function getCachedProfiles() {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+    const { ts, data } = JSON.parse(raw);
+    if (Date.now() - ts > CACHE_TTL) return null;
+    return data;
+  } catch(e) { return null; }
+}
+
+function setCachedProfiles(readers) {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: readers }));
+  } catch(e) {}
+}
+
+async function loadStatusOnly() {
+  try {
+    const res = await fetch(XML_FEED + '?t=' + Date.now(), { cache: 'no-cache' });
+    const text = await res.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/xml');
+    const nodes = [...doc.querySelectorAll('Reader')];
+    const statusMap = {};
+    nodes.forEach(n => {
+      const pin = n.querySelector('Pin')?.textContent?.trim();
+      const status = (n.querySelector('Status')?.textContent?.trim() || '').toLowerCase();
+      if (pin) statusMap[pin] = status;
+    });
+    // Update status on existing cards without full re-render
+    liveReaders.forEach(r => {
+      if (statusMap[r.pin] !== undefined) r.status = statusMap[r.pin];
+    });
+    renderReaders();
+  } catch(e) {}
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────
 buildBlog();
 buildHoroscopeGrid();
 
