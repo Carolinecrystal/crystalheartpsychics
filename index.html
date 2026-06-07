@@ -22,28 +22,61 @@
 <link rel="canonical" href="https://crystalheartpsychics.co.uk/">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Crystal Heart® Psychics",
-  "url": "https://crystalheartpsychics.co.uk",
-  "logo": "https://media.base44.com/images/public/69ef12132b7c75ed36aea371/2d67f3cd1_generated_image.png",
-  "description": "Genuine psychic readings by phone, text and online. Trusted UK psychic service since 2007. Clairvoyants, mediums, tarot readers.",
-  "foundingDate": "2007",
-  "founder": {
-    "@type": "Person",
-    "name": "Caroline",
-    "jobTitle": "Psychic Medium & Clairvoyant"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness","ProfessionalService"],
+    "name": "Crystal Heart Psychics",
+    "alternateName": "Crystal Heart® Psychics",
+    "url": "https://crystalheartpsychics.co.uk",
+    "logo": "https://media.base44.com/images/public/69ef12132b7c75ed36aea371/8caa06ec0_generated_image.png",
+    "image": "https://media.base44.com/images/public/69ef12132b7c75ed36aea371/8caa06ec0_generated_image.png",
+    "description": "Crystal Heart Psychics offers genuine, professional telephone psychic readings with gifted clairvoyants, mediums, tarot readers and spiritual life coaches. Est. 2007. UK, USA and Australia.",
+    "telephone": "+442077545333",
+    "email": "info@crystalheartpsychics.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB",
+      "addressRegion": "West Midlands"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Caroline",
+      "jobTitle": "Psychic Medium, Clairvoyant, NLP Master Practitioner, CBT Therapist",
+      "description": "Caroline is the founder of Crystal Heart Psychics, a Psychic Medium, Clairvoyant, Empath, NLP Master Practitioner, CBT Therapist, Hypnotherapist, Healer and Animal Communicator with 17+ years experience. Featured in Soul & Spirit Magazine 2013, 2014 and 2016."
+    },
+    "foundingDate": "2007",
+    "areaServed": ["GB","US","AU"],
+    "serviceType": ["Psychic Readings","Tarot Readings","Mediumship","Clairvoyant Readings","Angel Card Readings","Animal Communication","Spiritual Life Coaching"],
+    "priceRange": "££",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Psychic Reading Services",
+      "itemListElement": [
+        {"@type":"Offer","name":"Phone Psychic Reading — Credit Card","description":"Telephone psychic reading billed by credit or debit card. From £1.50/min. 5-minute satisfaction guarantee.","telephone":"+442077545333"},
+        {"@type":"Offer","name":"Phone Psychic Reading — Phone Bill","description":"Telephone psychic reading billed to your phone bill. £1.50/min. Dial 0906 636 4550 and enter reader PIN.","telephone":"09066364550"},
+        {"@type":"Offer","name":"Text Psychic Reading","description":"Psychic reading by SMS text message. Text HEART + your question to 78887. £1.50 per text."},
+        {"@type":"Offer","name":"Animal Communication Reading","description":"Psychic animal communication reading by telephone. Connect with living or passed pets."}
+      ]
+    },
+    "sameAs": [
+      "https://crystalheartpsychics.com",
+      "https://crystalheartradio.app",
+      "https://www.crystalheartacademy.com"
+    ]
   },
-  "areaServed": ["GB", "US", "AU"],
-  "telephone": "+442077545333",
-  "email": "info@crystalheartpsychics.com",
-  "sameAs": [
-    "https://crystalheartradio.app",
-    "https://www.crystalheartacademy.com"
-  ],
-  "serviceType": ["Psychic Readings", "Tarot Readings", "Clairvoyant Readings", "Mediumship", "Spiritual Guidance"]
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Crystal Heart Psychics",
+    "url": "https://crystalheartpsychics.co.uk",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://crystalheartpsychics.co.uk#{search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+]
 </script>
 <meta property="og:title" content="Crystal Heart® Psychics | Genuine Psychic Readings">
 <meta property="og:description" content="Speak to a gifted psychic reader today. Live readings by phone, text and online. Trusted since 2007.">
@@ -321,6 +354,50 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
 .rmp-tag{display:inline-block;background:rgba(124,58,237,.25);border:1px solid rgba(139,92,246,.4);color:rgba(255,255,255,.75);font-size:11px;padding:3px 9px;border-radius:20px;margin:2px 2px 2px 0;line-height:1.6}
 .rmp-tag-sub{background:rgba(16,185,129,.15);border-color:rgba(16,185,129,.35);color:rgba(167,243,208,.85)}
 .rmp-tag-tool{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.3);color:rgba(252,211,77,.85)}
+
+
+/* ── SERVICE CARDS ── */
+.svc-card{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:28px 22px;cursor:pointer;transition:all .25s;text-align:center}
+.svc-card:hover{border-color:var(--purple);box-shadow:0 0 20px rgba(149,76,233,.25);transform:translateY(-3px)}
+.svc-icon{font-size:36px;margin-bottom:12px}
+.svc-title{font-family:'Cinzel',serif;color:var(--gold);font-size:14px;letter-spacing:1.5px;margin-bottom:10px}
+.svc-desc{color:var(--text2);font-size:12px;line-height:1.7;margin-bottom:14px}
+.svc-link{color:var(--purple3);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+/* ── SERVICE MODAL ── */
+.svc-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;overflow-y:auto;padding:20px}
+.svc-modal.open{display:flex;align-items:flex-start;justify-content:center}
+.svc-modal-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;max-width:700px;width:100%;margin:auto;padding:40px 36px;position:relative}
+.svc-modal-close{position:absolute;top:14px;right:18px;background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer;line-height:1}
+.svc-modal-title{font-family:'Cinzel',serif;color:var(--gold);font-size:20px;letter-spacing:2px;margin-bottom:20px;padding-right:30px}
+.svc-modal-body{color:var(--text2);font-size:13px;line-height:1.9}
+.svc-modal-body h3{color:var(--purple3);font-family:'Cinzel',serif;font-size:14px;margin:22px 0 8px;letter-spacing:1px}
+.svc-modal-body ul{padding-left:18px;margin:8px 0}
+.svc-modal-body ul li{margin-bottom:6px}
+.svc-modal-body strong{color:var(--text)}
+.svc-modal-cta{display:inline-block;margin-top:24px;background:var(--purple);color:white;padding:12px 30px;border-radius:999px;font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;text-decoration:none;cursor:pointer;border:none}
+/* ── ADMIN PANEL ── */
+.admin-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:3000;overflow-y:auto;padding:20px}
+.admin-modal.open{display:flex}
+.admin-box{background:#0d0520;border:1px solid var(--purple);border-radius:16px;max-width:900px;width:100%;margin:auto;padding:36px;position:relative}
+.admin-close{position:absolute;top:14px;right:18px;background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer}
+.admin-title{font-family:'Cinzel',serif;color:var(--gold);font-size:18px;letter-spacing:3px;margin-bottom:24px}
+.admin-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;border-bottom:1px solid var(--border);padding-bottom:12px}
+.admin-tab{background:none;border:1px solid var(--border);color:var(--text2);padding:8px 16px;border-radius:8px;font-size:11px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.admin-tab.active,.admin-tab:hover{background:var(--purple);color:white;border-color:var(--purple)}
+.admin-panel{display:none}.admin-panel.active{display:block}
+.admin-stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:24px}
+.admin-stat{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.admin-stat-val{font-family:'Cinzel',serif;color:var(--gold);font-size:24px}
+.admin-stat-lbl{color:var(--text2);font-size:10px;margin-top:4px;letter-spacing:1px;text-transform:uppercase}
+.admin-input{background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:8px;width:100%;font-size:13px;margin-bottom:10px;box-sizing:border-box}
+.admin-input:focus{outline:none;border-color:var(--purple)}
+.admin-btn{background:var(--purple);color:white;border:none;padding:10px 24px;border-radius:8px;font-size:12px;letter-spacing:1px;cursor:pointer;margin-right:8px;margin-bottom:8px}
+.admin-btn:hover{background:var(--purple2)}
+.admin-btn.danger{background:#7f1d1d}
+.admin-section-title{color:var(--purple3);font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin:20px 0 10px;border-bottom:1px solid var(--border);padding-bottom:6px}
+.admin-blog-list{max-height:300px;overflow-y:auto}
+.admin-blog-item{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--text2)}
+.admin-blog-item:hover{background:rgba(149,76,233,.05)}
 
 </style>
 </head>
@@ -1642,5 +1719,292 @@ function closeReaderModal(){
     </div>
   </div>
 </div>
+
+<!-- ═══════════ SERVICE MODALS ═══════════ -->
+<div class="svc-modal" id="svcModal" onclick="if(event.target===this)closeSvc()">
+  <div class="svc-modal-box">
+    <button class="svc-modal-close" onclick="closeSvc()">✕</button>
+    <div class="svc-modal-title" id="svcTitle"></div>
+    <div class="svc-modal-body" id="svcBody"></div>
+    <button class="svc-modal-cta" onclick="window.location='tel:02077545333'">📞 Call Now: 0207 754 5333</button>
+  </div>
+</div>
+
+<!-- ═══════════ ADMIN PANEL ═══════════ -->
+<div class="admin-modal" id="adminModal">
+  <div class="admin-box">
+    <button class="admin-close" onclick="closeAdmin()">✕</button>
+    <div class="admin-title">⚙️ Crystal Heart Admin</div>
+    <div class="admin-tabs">
+      <button class="admin-tab active" onclick="adminTab('overview',this)">Overview</button>
+      <button class="admin-tab" onclick="adminTab('blogs',this)">Blog Posts</button>
+      <button class="admin-tab" onclick="adminTab('readers',this)">Readers</button>
+      <button class="admin-tab" onclick="adminTab('schema',this)">SEO &amp; Schema</button>
+    </div>
+    <!-- Overview -->
+    <div class="admin-panel active" id="admin-overview">
+      <div class="admin-stat-grid">
+        <div class="admin-stat"><div class="admin-stat-val" id="aStat1">—</div><div class="admin-stat-lbl">Blog Posts</div></div>
+        <div class="admin-stat"><div class="admin-stat-val" id="aStat2">—</div><div class="admin-stat-lbl">Readers Live</div></div>
+        <div class="admin-stat"><div class="admin-stat-val" id="aStat3">22</div><div class="admin-stat-lbl">Tarot Cards</div></div>
+        <div class="admin-stat"><div class="admin-stat-val" id="aStat4">12</div><div class="admin-stat-lbl">Horoscopes</div></div>
+      </div>
+      <div class="admin-section-title">Quick Links</div>
+      <a class="admin-btn" href="https://crystalheartradio.app" target="_blank">📻 Crystal Heart Radio</a>
+      <a class="admin-btn" href="https://www.crystalheartacademy.com" target="_blank">🎓 Academy</a>
+      <a class="admin-btn" href="https://github.com/carolinecrystal/crystalheartpsychics" target="_blank">💻 GitHub Repo</a>
+      <a class="admin-btn" href="https://search.google.com/search-console" target="_blank">📊 Search Console</a>
+      <a class="admin-btn" href="https://www.bing.com/webmasters" target="_blank">🔍 Bing Webmaster</a>
+      <div class="admin-section-title">Site Status</div>
+      <div style="color:var(--text2);font-size:12px;line-height:2">
+        ✅ Domain: crystalheartpsychics.co.uk<br>
+        ✅ Inveroak XML feed: live<br>
+        ✅ Tarot: Caroline's personal meanings active<br>
+        ✅ Crystal Heart® Oracle card back<br>
+        ✅ Schema markup: LocalBusiness + ProfessionalService<br>
+        ✅ Sitemap: /sitemap.xml
+      </div>
+    </div>
+    <!-- Blog Posts -->
+    <div class="admin-panel" id="admin-blogs">
+      <div class="admin-section-title">All Blog Posts (<span id="blogCount">0</span>)</div>
+      <div class="admin-blog-list" id="adminBlogList"></div>
+    </div>
+    <!-- Readers -->
+    <div class="admin-panel" id="admin-readers">
+      <div class="admin-section-title">Live Reader Feed Status</div>
+      <div id="adminReadersInfo" style="color:var(--text2);font-size:12px;line-height:2">Loading feed...</div>
+      <div class="admin-section-title">Your Reader PIN</div>
+      <div style="color:var(--gold);font-family:'Cinzel',serif;font-size:28px">5330</div>
+      <div style="color:var(--text2);font-size:11px;margin-top:4px">Caroline — Inveroak Premium Line</div>
+      <div class="admin-section-title">Inveroak Portal</div>
+      <a class="admin-btn" href="https://www.inveroak.com" target="_blank">🔗 Inveroak Operator Portal</a>
+    </div>
+    <!-- SEO -->
+    <div class="admin-panel" id="admin-schema">
+      <div class="admin-section-title">AI Discoverability Checklist</div>
+      <div style="color:var(--text2);font-size:12px;line-height:2.2">
+        ✅ <strong style="color:var(--text)">Schema.org LocalBusiness</strong> — embedded in page<br>
+        ✅ <strong style="color:var(--text)">Schema.org ProfessionalService</strong> — embedded in page<br>
+        ✅ <strong style="color:var(--text)">Open Graph tags</strong> — Facebook/social sharing<br>
+        ✅ <strong style="color:var(--text)">Sitemap.xml</strong> — submit to Google &amp; Bing<br>
+        ⬜ <strong style="color:var(--text)">Google Search Console</strong> — verify &amp; submit sitemap<br>
+        ⬜ <strong style="color:var(--text)">Bing Webmaster Tools</strong> — submit for ChatGPT visibility<br>
+        ⬜ <strong style="color:var(--text)">WordPress redirect</strong> — add link from .com → .co.uk
+      </div>
+      <div class="admin-section-title">Submit Your Sitemap</div>
+      <div style="color:var(--text2);font-size:12px;margin-bottom:12px">Your sitemap URL: <strong style="color:var(--gold)">https://crystalheartpsychics.co.uk/sitemap.xml</strong></div>
+      <a class="admin-btn" href="https://search.google.com/search-console/sitemaps" target="_blank">📊 Submit to Google</a>
+      <a class="admin-btn" href="https://www.bing.com/webmasters/sitemaps" target="_blank">🔍 Submit to Bing</a>
+    </div>
+  </div>
+</div>
+
+<!-- Admin trigger (hidden, triple-click footer logo) -->
+<div id="adminTrigger" style="position:fixed;bottom:10px;right:10px;width:40px;height:40px;opacity:0;cursor:pointer;z-index:999" onclick="checkAdmin()" title="Admin"></div>
+
+<script>
+// ── SERVICE PAGE DATA ──────────────────────────────────────────────
+const SERVICES = {
+  phone: {
+    title: '📞 Phone Psychic Readings',
+    body: `<p>Our telephone psychic readings connect you directly with a gifted, caring psychic reader from the comfort and privacy of your own home. No waiting rooms, no appointments necessary — just genuine guidance when you need it most.</p>
+    <h3>How to Book</h3>
+    <ul>
+      <li><strong>Credit or Debit Card:</strong> Call <strong>0207 754 5333</strong>. Our friendly receptionist will take your payment and connect you with your chosen reader. From £1.50/min. Includes our 5-minute satisfaction guarantee.</li>
+      <li><strong>Pay on Phone Bill:</strong> Call <strong>0906 636 4550</strong>. Listen to the menu, enter your chosen reader's PIN number when prompted and you'll be connected directly. £1.50/min charged to your phone bill. 18+ only.</li>
+      <li><strong>USA:</strong> Call <strong>855-546-0126</strong>. $2.00/min by credit card.</li>
+      <li><strong>Australia:</strong> Call <strong>1800 689 373</strong>. From $3.90/min.</li>
+    </ul>
+    <h3>Our 5-Minute Guarantee</h3>
+    <p>With all credit card bookings, if you don't feel a connection with your chosen reader within 5 minutes, simply end the call politely and phone our receptionist on 0207 754 5333 — they'll connect you to another reader at no extra charge.</p>
+    <h3>Tips for Your Best Reading</h3>
+    <ul>
+      <li>Find a quiet, private space where you won't be disturbed</li>
+      <li>Have a pen and paper ready to take notes</li>
+      <li>Have your questions ready — but stay open to what comes through</li>
+      <li>Be relaxed and open — the energy flows better when you're calm</li>
+    </ul>
+    <p style="color:#888;font-size:11px;margin-top:16px">18+ only. For entertainment purposes only. SP: Inveroak.com, PO Box 10015, CM1 9HH. Customer Helpline: 0330 114 0300.</p>`
+  },
+  text: {
+    title: '💬 Text Psychic Readings',
+    body: `<p>Our text psychic reading service is perfect when you need guidance but can't speak privately, or simply prefer to receive your reading in writing. Text your question and receive a thoughtful, personalised response from one of our gifted readers.</p>
+    <h3>How It Works</h3>
+    <ul>
+      <li>Text the word <strong>HEART</strong> followed by your question to <strong>78887</strong></li>
+      <li>£1.50 per text message plus your standard network rate</li>
+      <li>Maximum 3 messages per reply</li>
+      <li>18+ only</li>
+    </ul>
+    <h3>Tips for a Great Text Reading</h3>
+    <ul>
+      <li>Keep your question clear and focused — one topic works best</li>
+      <li>Include relevant details: names, situations, what you need clarity on</li>
+      <li>Ask open questions for the most insightful responses</li>
+    </ul>
+    <h3>Example Questions</h3>
+    <ul>
+      <li>"HEART Will my relationship with John improve this year?"</li>
+      <li>"HEART I'm considering a career change — what does spirit say?"</li>
+      <li>"HEART I feel lost on my path — can you give me guidance?"</li>
+    </ul>
+    <p style="color:#888;font-size:11px;margin-top:16px">18+ only. For entertainment purposes only. £1.50 per text plus standard network rate. Max 3 msgs per reply.</p>`
+  },
+  types: {
+    title: '🔮 Psychic Reading Types',
+    body: `<p>Our readers have a wide range of gifts, skills and abilities. Here's a guide to the different types of readings available so you can choose what's right for you.</p>
+    <h3>🌟 Clairvoyance</h3>
+    <p>Clairvoyance means "clear seeing" — a psychic clairvoyant receives visual impressions, images and symbols about your past, present and future. Many of our readers use clairvoyance alongside their other gifts to give you a rich, detailed reading.</p>
+    <h3>🕊️ Mediumship</h3>
+    <p>A psychic medium has the ability to communicate with those who have passed to the spirit world. If you are seeking connection with a loved one who has crossed over, a medium reading can bring comfort, healing and closure. Our mediums deliver messages with love, care and sensitivity.</p>
+    <h3>🃏 Tarot Reading</h3>
+    <p>Tarot uses a deck of 78 cards — each with its own symbolism and meaning — to provide insight into your situation. A skilled tarot reader doesn't just interpret the cards mechanically; they use their intuition to weave the cards into a meaningful, personal reading for you.</p>
+    <h3>👼 Angel Card Reading</h3>
+    <p>Angel cards work with the angelic realm to deliver gentle, uplifting messages of guidance and encouragement. Perfect if you're seeking positive direction and reassurance on your path.</p>
+    <h3>💜 Clairsentience</h3>
+    <p>Clairsentience means "clear feeling" — a clairsentient reader receives information through feelings and emotions. They may sense what you or others around you are feeling, detecting the emotional energy of a situation with great accuracy.</p>
+    <h3>👂 Clairaudience</h3>
+    <p>Clairaudience means "clear hearing" — a clairaudient reader hears messages, names, words or sounds from spirit. This gift often works alongside mediumship to bring through specific, evidential messages from loved ones.</p>
+    <h3>🔢 Numerology</h3>
+    <p>Numerology uses the power of numbers — your date of birth, name numbers and life path number — to reveal your personality, life purpose, and the cycles and patterns playing out in your life right now.</p>
+    <h3>🌿 Energy Healing &amp; Aura Reading</h3>
+    <p>Some of our readers can sense and read the energy field (aura) around you, identifying blockages, imbalances and strengths. This can provide deep insight into your physical, emotional and spiritual wellbeing.</p>
+    <h3>🐾 Animal Communication</h3>
+    <p>Psychic animal communication works in exactly the same way as a human psychic reading. Our animal communicators can tune in to your pets — living or passed — to receive messages, understand behaviours, and bring healing and comfort.</p>`
+  },
+  howto: {
+    title: '✨ How to Get a Reading',
+    body: `<p>Getting your first psychic reading is simple. Here's everything you need to know to get started and make the most of your experience.</p>
+    <h3>Step 1 — Choose Your Reader</h3>
+    <p>Browse our reader profiles above. Each profile shows their specialties, gifts, star sign and live availability status. Click a reader's card to view their full profile. Take your time — choosing a reader you feel drawn to makes a big difference.</p>
+    <h3>Step 2 — Choose Your Payment Method</h3>
+    <ul>
+      <li><strong>Credit/Debit Card (recommended for first-timers):</strong> Includes our 5-minute satisfaction guarantee. Call 0207 754 5333 and our receptionist will take payment and connect you.</li>
+      <li><strong>Pay on Phone Bill:</strong> No card needed. Call 0906 636 4550 and enter your reader's PIN when prompted. Charged to your phone bill.</li>
+      <li><strong>Text Reading:</strong> Text HEART + your question to 78887.</li>
+    </ul>
+    <h3>Step 3 — Prepare for Your Reading</h3>
+    <ul>
+      <li>Find a quiet, comfortable space where you won't be disturbed</li>
+      <li>Have a pen and paper ready to write down key messages</li>
+      <li>Think about what you'd like guidance on — but don't feel you need a script</li>
+      <li>Take a few deep breaths and relax before your call</li>
+    </ul>
+    <h3>Step 4 — During Your Reading</h3>
+    <p>Be open and honest with your reader. You don't need to give lots of information away — your reader will guide the session. If something doesn't resonate immediately, make a note — readings often make more sense with time.</p>
+    <h3>After Your Reading</h3>
+    <p>Take time to reflect on the messages you received. Many clients find it helpful to re-read their notes in the days following a reading. Remember — psychic guidance is one tool to help you make empowered choices, not a substitute for your own judgement.</p>
+    <p style="color:#888;font-size:11px;margin-top:16px">All readings are for entertainment purposes only. 18+ only. Please do not make major life decisions based solely on a psychic reading.</p>`
+  },
+  findreader: {
+    title: '🌟 Find a Reader',
+    body: `<p>Choosing the right psychic reader is one of the most important steps in getting a meaningful, accurate reading. Here's our guide to finding the perfect match for you.</p>
+    <h3>Trust Your Intuition</h3>
+    <p>When browsing our reader profiles, pay attention to how you feel looking at each reader's photo and description. A sense of warmth, calm or curiosity is a good sign. Your intuition is already working — trust it.</p>
+    <h3>Consider What You Need</h3>
+    <ul>
+      <li><strong>Seeking connection with a loved one who has passed?</strong> Choose a medium.</li>
+      <li><strong>Want insight into love, relationships or career?</strong> A clairvoyant or tarot reader works well.</li>
+      <li><strong>Looking for spiritual guidance and life direction?</strong> Many of our readers combine psychic gifts with life coaching and counselling skills.</li>
+      <li><strong>Need to communicate with a pet?</strong> Look for our animal communication specialists.</li>
+    </ul>
+    <h3>What Makes a Good Psychic Reader?</h3>
+    <ul>
+      <li>They are warm, empathetic and non-judgemental</li>
+      <li>They give specific, evidential information — not just vague generalities</li>
+      <li>They empower you rather than create dependency</li>
+      <li>They are honest — even when the truth is challenging</li>
+      <li>They never predict death, illness or create fear</li>
+    </ul>
+    <h3>Our Quality Guarantee</h3>
+    <p>Every reader on Crystal Heart Psychics has been personally tested and vetted by Caroline. We do not accept readers onto our platform without rigorous testing to ensure they have genuine ability and the emotional intelligence to deliver readings with care and integrity.</p>
+    <h3>Our 5-Minute Promise</h3>
+    <p>If you book by credit or debit card and don't feel a connection with your chosen reader within 5 minutes, call our receptionist on 0207 754 5333 and we'll connect you with another reader.</p>`
+  },
+  animal: {
+    title: '🐾 Animal Communication',
+    body: `<p>Psychic animal communication is one of the most wonderful and healing services we offer. Whether your beloved pet is still with you or has passed to the other side, our animal communicators can tune in to their energy and bring you messages of love, understanding and comfort.</p>
+    <h3>How Does Animal Communication Work?</h3>
+    <p>Psychic animal readings work in exactly the same way as a human psychic reading. Our readers tune in to the energy and consciousness of your animal — living or passed — and receive impressions, feelings, images and sometimes words that communicate their experience, feelings and messages for you.</p>
+    <h3>What Can Animal Communication Help With?</h3>
+    <ul>
+      <li>Understanding unexplained behaviour changes in your pet</li>
+      <li>Receiving comfort and closure after the loss of a beloved animal</li>
+      <li>Knowing whether your pet is happy, in pain or distressed</li>
+      <li>Communicating your love and reassurance to an animal that is unwell</li>
+      <li>Connecting with animals that have passed — receiving messages of love from the other side</li>
+    </ul>
+    <h3>What to Have Ready</h3>
+    <ul>
+      <li>Your pet's name and species</li>
+      <li>A photo if possible (not always necessary but can help focus the energy)</li>
+      <li>Any specific questions or situations you'd like to address</li>
+    </ul>
+    <p>Look out for the animal communication skill listed in our readers' profiles. Caroline herself is a gifted animal communicator with many years of experience connecting people with their beloved animals.</p>
+    <p style="color:var(--purple3);font-style:italic;margin-top:16px">"Animals are pure love. Their messages are always filled with unconditional love and forgiveness." — Caroline</p>`
+  }
+};
+
+function openService(key) {
+  const s = SERVICES[key];
+  if (!s) return;
+  document.getElementById('svcTitle').textContent = s.title;
+  document.getElementById('svcBody').innerHTML = s.body;
+  document.getElementById('svcModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSvc() {
+  document.getElementById('svcModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── ADMIN PANEL ──────────────────────────────────────────────────────
+const ADMIN_PASS = 'crystal2026';
+let adminUnlocked = false;
+
+function checkAdmin() {
+  if (adminUnlocked) { openAdmin(); return; }
+  const p = prompt('Enter admin password:');
+  if (p === ADMIN_PASS) { adminUnlocked = true; openAdmin(); }
+}
+function openAdmin() {
+  document.getElementById('adminModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Populate stats
+  document.getElementById('aStat1').textContent = typeof BLOGS !== 'undefined' ? BLOGS.length : '—';
+  // Populate blog list
+  const list = document.getElementById('adminBlogList');
+  document.getElementById('blogCount').textContent = typeof BLOGS !== 'undefined' ? BLOGS.length : 0;
+  if (typeof BLOGS !== 'undefined') {
+    list.innerHTML = BLOGS.map((b,i) => `<div class="admin-blog-item"><span>${i+1}. ${b.title}</span><span style="color:var(--purple3);font-size:10px">${b.category||'General'}</span></div>`).join('');
+  }
+  // Reader feed status
+  const ri = document.getElementById('adminReadersInfo');
+  if (typeof liveReaders !== 'undefined') {
+    const online = liveReaders.filter(r=>r.status==='Available').length;
+    document.getElementById('aStat2').textContent = online;
+    ri.innerHTML = liveReaders.map(r=>`✦ <strong style="color:var(--text)">${r.name}</strong> (PIN: ${r.pin}) — <span style="color:${r.status==='Available'?'#4ade80':'#f87171'}">${r.status}</span>`).join('<br>');
+  } else {
+    ri.textContent = 'Feed not yet loaded — scroll to reader section first.';
+  }
+}
+function closeAdmin() {
+  document.getElementById('adminModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function adminTab(id, btn) {
+  document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.admin-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('admin-'+id).classList.add('active');
+}
+
+// Keyboard shortcut: Ctrl+Shift+A to open admin
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && e.shiftKey && e.key === 'A') checkAdmin();
+});
+</script>
+
 </body>
 </html>
