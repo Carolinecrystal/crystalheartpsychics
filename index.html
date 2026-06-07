@@ -477,11 +477,13 @@ footer{background:#07040f;border-top:1px solid var(--border);padding:44px 20px;t
   <h2>🔮 Our Psychic Readers</h2>
   <div class="divider"></div>
   <p style="font-size:16px;max-width:600px;margin:0 auto">Every reader is personally vetted by Caroline. Genuine, gifted, and available 24/7.</p>
-  <p style="font-size:13px;color:rgba(255,255,255,.4);margin-top:8px">Live availability updates every 90 seconds</p>
+  <p style="font-size:13px;color:rgba(255,255,255,.4);margin-top:8px">Live availability updates every 60 seconds</p>
 </div>
 <div class="readers-section">
   <div class="readers-grid" id="readersGrid">
-    <div class="loading"><div class="spinner"></div><p>Loading our readers…</p></div>
+    <div class="reader-card skeleton-card" style="opacity:.4;pointer-events:none"><div style="width:100%;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#2d1b4e,#1a0a2e);margin:0 auto 12px;max-width:120px"></div><div style="height:14px;background:#2d1b4e;border-radius:6px;margin:8px auto;width:70%"></div><div style="height:10px;background:#1a0a2e;border-radius:6px;margin:6px auto;width:50%"></div></div>
+    <div class="reader-card skeleton-card" style="opacity:.4;pointer-events:none"><div style="width:100%;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#2d1b4e,#1a0a2e);margin:0 auto 12px;max-width:120px"></div><div style="height:14px;background:#2d1b4e;border-radius:6px;margin:8px auto;width:70%"></div><div style="height:10px;background:#1a0a2e;border-radius:6px;margin:6px auto;width:50%"></div></div>
+    <div class="reader-card skeleton-card" style="opacity:.4;pointer-events:none"><div style="width:100%;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#2d1b4e,#1a0a2e);margin:0 auto 12px;max-width:120px"></div><div style="height:14px;background:#2d1b4e;border-radius:6px;margin:8px auto;width:70%"></div><div style="height:10px;background:#1a0a2e;border-radius:6px;margin:6px auto;width:50%"></div></div>
   </div>
 </div>
 
@@ -1867,7 +1869,7 @@ function renderReaders(){
 
 // ─── CACHE HELPERS ────────────────────────────────────────────────
 const CACHE_KEY = 'chr_readers_cache';
-const CACHE_TTL = 3600000; // 1 hour
+const CACHE_TTL = 600000; // 10 minutes
 
 function getCachedProfiles() {
   try {
@@ -1920,7 +1922,7 @@ buildHoroscopeGrid();
 })();
 
 // Every 90s: only poll for status changes (fast, lightweight)
-setInterval(loadStatusOnly, 90000);
+setInterval(loadStatusOnly, 60000);
 
 // ─── BOOKING ──────────────────────────────────────────────────────
 function openBooking(product, mins, price, perMin) {
