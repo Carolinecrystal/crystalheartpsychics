@@ -1615,7 +1615,23 @@ function resetTarot(){
 
 // ─── READER FEED — fully driven by Inveroak XML ──────────────────
 const PROFILE_BASE='https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
-const XML_FEED='https://app.base44.com/api/apps/69ef12132b7c75ed36aea371/functions/readerFeedProxy';
+const INVEROAK_FEED='https://services.inveroak.co.uk/readerimages/livepanel/91232.xml';
+const CORS_PROXIES=[
+  url=>'https://api.allorigins.win/raw?url='+encodeURIComponent(url),
+  url=>'https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(url),
+  url=>'https://corsproxy.io/?url='+encodeURIComponent(url),
+];
+async function fetchFeedXML(){
+  for(const proxy of CORS_PROXIES){
+    try{
+      const res=await fetch(proxy(INVEROAK_FEED+'?t='+Date.now()),{cache:'no-cache',signal:AbortSignal.timeout(6000)});
+      if(!res.ok) continue;
+      const text=await res.text();
+      if(text.includes('<Reader>')) return text;
+    }catch(e){console.warn('Proxy failed:',e);}
+  }
+  throw new Error('All proxies failed');
+}
 
 // No photo overrides — use live Inveroak feed photos directly
 const PHOTO_OVERRIDES={};
@@ -1624,8 +1640,7 @@ let liveReaders=[];
 
 async function loadReaderStatuses(){
   try{
-    const res=await fetch(XML_FEED+'?t='+Date.now(),{cache:'no-cache'});
-    const text=await res.text();
+    const text=await fetchFeedXML();
     const parser=new DOMParser();
     const doc=parser.parseFromString(text,'text/xml');
     const nodes=[...doc.querySelectorAll('Reader')];
@@ -1721,8 +1736,7 @@ function setCachedProfiles(readers) {
 
 async function loadStatusOnly() {
   try {
-    const res = await fetch(XML_FEED + '?t=' + Date.now(), { cache: 'no-cache' });
-    const text = await res.text();
+    const text = await fetchFeedXML();
     const parser = new DOMParser();
     const doc = parser.parseFromString(text, 'text/xml');
     const nodes = [...doc.querySelectorAll('Reader')];
