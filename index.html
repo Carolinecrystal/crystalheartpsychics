@@ -1844,8 +1844,8 @@ function renderReaders(){
     const statusClass=isAvail?'s-available':isBusy?'s-busy':'s-offline';
     const statusText=isAvail?'🟢 Available Now':isBusy?'🟡 With a Client':'⚫ Offline';
     const ctaClass=isAvail||isBusy?'reader-cta':'reader-cta reader-cta-offline';
-    const ctaText=isAvail?'📞 Book a Reading':isBusy?'⏳ Join Queue':'📅 Leave a Message';
-    const ctaHref=isAvail||isBusy?PROFILE_BASE+r.pin:'mailto:info@crystalheartpsychics.com?subject=Reading Request - '+encodeURIComponent(r.name);
+    const ctaText=isAvail?'📞 Call Now':'📅 Leave a Message';
+    const ctaHref=isAvail?PROFILE_BASE+r.pin:'mailto:info@crystalheartpsychics.com?subject=Reading Request - '+encodeURIComponent(r.name);
     const ctaTarget=isAvail||isBusy?'_blank':'_self';
     const stars='★★★★★';
     const photoHtml=r.photo
@@ -1984,8 +1984,8 @@ function openReaderModal(pin){
       '<span class="rmp-call-label">Phone Bill &bull; Enter PIN '+callPin+'</span></span>'+
     '</a>';
   // Book online + close
-  var ctaHref=(isAvail||isBusy)?'https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin='+r.pin:'mailto:info@crystalheartpsychics.com?subject=Reading Request - '+encodeURIComponent(r.name);
-  var ctaText=isAvail?'&#128197; Book Online Now':isBusy?'&#9203; Join the Queue':'&#128231; Leave a Message';
+  var ctaHref=isAvail?'https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin='+r.pin:'mailto:info@crystalheartpsychics.com?subject=Reading Request - '+encodeURIComponent(r.name);
+  var ctaText=isAvail?'var ctaText=isAvail?'&#128197; Book Online Now':'&#128231; Leave a Message';#128197; Book Online Now':'var ctaText=isAvail?'&#128197; Book Online Now':'&#128231; Leave a Message';#128231; Leave a Message';
   var ctaTarget=(isAvail||isBusy)?'_blank':'_self';
   document.getElementById('rmpActions').innerHTML='<a href="'+ctaHref+'" target="'+ctaTarget+'" class="rmp-btn rmp-btn-book">'+ctaText+'</a><button class="rmp-btn rmp-btn-secondary" onclick="closeReaderModal()">&#10005; Close</button>';
   // Skills / Subjects / Tools — live from feed
