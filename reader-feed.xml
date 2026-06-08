@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ReaderDetails updated="08/06/2026 16:57:09">
+<ReaderDetails updated="08/06/2026 17:02:13">
   <Reader>
     <Name>Caroline</Name>
     <Description>Caroline is a Psychic Medium,andclairvoyant  Naturally gifted healer, she is also an animal healer, and an empath. Caroline is also a Qualified NLP Master practitioner, Spiritual Practitioner, CBT Therapist,hypnotherapist, past life regression therapist, Reiki &amp; Seichem Master teacher has qualifications in herbalism and homeopathy. Soul &amp; Spirit Magazine 2013, 2014 and 2016. Caroline channels directly from spirit, receiving messages from her guides and clients guides or loved ones passed over.
@@ -52,6 +52,87 @@ Caroline was first aware of spirit in childhood. Caroline is the founder of Crys
     <Video>None</Video>
     <Rating>100</Rating>
     <StarSign />
+    <emailreader>No</emailreader>
+  </Reader>
+  <Reader>
+    <Name>Clara</Name>
+    <Description>Hello my name is Clara and I have been a clairvoyant since birth and I feel extremely privileged to be able to share my gift with you. I have been reading tarot and angel cards professionally for over 20 years. I also use my trusted pendulum for answers to closed questions. My areas of speciality are family, work, love and relationships. Alternatively, if you would prefer a general reading I also excel in this area. All my clients can be assured of a 100% confidential non judgemental reading where I will tune into my ascended master guides for insights and inspiration to provide you with a professional uplifting and spiritual reading. Namaste</Description>
+    <Status>Available</Status>
+    <WebChatStatus>Logged Off</WebChatStatus>
+    <WebCamStatus>Logged Off</WebCamStatus>
+    <Pin>4491</Pin>
+    <PinTier>0</PinTier>
+    <OverFlow>Yes</OverFlow>
+    <Picture>http://services.inveroak.co.uk/readerimages/images/4491-1</Picture>
+    <Pictures />
+    <PicturesLarge>
+      <Picture>http://services.inveroak.co.uk/readerimages/images/4491-1_lf</Picture>
+    </PicturesLarge>
+    <Audio>None</Audio>
+    <Rota />
+    <Categories>
+      <Category name="Skills">
+        <Skill>Clairvoyant</Skill>
+        <Skill>Clairsentient</Skill>
+        <Skill>Clairaudient</Skill>
+        <Skill>Medium</Skill>
+        <Skill>Psychic</Skill>
+        <Skill>Reiki Healer</Skill>
+      </Category>
+      <Category name="Tools">
+        <Skill>Tarot Cards</Skill>
+        <Skill>Pendulum</Skill>
+        <Skill>Angel Cards</Skill>
+      </Category>
+      <Category name="Subjects">
+        <Skill>Love/relationships</Skill>
+        <Skill>Career/work</Skill>
+        <Skill>Pets/animals</Skill>
+        <Skill>Destiny/life path</Skill>
+      </Category>
+      <Category name="Languages">
+        <Skill>English</Skill>
+      </Category>
+    </Categories>
+    <Video>None</Video>
+    <Rating>100</Rating>
+    <StarSign>Aries</StarSign>
+    <emailreader>No</emailreader>
+  </Reader>
+  <Reader>
+    <Name>Isobel</Name>
+    <Description>Isobel has been working as a professional qualified Medium for 40 years and is a natural Clairvoyant, capable of tuning into your partner or work colleagues energies, and can help with any emotional, family, or work issues. Can provide proof of survival that loved ones are able to communicate from the world of spirit to give validation and direction. Pets are also able to give validation.
+Isobel is a very honest reader who will tell you exactly what she sees.</Description>
+    <Status>Available</Status>
+    <WebChatStatus>Logged Off</WebChatStatus>
+    <WebCamStatus>Logged Off</WebCamStatus>
+    <Pin>4336</Pin>
+    <PinTier>0</PinTier>
+    <OverFlow>Yes</OverFlow>
+    <Picture>http://services.inveroak.co.uk/readerimages/images/4336-3</Picture>
+    <Pictures />
+    <PicturesLarge>
+      <Picture>http://services.inveroak.co.uk/readerimages/images/4336-3_lf</Picture>
+    </PicturesLarge>
+    <Audio>http://services.inveroak.co.uk/readerimages/audio/4336.mp3</Audio>
+    <Rota />
+    <Categories>
+      <Category name="Skills">
+        <Skill>Clairvoyant</Skill>
+        <Skill>Medium</Skill>
+      </Category>
+      <Category name="Subjects">
+        <Skill>Love/relationships</Skill>
+        <Skill>Career/work</Skill>
+        <Skill>Destiny/life path</Skill>
+      </Category>
+      <Category name="Languages">
+        <Skill>English</Skill>
+      </Category>
+    </Categories>
+    <Video>https://player.vimeo.com/video/877445332?h=73656f0803</Video>
+    <Rating>100</Rating>
+    <StarSign>Sagittarius</StarSign>
     <emailreader>No</emailreader>
   </Reader>
   <Reader>
