@@ -1839,7 +1839,7 @@ function renderReaders(){
     return;
   }
   grid.innerHTML=liveReaders.map(r=>{
-    const isAvail=r.status==='available';
+    const isAvail=r.status==='available'||r.status==='waiting';
     const isBusy=r.status==='busy';
     const statusClass=isAvail?'s-available':isBusy?'s-busy':'s-offline';
     const statusText=isAvail?'🟢 Available Now':isBusy?'🟡 With a Client':'⚫ Offline';
