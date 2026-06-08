@@ -1838,7 +1838,8 @@ function renderReaders(){
     grid.innerHTML='<div class="loading"><div class="spinner"></div><p>Loading our readers…</p></div>';
     return;
   }
-  grid.innerHTML=liveReaders.map(r=>{
+  const sorted=[...liveReaders].sort((a,b)=>{const rank=s=>s==="available"||s==="waiting"?0:s==="busy"?1:2;return rank(a.status)-rank(b.status);});
+  grid.innerHTML=sorted.map(r=>{
     const isAvail=r.status==='available'||r.status==='waiting';
     const isBusy=r.status==='busy';
     const statusClass=isAvail?'s-available':isBusy?'s-busy':'s-offline';
