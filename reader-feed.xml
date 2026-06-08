@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ReaderDetails updated="08/06/2026 15:42:08">
+<ReaderDetails updated="08/06/2026 15:47:09">
   <Reader>
     <Name>Ane</Name>
     <Description>My approach to doing a phone reading is rooted in truth and honesty. Clients often find solace and clarity in my predictions and spiritual guidance, prompting them to return with positive feedback. My psychic toolkit includes a wide array of modalities where I offer personalised types of psychic readings: Clairvoyance, Clairsentience, Channelling, Soul Mate Readings, Spiritual Healing, Cord cutting with Archangel Michael, Crystal Healing, White Witchcraft, Spells and Rituals, Aura Cleansing, Angel Cards, Rune Cards, Tarot Cards, Light Worker. Theres more to me than meets the eye! While my psychic abilities are a core part of my work, I also hold a Bachelors degree in Botany from India. This scientific background brings a unique balance and depth to my readings. Additionally, I am a:Reiki Practitioner: Facilitating healing through the power of universal energy. Spell caster: Crafting positive spells for your intentions. Akashic Record reader: Unlocking wisdom from the past lives stored in the energetic library of the universe. Past life regression therapist: Guiding you on a journey to explore past experiences that may be impacting your present. Angel healer: Working with the benevolent energy of Archangels, particularly Archangel Michael for protection and healing. Practitioner of Maa Kali healing and Lakshmi/Ganesha healing: Utilising ancient mantras to address blockages and promote positive energy flow. Switch Word expert: Employing these powerful phrases to shift your energy for positive change.</Description>
@@ -180,9 +180,54 @@ I am very down to earth, and want to help guide you on your path.</Description>
     <emailreader>No</emailreader>
   </Reader>
   <Reader>
+    <Name>Joanna</Name>
+    <Description>Joanna is a psychic clairvoyant.  Joanna is a natural psychic, who was born with her ability. Joanna is also clairsentient which means she reads from the heart, and can feel peoples energies and emotions, whether they are in the same room or the other side of the world. This makes her insightful into what is going on in peoples lives, especially where matters of the heart are concerned.</Description>
+    <Status>Busy</Status>
+    <WebChatStatus>Logged Off</WebChatStatus>
+    <WebCamStatus>Logged Off</WebCamStatus>
+    <Pin>4456</Pin>
+    <PinTier>0</PinTier>
+    <OverFlow>Yes</OverFlow>
+    <Picture>http://services.inveroak.co.uk/readerimages/images/4456-1</Picture>
+    <Pictures />
+    <PicturesLarge>
+      <Picture>http://services.inveroak.co.uk/readerimages/images/4456-1_lf</Picture>
+    </PicturesLarge>
+    <Audio>None</Audio>
+    <Rota />
+    <Categories>
+      <Category name="Skills">
+        <Skill>Clairvoyant</Skill>
+        <Skill>Clairsentient</Skill>
+        <Skill>Counsellor</Skill>
+        <Skill>Psychic</Skill>
+      </Category>
+      <Category name="Tools">
+        <Skill>Tarot Cards</Skill>
+        <Skill>Oracle Cards</Skill>
+      </Category>
+      <Category name="Subjects">
+        <Skill>Love/relationships</Skill>
+        <Skill>Career/work</Skill>
+        <Skill>Pets/animals</Skill>
+        <Skill>Destiny/life path</Skill>
+      </Category>
+      <Category name="Languages">
+        <Skill>English</Skill>
+      </Category>
+      <Category name="Counselling">
+        <Skill>Counsellor</Skill>
+      </Category>
+    </Categories>
+    <Video>https://youtube.com/embed/eybB9_r7cbo</Video>
+    <Rating>80</Rating>
+    <StarSign />
+    <emailreader>No</emailreader>
+  </Reader>
+  <Reader>
     <Name>Terry</Name>
     <Description>Healing Mind, Body, Spirit &amp; the Emotions. I have been successfully predicting the outcome of many client issues now for over 40yrs. I am a Clairaudient, Clairsentient, Clairvoyant a Spirit Guide Channeler, and can read into Soulmate, Kindred Spirit, Twin Flame Connections, plus interaction or communicational issues etc. Reading in an ethical, honest and integral way is part of my core, and my aim is not to give you false promises, but the way forward in love matters. I reveal your past as it was, the present as it is and your future as it will be. I am also Internationally known, and pride myself on being a Psychic, Intuitive Channeler. I provide you with the answers to lifes most challenging love relationship questions, including, family, business, and friendship connections. Many times as we travel lifes path, we come to crossroads in love - where we wonder what do I do? What do I say?, What do I believe? Sometimes we need Spiritual Guidance. Are you trying to go forward in life but going backwards? Worried, confused or unhappy? My spirit guides provide the answers; they will always speak the truth and for your best outcome. If happiness is what you seek. Know it is waiting for you. Please - Let us help you find it today! Are you ready? Let me guide you through a better life filled with happiness &amp; Peace. I specialise in: Crystal Ball reading, Tarot cards, Clairvoyance &amp; Clairsentience, Soulmate love readings, Spirit Guide Channeling, Crystal Energy &amp; Healing.</Description>
-    <Status>Available</Status>
+    <Status>Busy</Status>
     <WebChatStatus>Logged Off</WebChatStatus>
     <WebCamStatus>Logged Off</WebCamStatus>
     <Pin>4476</Pin>
