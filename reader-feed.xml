@@ -1,41 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ReaderDetails updated="08/06/2026 12:42:08">
-  <Reader>
-    <Name>Isobel</Name>
-    <Description>Isobel has been working as a professional qualified Medium for 40 years and is a natural Clairvoyant, capable of tuning into your partner or work colleagues energies, and can help with any emotional, family, or work issues. Can provide proof of survival that loved ones are able to communicate from the world of spirit to give validation and direction. Pets are also able to give validation.
-Isobel is a very honest reader who will tell you exactly what she sees.</Description>
-    <Status>Available</Status>
-    <WebChatStatus>Logged Off</WebChatStatus>
-    <WebCamStatus>Logged Off</WebCamStatus>
-    <Pin>4336</Pin>
-    <PinTier>0</PinTier>
-    <OverFlow>Yes</OverFlow>
-    <Picture>http://services.inveroak.co.uk/readerimages/images/4336-3</Picture>
-    <Pictures />
-    <PicturesLarge>
-      <Picture>http://services.inveroak.co.uk/readerimages/images/4336-3_lf</Picture>
-    </PicturesLarge>
-    <Audio>http://services.inveroak.co.uk/readerimages/audio/4336.mp3</Audio>
-    <Rota />
-    <Categories>
-      <Category name="Skills">
-        <Skill>Clairvoyant</Skill>
-        <Skill>Medium</Skill>
-      </Category>
-      <Category name="Subjects">
-        <Skill>Love/relationships</Skill>
-        <Skill>Career/work</Skill>
-        <Skill>Destiny/life path</Skill>
-      </Category>
-      <Category name="Languages">
-        <Skill>English</Skill>
-      </Category>
-    </Categories>
-    <Video>https://player.vimeo.com/video/877445332?h=73656f0803</Video>
-    <Rating>100</Rating>
-    <StarSign>Sagittarius</StarSign>
-    <emailreader>No</emailreader>
-  </Reader>
+<ReaderDetails updated="08/06/2026 12:58:08">
   <Reader>
     <Name>Leonie</Name>
     <Description>I am a caring and experienced Clairvoyant Psychic and I discovered my gift from quite a young age. I was able to see and predict what was about to happen around them. I was able to help individuals on specific personal matters. I am here to guide you when you are feeling lifes challenges and will bring sunshine into your life. I specialise in love relationships and I am able to advise spiritually on career problems. I aim to empower and enlighten you, and my approach is honest and direct.</Description>
@@ -152,6 +116,42 @@ Isobel is a very honest reader who will tell you exactly what she sees.</Descrip
     <Video>https://player.vimeo.com/video/877446342?h=a62e6516a0</Video>
     <Rating>60</Rating>
     <StarSign>Taurus</StarSign>
+    <emailreader>No</emailreader>
+  </Reader>
+  <Reader>
+    <Name>Isobel</Name>
+    <Description>Isobel has been working as a professional qualified Medium for 40 years and is a natural Clairvoyant, capable of tuning into your partner or work colleagues energies, and can help with any emotional, family, or work issues. Can provide proof of survival that loved ones are able to communicate from the world of spirit to give validation and direction. Pets are also able to give validation.
+Isobel is a very honest reader who will tell you exactly what she sees.</Description>
+    <Status>Busy</Status>
+    <WebChatStatus>Logged Off</WebChatStatus>
+    <WebCamStatus>Logged Off</WebCamStatus>
+    <Pin>4336</Pin>
+    <PinTier>0</PinTier>
+    <OverFlow>Yes</OverFlow>
+    <Picture>http://services.inveroak.co.uk/readerimages/images/4336-3</Picture>
+    <Pictures />
+    <PicturesLarge>
+      <Picture>http://services.inveroak.co.uk/readerimages/images/4336-3_lf</Picture>
+    </PicturesLarge>
+    <Audio>http://services.inveroak.co.uk/readerimages/audio/4336.mp3</Audio>
+    <Rota />
+    <Categories>
+      <Category name="Skills">
+        <Skill>Clairvoyant</Skill>
+        <Skill>Medium</Skill>
+      </Category>
+      <Category name="Subjects">
+        <Skill>Love/relationships</Skill>
+        <Skill>Career/work</Skill>
+        <Skill>Destiny/life path</Skill>
+      </Category>
+      <Category name="Languages">
+        <Skill>English</Skill>
+      </Category>
+    </Categories>
+    <Video>https://player.vimeo.com/video/877445332?h=73656f0803</Video>
+    <Rating>100</Rating>
+    <StarSign>Sagittarius</StarSign>
     <emailreader>No</emailreader>
   </Reader>
   <Reader>
