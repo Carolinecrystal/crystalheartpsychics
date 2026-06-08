@@ -1,255 +1,82 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ReaderDetails updated="08/06/2026 13:42:09">
-  <Reader>
-    <Name>Leonie</Name>
-    <Description>I am a caring and experienced Clairvoyant Psychic and I discovered my gift from quite a young age. I was able to see and predict what was about to happen around them. I was able to help individuals on specific personal matters. I am here to guide you when you are feeling lifes challenges and will bring sunshine into your life. I specialise in love relationships and I am able to advise spiritually on career problems. I aim to empower and enlighten you, and my approach is honest and direct.</Description>
-    <Status>Available</Status>
-    <WebChatStatus>Logged Off</WebChatStatus>
-    <WebCamStatus>Logged Off</WebCamStatus>
-    <Pin>4468</Pin>
-    <PinTier>0</PinTier>
-    <OverFlow>Yes</OverFlow>
-    <Picture>http://services.inveroak.co.uk/readerimages/images/4468-1</Picture>
-    <Pictures />
-    <PicturesLarge>
-      <Picture>http://services.inveroak.co.uk/readerimages/images/4468-1_lf</Picture>
-    </PicturesLarge>
-    <Audio>None</Audio>
-    <Rota />
-    <Categories>
-      <Category name="Skills">
-        <Skill>Clairvoyant</Skill>
-        <Skill>Counsellor</Skill>
-        <Skill>Psychic</Skill>
-      </Category>
-      <Category name="Tools">
-        <Skill>Tarot Cards</Skill>
-        <Skill>Crystals</Skill>
-        <Skill>Pendulum</Skill>
-      </Category>
-      <Category name="Subjects">
-        <Skill>Love/relationships</Skill>
-        <Skill>Career/work</Skill>
-        <Skill>Destiny/life path</Skill>
-      </Category>
-      <Category name="Languages">
-        <Skill>English</Skill>
-      </Category>
-    </Categories>
-    <Video>None</Video>
-    <Rating>100</Rating>
-    <StarSign>Leo</StarSign>
-    <emailreader>No</emailreader>
-  </Reader>
-  <Reader>
-    <Name>Sherrey</Name>
-    <Description>Sherrey is an experienced Medium and clairvoyant. Sherrey will give you enough details about a loved one that you will instantly feel comforted and that you are speaking to a reader who truly cares and understands. Sherrey certainly doesnt give vague answers. She is a very warm woman that will tell you what she sees. It may not be what you want to hear but it will help you make the decision that is right for you.</Description>
-    <Status>Available</Status>
-    <WebChatStatus>Logged Off</WebChatStatus>
-    <WebCamStatus>Logged Off</WebCamStatus>
-    <Pin>4436</Pin>
-    <PinTier>0</PinTier>
-    <OverFlow>Yes</OverFlow>
-    <Picture>http://services.inveroak.co.uk/readerimages/images/4436-2</Picture>
-    <Pictures />
-    <PicturesLarge />
-    <Audio>None</Audio>
-    <Rota />
-    <Categories>
-      <Category name="Skills">
-        <Skill>Clairvoyant</Skill>
-        <Skill>Clairsentient</Skill>
-        <Skill>Clairaudient</Skill>
-        <Skill>Medium</Skill>
-        <Skill>Psychic</Skill>
-      </Category>
-      <Category name="Subjects">
-        <Skill>Love/relationships</Skill>
-        <Skill>Career/work</Skill>
-        <Skill>Pets/animals</Skill>
-        <Skill>Destiny/life path</Skill>
-        <Skill>Deceased loved ones</Skill>
-      </Category>
-      <Category name="Languages">
-        <Skill>English</Skill>
-      </Category>
-    </Categories>
-    <Video>https://player.vimeo.com/video/881693496?h=5e7298981f</Video>
-    <Rating>100</Rating>
-    <StarSign>Gemini</StarSign>
-    <emailreader>No</emailreader>
-  </Reader>
-  <Reader>
-    <Name>Terry</Name>
-    <Description>Healing Mind, Body, Spirit &amp; the Emotions. I have been successfully predicting the outcome of many client issues now for over 40yrs. I am a Clairaudient, Clairsentient, Clairvoyant a Spirit Guide Channeler, and can read into Soulmate, Kindred Spirit, Twin Flame Connections, plus interaction or communicational issues etc. Reading in an ethical, honest and integral way is part of my core, and my aim is not to give you false promises, but the way forward in love matters. I reveal your past as it was, the present as it is and your future as it will be. I am also Internationally known, and pride myself on being a Psychic, Intuitive Channeler. I provide you with the answers to lifes most challenging love relationship questions, including, family, business, and friendship connections. Many times as we travel lifes path, we come to crossroads in love - where we wonder what do I do? What do I say?, What do I believe? Sometimes we need Spiritual Guidance. Are you trying to go forward in life but going backwards? Worried, confused or unhappy? My spirit guides provide the answers; they will always speak the truth and for your best outcome. If happiness is what you seek. Know it is waiting for you. Please - Let us help you find it today! Are you ready? Let me guide you through a better life filled with happiness &amp; Peace. I specialise in: Crystal Ball reading, Tarot cards, Clairvoyance &amp; Clairsentience, Soulmate love readings, Spirit Guide Channeling, Crystal Energy &amp; Healing.</Description>
-    <Status>Available</Status>
-    <WebChatStatus>Logged Off</WebChatStatus>
-    <WebCamStatus>Logged Off</WebCamStatus>
-    <Pin>4476</Pin>
-    <PinTier>0</PinTier>
-    <OverFlow>Yes</OverFlow>
-    <Picture>http://services.inveroak.co.uk/readerimages/images/4476-3</Picture>
-    <Pictures />
-    <PicturesLarge>
-      <Picture>http://services.inveroak.co.uk/readerimages/images/4476-3_lf</Picture>
-    </PicturesLarge>
-    <Audio>None</Audio>
-    <Rota />
-    <Categories>
-      <Category name="Skills">
-        <Skill>Clairvoyant</Skill>
-        <Skill>Clairsentient</Skill>
-        <Skill>Clairaudient</Skill>
-        <Skill>Psychic</Skill>
-        <Skill>Wicca</Skill>
-        <Skill>Channeler</Skill>
-      </Category>
-      <Category name="Tools">
-        <Skill>Tarot Cards</Skill>
-        <Skill>Crystals</Skill>
-        <Skill>Pendulum</Skill>
-      </Category>
-      <Category name="Subjects">
-        <Skill>Love/relationships</Skill>
-        <Skill>Career/work</Skill>
-        <Skill>Destiny/life path</Skill>
-      </Category>
-      <Category name="Languages">
-        <Skill>English</Skill>
-      </Category>
-    </Categories>
-    <Video>None</Video>
-    <Rating>100</Rating>
-    <StarSign>Aquarius</StarSign>
-    <emailreader>Yes</emailreader>
-  </Reader>
-  <Reader>
-    <Name>Tina</Name>
-    <Description>Tina is a Natural Psychic Clairvoyant who is also a very good Medium with around 35 years of experience. Tina can do distant healing helping you feel more yourself. Tina uses her guides and angels to help guide you and give you the answers that you are seeking regarding any situation you may be facing. Tina can also use the Pendulum, Tarot and Angel cards if requested, to give a very indepth and detailed reading. Tinas readings will leave you with a zest for life and feeling content with yourself.</Description>
-    <Status>Available</Status>
-    <WebChatStatus>Logged Off</WebChatStatus>
-    <WebCamStatus>Logged Off</WebCamStatus>
-    <Pin>4375</Pin>
-    <PinTier>0</PinTier>
-    <OverFlow>Yes</OverFlow>
-    <Picture>http://services.inveroak.co.uk/readerimages/images/4375-1</Picture>
-    <Pictures />
-    <PicturesLarge />
-    <Audio>None</Audio>
-    <Rota />
-    <Categories>
-      <Category name="Skills">
-        <Skill>Clairvoyant</Skill>
-        <Skill>Medium</Skill>
-        <Skill>Psychic</Skill>
-      </Category>
-      <Category name="Tools">
-        <Skill>Tarot Cards</Skill>
-        <Skill>Pendulum</Skill>
-      </Category>
-      <Category name="Subjects">
-        <Skill>Love/relationships</Skill>
-        <Skill>Career/work</Skill>
-        <Skill>Destiny/life path</Skill>
-        <Skill>Deceased loved ones</Skill>
-      </Category>
-      <Category name="Languages">
-        <Skill>English</Skill>
-      </Category>
-    </Categories>
-    <Video>https://player.vimeo.com/video/877446342?h=a62e6516a0</Video>
-    <Rating>60</Rating>
-    <StarSign>Taurus</StarSign>
-    <emailreader>No</emailreader>
-  </Reader>
-  <Reader>
-    <Name>Isobel</Name>
-    <Description>Isobel has been working as a professional qualified Medium for 40 years and is a natural Clairvoyant, capable of tuning into your partner or work colleagues energies, and can help with any emotional, family, or work issues. Can provide proof of survival that loved ones are able to communicate from the world of spirit to give validation and direction. Pets are also able to give validation.
-Isobel is a very honest reader who will tell you exactly what she sees.</Description>
-    <Status>Busy</Status>
-    <WebChatStatus>Logged Off</WebChatStatus>
-    <WebCamStatus>Logged Off</WebCamStatus>
-    <Pin>4336</Pin>
-    <PinTier>0</PinTier>
-    <OverFlow>Yes</OverFlow>
-    <Picture>http://services.inveroak.co.uk/readerimages/images/4336-3</Picture>
-    <Pictures />
-    <PicturesLarge>
-      <Picture>http://services.inveroak.co.uk/readerimages/images/4336-3_lf</Picture>
-    </PicturesLarge>
-    <Audio>http://services.inveroak.co.uk/readerimages/audio/4336.mp3</Audio>
-    <Rota />
-    <Categories>
-      <Category name="Skills">
-        <Skill>Clairvoyant</Skill>
-        <Skill>Medium</Skill>
-      </Category>
-      <Category name="Subjects">
-        <Skill>Love/relationships</Skill>
-        <Skill>Career/work</Skill>
-        <Skill>Destiny/life path</Skill>
-      </Category>
-      <Category name="Languages">
-        <Skill>English</Skill>
-      </Category>
-    </Categories>
-    <Video>https://player.vimeo.com/video/877445332?h=73656f0803</Video>
-    <Rating>100</Rating>
-    <StarSign>Sagittarius</StarSign>
-    <emailreader>No</emailreader>
-  </Reader>
-  <Reader>
-    <Name>Caroline</Name>
-    <Description>Caroline is a Psychic Medium,andclairvoyant  Naturally gifted healer, she is also an animal healer, and an empath. Caroline is also a Qualified NLP Master practitioner, Spiritual Practitioner, CBT Therapist,hypnotherapist, past life regression therapist, Reiki &amp; Seichem Master teacher has qualifications in herbalism and homeopathy. Soul &amp; Spirit Magazine 2013, 2014 and 2016. Caroline channels directly from spirit, receiving messages from her guides and clients guides or loved ones passed over.
-Caroline was first aware of spirit in childhood. Caroline is the founder of Crystal Heart Psychics she has worked professionally as a psychic medium,&amp; life coach for the past 20 years. To pre arrange a psychic reading with Caroline, contact us via our e mail address or message us through our facebook page. Caroline ensures all of her psychic team are empathetic and caring in the most professional manner.
-
-</Description>
-    <Status>Logged Off</Status>
-    <WebChatStatus>Logged Off</WebChatStatus>
-    <WebCamStatus>Logged Off</WebCamStatus>
-    <Pin>5330</Pin>
-    <PinTier>0</PinTier>
-    <OverFlow>No</OverFlow>
-    <Picture>http://services.inveroak.co.uk/readerimages/images/5330-5</Picture>
-    <Pictures />
-    <PicturesLarge>
-      <Picture>http://services.inveroak.co.uk/readerimages/images/5330-5_lf</Picture>
-    </PicturesLarge>
-    <Audio>None</Audio>
-    <Rota />
-    <Categories>
-      <Category name="Skills">
-        <Skill>Clairvoyant</Skill>
-        <Skill>Clairsentient</Skill>
-        <Skill>Clairaudient</Skill>
-        <Skill>Life Coach</Skill>
-        <Skill>Medium</Skill>
-        <Skill>Psychic</Skill>
-        <Skill>Reiki Healer</Skill>
-      </Category>
-      <Category name="Tools">
-        <Skill>Tarot Cards</Skill>
-        <Skill>Crystals</Skill>
-        <Skill>Pendulum</Skill>
-        <Skill>Oracle Cards</Skill>
-        <Skill>Angel Cards</Skill>
-      </Category>
-      <Category name="Subjects">
-        <Skill>Love/relationships</Skill>
-        <Skill>Career/work</Skill>
-        <Skill>Pets/animals</Skill>
-        <Skill>Destiny/life path</Skill>
-        <Skill>Lost people/pets</Skill>
-        <Skill>Past lives</Skill>
-        <Skill>Deceased loved ones</Skill>
-      </Category>
-      <Category name="Languages">
-        <Skill>English</Skill>
-      </Category>
-    </Categories>
-    <Video>None</Video>
-    <Rating>100</Rating>
-    <StarSign />
-    <emailreader>No</emailreader>
-  </Reader>
-</ReaderDetails>
+<?xml version="1.0" encoding="UTF-8"?>
+<readers>
+  <reader>
+    <name>Leonie</name>
+    <status>Available</status>
+    <reader_id>4468</reader_id>
+    <description>I am a caring and experienced Clairvoyant Psychic and I discovered my gift from quite a young age. I was able to see and predict what was about to happen around them. I was able to help individuals on specific personal matters. I am here to guide you when you are feeling lifes challenges and will bring sunshine into your life. I specialise in love relationships and I am able to advise spiritually on career problems. I aim to empower and enlighten you, and my approach is honest and direct.</description>
+    <image_url>http://services.inveroak.co.uk/readerimages/images/4468-1</image_url>
+    <specialties>Clairvoyant,Counsellor,Psychic,Tarot Cards,Crystals,Pendulum</specialties>
+    <areas>Love/relationships,Career/work,Destiny/life path</areas>
+    <language>English</language>
+    <rating>100</rating>
+    <zodiac>Leo</zodiac>
+  </reader>
+  <reader>
+    <name>Sherrey</name>
+    <status>Available</status>
+    <reader_id>4436</reader_id>
+    <description>Sherrey is an experienced Medium and clairvoyant. Sherrey will give you enough details about a loved one that you will instantly feel comforted and that you are speaking to a reader who truly cares and understands. Sherrey certainly doesnt give vague answers. She is a very warm woman that will tell you what she sees. It may not be what you want to hear but it will help you make the decision that is right for you.</description>
+    <image_url>http://services.inveroak.co.uk/readerimages/images/4436-2</image_url>
+    <specialties>Clairvoyant,Clairsentient,Clairaudient,Medium,Psychic</specialties>
+    <areas>Love/relationships,Career/work,Pets/animals,Destiny/life path,Deceased loved ones</areas>
+    <language>English</language>
+    <video_url>https://player.vimeo.com/video/881693496?h=5e7298981f</video_url>
+    <rating>100</rating>
+    <zodiac>Gemini</zodiac>
+  </reader>
+  <reader>
+    <name>Terry</name>
+    <status>Available</status>
+    <reader_id>4476</reader_id>
+    <description>Healing Mind, Body, Spirit &amp; the Emotions. I have been successfully predicting the outcome of many client issues now for over 40yrs. I am a Clairaudient, Clairsentient, Clairvoyant a Spirit Guide Channeler, and can read into Soulmate, Kindred Spirit, Twin Flame Connections, plus interaction or communicational issues etc. Reading in an ethical, honest and integral way is part of my core, and my aim is not to give you false promises, but the way forward in love matters. I reveal your past as it was, the present as it is and your future as it will be. I am also Internationally known, and pride myself on being a Psychic, Intuitive Channeler. I provide you with the answers to lifes most challenging love relationship questions, including, family, business, and friendship connections. Many times as we travel lifes path, we come to crossroads in love - where we wonder what do I do? What do I say?, What do I believe? Sometimes we need Spiritual Guidance. Are you trying to go forward in life but going backwards? Worried, confused or unhappy? My spirit guides provide the answers; they will always speak the truth and for your best outcome. If happiness is what you seek. Know it is waiting for you. Please - Let us help you find it today! Are you ready? Let me guide you through a better life filled with happiness &amp; Peace. I specialise in: Crystal Ball reading, Tarot cards, Clairvoyance &amp; Clairsentience, Soulmate love readings, Spirit Guide Channeling, Crystal Energy &amp; Healing.</description>
+    <image_url>http://services.inveroak.co.uk/readerimages/images/4476-3</image_url>
+    <specialties>Clairvoyant,Clairsentient,Clairaudient,Psychic,Wicca,Channeler,Tarot Cards,Crystals,Pendulum</specialties>
+    <areas>Love/relationships,Career/work,Destiny/life path</areas>
+    <language>English</language>
+    <rating>100</rating>
+    <zodiac>Aquarius</zodiac>
+    <featured>true</featured>
+  </reader>
+  <reader>
+    <name>Tina</name>
+    <status>Available</status>
+    <reader_id>4375</reader_id>
+    <description>Tina is a Natural Psychic Clairvoyant who is also a very good Medium with around 35 years of experience. Tina can do distant healing helping you feel more yourself. Tina uses her guides and angels to help guide you and give you the answers that you are seeking regarding any situation you may be facing. Tina can also use the Pendulum, Tarot and Angel cards if requested, to give a very indepth and detailed reading. Tinas readings will leave you with a zest for life and feeling content with yourself.</description>
+    <image_url>http://services.inveroak.co.uk/readerimages/images/4375-1</image_url>
+    <specialties>Clairvoyant,Medium,Psychic,Tarot Cards,Pendulum</specialties>
+    <areas>Love/relationships,Career/work,Destiny/life path,Deceased loved ones</areas>
+    <language>English</language>
+    <video_url>https://player.vimeo.com/video/877446342?h=a62e6516a0</video_url>
+    <rating>60</rating>
+    <zodiac>Taurus</zodiac>
+  </reader>
+  <reader>
+    <name>Isobel</name>
+    <status>Busy</status>
+    <reader_id>4336</reader_id>
+    <description>Isobel has been working as a professional qualified Medium for 40 years and is a natural Clairvoyant, capable of tuning into your partner or work colleagues energies, and can help with any emotional, family, or work issues. Can provide proof of survival that loved ones are able to communicate from the world of spirit to give validation and direction. Pets are also able to give validation. Isobel is a very honest reader who will tell you exactly what she sees.</description>
+    <image_url>http://services.inveroak.co.uk/readerimages/images/4336-3</image_url>
+    <image_url_lf>http://services.inveroak.co.uk/readerimages/images/4336-3_lf</image_url_lf>
+    <audio_url>http://services.inveroak.co.uk/readerimages/audio/4336.mp3</audio_url>
+    <specialties>Clairvoyant,Medium</specialties>
+    <areas>Love/relationships,Career/work,Destiny/life path</areas>
+    <language>English</language>
+    <video_url>https://player.vimeo.com/video/877445332?h=73656f0803</video_url>
+    <rating>100</rating>
+    <zodiac>Sagittarius</zodiac>
+  </reader>
+  <reader>
+    <name>Caroline</name>
+    <status>Logged Off</status>
+    <reader_id>5330</reader_id>
+    <description>Caroline is a Psychic Medium, Clairvoyant, naturally gifted healer, animal healer, and empath. Qualified NLP Master practitioner, Spiritual Practitioner, CBT Therapist, hypnotherapist, past life regression therapist, Reiki &amp; Seichem Master teacher with qualifications in herbalism and homeopathy. Featured in Soul &amp; Spirit Magazine 2013, 2014 and 2016. Caroline channels directly from spirit, receiving messages from her guides and clients guides or loved ones passed over. Caroline is the founder of Crystal Heart Psychics and has worked professionally as a psychic medium and life coach for the past 20 years.</description>
+    <image_url>http://services.inveroak.co.uk/readerimages/images/5330-5</image_url>
+    <image_url_lf>http://services.inveroak.co.uk/readerimages/images/5330-5_lf</image_url_lf>
+    <specialties>Clairvoyant,Clairsentient,Clairaudient,Life Coach,Medium,Psychic,Reiki,Healer,Tarot Cards,Crystals,Pendulum,Oracle Cards,Angel Cards</specialties>
+    <areas>Love/relationships,Career/work,Pets/animals,Destiny/life path,Lost people/pets,Past lives,Deceased loved ones</areas>
+    <language>English</language>
+    <rating>100</rating>
+    <featured>true</featured>
+  </reader>
+</readers>
