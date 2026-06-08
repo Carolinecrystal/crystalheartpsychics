@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ReaderDetails updated="08/06/2026 14:22:16">
+<ReaderDetails updated="08/06/2026 14:27:07">
   <Reader>
     <Name>Elizabeth</Name>
     <Description>I am an Intuitive Psychic and Life Coach and have been helping people for over 7 years.
@@ -257,6 +257,64 @@ I am here to help support &amp; guide you through your journey and questions. I 
     <Video>https://player.vimeo.com/video/877446342?h=a62e6516a0</Video>
     <Rating>60</Rating>
     <StarSign>Taurus</StarSign>
+    <emailreader>No</emailreader>
+  </Reader>
+  <Reader>
+    <Name>Ane</Name>
+    <Description>My approach to doing a phone reading is rooted in truth and honesty. Clients often find solace and clarity in my predictions and spiritual guidance, prompting them to return with positive feedback. My psychic toolkit includes a wide array of modalities where I offer personalised types of psychic readings: Clairvoyance, Clairsentience, Channelling, Soul Mate Readings, Spiritual Healing, Cord cutting with Archangel Michael, Crystal Healing, White Witchcraft, Spells and Rituals, Aura Cleansing, Angel Cards, Rune Cards, Tarot Cards, Light Worker. Theres more to me than meets the eye! While my psychic abilities are a core part of my work, I also hold a Bachelors degree in Botany from India. This scientific background brings a unique balance and depth to my readings. Additionally, I am a:Reiki Practitioner: Facilitating healing through the power of universal energy. Spell caster: Crafting positive spells for your intentions. Akashic Record reader: Unlocking wisdom from the past lives stored in the energetic library of the universe. Past life regression therapist: Guiding you on a journey to explore past experiences that may be impacting your present. Angel healer: Working with the benevolent energy of Archangels, particularly Archangel Michael for protection and healing. Practitioner of Maa Kali healing and Lakshmi/Ganesha healing: Utilising ancient mantras to address blockages and promote positive energy flow. Switch Word expert: Employing these powerful phrases to shift your energy for positive change.</Description>
+    <Status>Busy</Status>
+    <WebChatStatus>Logged Off</WebChatStatus>
+    <WebCamStatus>Logged Off</WebCamStatus>
+    <Pin>4496</Pin>
+    <PinTier>0</PinTier>
+    <OverFlow>Yes</OverFlow>
+    <Picture>http://services.inveroak.co.uk/readerimages/images/4496-1</Picture>
+    <Pictures />
+    <PicturesLarge>
+      <Picture>http://services.inveroak.co.uk/readerimages/images/4496-1_lf</Picture>
+    </PicturesLarge>
+    <Audio>None</Audio>
+    <Rota />
+    <Categories>
+      <Category name="Skills">
+        <Skill>Clairvoyant</Skill>
+        <Skill>Clairsentient</Skill>
+        <Skill>Clairaudient</Skill>
+        <Skill>Counsellor</Skill>
+        <Skill>Psychic</Skill>
+        <Skill>Reiki Healer</Skill>
+        <Skill>Wicca</Skill>
+        <Skill>Channeler</Skill>
+      </Category>
+      <Category name="Tools">
+        <Skill>Runestones</Skill>
+        <Skill>Astrology</Skill>
+        <Skill>Numerology</Skill>
+        <Skill>Tarot Cards</Skill>
+        <Skill>Crystals</Skill>
+        <Skill>Pendulum</Skill>
+        <Skill>Oracle Cards</Skill>
+        <Skill>Angel Cards</Skill>
+      </Category>
+      <Category name="Subjects">
+        <Skill>Love/relationships</Skill>
+        <Skill>Career/work</Skill>
+        <Skill>Pets/animals</Skill>
+        <Skill>Destiny/life path</Skill>
+        <Skill>Lost objects</Skill>
+        <Skill>Lost people/pets</Skill>
+        <Skill>Past lives</Skill>
+        <Skill>Deceased loved ones</Skill>
+      </Category>
+      <Category name="Languages">
+        <Skill>English</Skill>
+        <Skill>Bengali</Skill>
+        <Skill>Hindi</Skill>
+      </Category>
+    </Categories>
+    <Video>None</Video>
+    <Rating>100</Rating>
+    <StarSign>Aquarius</StarSign>
     <emailreader>No</emailreader>
   </Reader>
   <Reader>
