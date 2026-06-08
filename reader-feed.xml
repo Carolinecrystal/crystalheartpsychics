@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ReaderDetails updated="08/06/2026 16:42:07">
+<ReaderDetails updated="08/06/2026 16:52:09">
   <Reader>
     <Name>Caroline</Name>
     <Description>Caroline is a Psychic Medium,andclairvoyant  Naturally gifted healer, she is also an animal healer, and an empath. Caroline is also a Qualified NLP Master practitioner, Spiritual Practitioner, CBT Therapist,hypnotherapist, past life regression therapist, Reiki &amp; Seichem Master teacher has qualifications in herbalism and homeopathy. Soul &amp; Spirit Magazine 2013, 2014 and 2016. Caroline channels directly from spirit, receiving messages from her guides and clients guides or loved ones passed over.
@@ -55,9 +55,92 @@ Caroline was first aware of spirit in childhood. Caroline is the founder of Crys
     <emailreader>No</emailreader>
   </Reader>
   <Reader>
+    <Name>Joanna</Name>
+    <Description>Joanna is a psychic clairvoyant.  Joanna is a natural psychic, who was born with her ability. Joanna is also clairsentient which means she reads from the heart, and can feel peoples energies and emotions, whether they are in the same room or the other side of the world. This makes her insightful into what is going on in peoples lives, especially where matters of the heart are concerned.</Description>
+    <Status>Available</Status>
+    <WebChatStatus>Logged Off</WebChatStatus>
+    <WebCamStatus>Logged Off</WebCamStatus>
+    <Pin>4456</Pin>
+    <PinTier>0</PinTier>
+    <OverFlow>Yes</OverFlow>
+    <Picture>http://services.inveroak.co.uk/readerimages/images/4456-1</Picture>
+    <Pictures />
+    <PicturesLarge>
+      <Picture>http://services.inveroak.co.uk/readerimages/images/4456-1_lf</Picture>
+    </PicturesLarge>
+    <Audio>None</Audio>
+    <Rota />
+    <Categories>
+      <Category name="Skills">
+        <Skill>Clairvoyant</Skill>
+        <Skill>Clairsentient</Skill>
+        <Skill>Counsellor</Skill>
+        <Skill>Psychic</Skill>
+      </Category>
+      <Category name="Tools">
+        <Skill>Tarot Cards</Skill>
+        <Skill>Oracle Cards</Skill>
+      </Category>
+      <Category name="Subjects">
+        <Skill>Love/relationships</Skill>
+        <Skill>Career/work</Skill>
+        <Skill>Pets/animals</Skill>
+        <Skill>Destiny/life path</Skill>
+      </Category>
+      <Category name="Languages">
+        <Skill>English</Skill>
+      </Category>
+      <Category name="Counselling">
+        <Skill>Counsellor</Skill>
+      </Category>
+    </Categories>
+    <Video>https://youtube.com/embed/eybB9_r7cbo</Video>
+    <Rating>80</Rating>
+    <StarSign />
+    <emailreader>No</emailreader>
+  </Reader>
+  <Reader>
+    <Name>Sherrey</Name>
+    <Description>Sherrey is an experienced Medium and clairvoyant. Sherrey will give you enough details about a loved one that you will instantly feel comforted and that you are speaking to a reader who truly cares and understands. Sherrey certainly doesnt give vague answers. She is a very warm woman that will tell you what she sees. It may not be what you want to hear but it will help you make the decision that is right for you.</Description>
+    <Status>Available</Status>
+    <WebChatStatus>Logged Off</WebChatStatus>
+    <WebCamStatus>Logged Off</WebCamStatus>
+    <Pin>4436</Pin>
+    <PinTier>0</PinTier>
+    <OverFlow>Yes</OverFlow>
+    <Picture>http://services.inveroak.co.uk/readerimages/images/4436-2</Picture>
+    <Pictures />
+    <PicturesLarge />
+    <Audio>None</Audio>
+    <Rota />
+    <Categories>
+      <Category name="Skills">
+        <Skill>Clairvoyant</Skill>
+        <Skill>Clairsentient</Skill>
+        <Skill>Clairaudient</Skill>
+        <Skill>Medium</Skill>
+        <Skill>Psychic</Skill>
+      </Category>
+      <Category name="Subjects">
+        <Skill>Love/relationships</Skill>
+        <Skill>Career/work</Skill>
+        <Skill>Pets/animals</Skill>
+        <Skill>Destiny/life path</Skill>
+        <Skill>Deceased loved ones</Skill>
+      </Category>
+      <Category name="Languages">
+        <Skill>English</Skill>
+      </Category>
+    </Categories>
+    <Video>https://player.vimeo.com/video/881693496?h=5e7298981f</Video>
+    <Rating>100</Rating>
+    <StarSign>Gemini</StarSign>
+    <emailreader>No</emailreader>
+  </Reader>
+  <Reader>
     <Name>Ane</Name>
     <Description>My approach to doing a phone reading is rooted in truth and honesty. Clients often find solace and clarity in my predictions and spiritual guidance, prompting them to return with positive feedback. My psychic toolkit includes a wide array of modalities where I offer personalised types of psychic readings: Clairvoyance, Clairsentience, Channelling, Soul Mate Readings, Spiritual Healing, Cord cutting with Archangel Michael, Crystal Healing, White Witchcraft, Spells and Rituals, Aura Cleansing, Angel Cards, Rune Cards, Tarot Cards, Light Worker. Theres more to me than meets the eye! While my psychic abilities are a core part of my work, I also hold a Bachelors degree in Botany from India. This scientific background brings a unique balance and depth to my readings. Additionally, I am a:Reiki Practitioner: Facilitating healing through the power of universal energy. Spell caster: Crafting positive spells for your intentions. Akashic Record reader: Unlocking wisdom from the past lives stored in the energetic library of the universe. Past life regression therapist: Guiding you on a journey to explore past experiences that may be impacting your present. Angel healer: Working with the benevolent energy of Archangels, particularly Archangel Michael for protection and healing. Practitioner of Maa Kali healing and Lakshmi/Ganesha healing: Utilising ancient mantras to address blockages and promote positive energy flow. Switch Word expert: Employing these powerful phrases to shift your energy for positive change.</Description>
-    <Status>Available</Status>
+    <Status>Busy</Status>
     <WebChatStatus>Logged Off</WebChatStatus>
     <WebCamStatus>Logged Off</WebCamStatus>
     <Pin>4496</Pin>
@@ -117,7 +200,7 @@ Caroline was first aware of spirit in childhood. Caroline is the founder of Crys
     <Description>I specialise in all the Clairs &amp; Mediumship. I will also clarify information with my Tarot &amp; Oracle Cards, and have assistance from my guides.
 Please be open-minded with your readings, sometimes the information that is received may not necessarily be the one we are hoping to hear, however, have faith that it may be what is needed at this point in time.
 I am here to help support &amp; guide you through your journey and questions. I look forward to speaking with you soon! Esha x</Description>
-    <Status>Available</Status>
+    <Status>Busy</Status>
     <WebChatStatus>Logged Off</WebChatStatus>
     <WebCamStatus>Logged Off</WebCamStatus>
     <Pin>4021</Pin>
@@ -162,7 +245,7 @@ I am here to help support &amp; guide you through your journey and questions. I 
     <Description>I have been a Clairvoyant and Psychic for 15 years, who will bring positive energy to your reading. I use my Crystals, as well as tuning into your energy, to conduct my readings. 
 I want to help you feel strong, and to believe in yourself, as well as your choices. 
 I am very down to earth, and want to help guide you on your path.</Description>
-    <Status>Available</Status>
+    <Status>Busy</Status>
     <WebChatStatus>Logged Off</WebChatStatus>
     <WebCamStatus>Logged Off</WebCamStatus>
     <Pin>4056</Pin>
@@ -193,89 +276,6 @@ I am very down to earth, and want to help guide you on your path.</Description>
     <Video>None</Video>
     <Rating>100</Rating>
     <StarSign>Sagittarius</StarSign>
-    <emailreader>No</emailreader>
-  </Reader>
-  <Reader>
-    <Name>Joanna</Name>
-    <Description>Joanna is a psychic clairvoyant.  Joanna is a natural psychic, who was born with her ability. Joanna is also clairsentient which means she reads from the heart, and can feel peoples energies and emotions, whether they are in the same room or the other side of the world. This makes her insightful into what is going on in peoples lives, especially where matters of the heart are concerned.</Description>
-    <Status>Busy</Status>
-    <WebChatStatus>Logged Off</WebChatStatus>
-    <WebCamStatus>Logged Off</WebCamStatus>
-    <Pin>4456</Pin>
-    <PinTier>0</PinTier>
-    <OverFlow>Yes</OverFlow>
-    <Picture>http://services.inveroak.co.uk/readerimages/images/4456-1</Picture>
-    <Pictures />
-    <PicturesLarge>
-      <Picture>http://services.inveroak.co.uk/readerimages/images/4456-1_lf</Picture>
-    </PicturesLarge>
-    <Audio>None</Audio>
-    <Rota />
-    <Categories>
-      <Category name="Skills">
-        <Skill>Clairvoyant</Skill>
-        <Skill>Clairsentient</Skill>
-        <Skill>Counsellor</Skill>
-        <Skill>Psychic</Skill>
-      </Category>
-      <Category name="Tools">
-        <Skill>Tarot Cards</Skill>
-        <Skill>Oracle Cards</Skill>
-      </Category>
-      <Category name="Subjects">
-        <Skill>Love/relationships</Skill>
-        <Skill>Career/work</Skill>
-        <Skill>Pets/animals</Skill>
-        <Skill>Destiny/life path</Skill>
-      </Category>
-      <Category name="Languages">
-        <Skill>English</Skill>
-      </Category>
-      <Category name="Counselling">
-        <Skill>Counsellor</Skill>
-      </Category>
-    </Categories>
-    <Video>https://youtube.com/embed/eybB9_r7cbo</Video>
-    <Rating>80</Rating>
-    <StarSign />
-    <emailreader>No</emailreader>
-  </Reader>
-  <Reader>
-    <Name>Sherrey</Name>
-    <Description>Sherrey is an experienced Medium and clairvoyant. Sherrey will give you enough details about a loved one that you will instantly feel comforted and that you are speaking to a reader who truly cares and understands. Sherrey certainly doesnt give vague answers. She is a very warm woman that will tell you what she sees. It may not be what you want to hear but it will help you make the decision that is right for you.</Description>
-    <Status>Busy</Status>
-    <WebChatStatus>Logged Off</WebChatStatus>
-    <WebCamStatus>Logged Off</WebCamStatus>
-    <Pin>4436</Pin>
-    <PinTier>0</PinTier>
-    <OverFlow>Yes</OverFlow>
-    <Picture>http://services.inveroak.co.uk/readerimages/images/4436-2</Picture>
-    <Pictures />
-    <PicturesLarge />
-    <Audio>None</Audio>
-    <Rota />
-    <Categories>
-      <Category name="Skills">
-        <Skill>Clairvoyant</Skill>
-        <Skill>Clairsentient</Skill>
-        <Skill>Clairaudient</Skill>
-        <Skill>Medium</Skill>
-        <Skill>Psychic</Skill>
-      </Category>
-      <Category name="Subjects">
-        <Skill>Love/relationships</Skill>
-        <Skill>Career/work</Skill>
-        <Skill>Pets/animals</Skill>
-        <Skill>Destiny/life path</Skill>
-        <Skill>Deceased loved ones</Skill>
-      </Category>
-      <Category name="Languages">
-        <Skill>English</Skill>
-      </Category>
-    </Categories>
-    <Video>https://player.vimeo.com/video/881693496?h=5e7298981f</Video>
-    <Rating>100</Rating>
-    <StarSign>Gemini</StarSign>
     <emailreader>No</emailreader>
   </Reader>
   <Reader>
