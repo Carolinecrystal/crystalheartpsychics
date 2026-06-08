@@ -1774,7 +1774,7 @@ function resetTarot(){
 // ─── READER FEED — fully driven by Inveroak XML ──────────────────
 const PROFILE_BASE='https://cc.inveroak.co.uk/bookings/crystalheart.aspx?pin=';
 const INVEROAK_FEED='https://services.inveroak.co.uk/readerimages/livepanel/91232.xml';
-const CHR_PROXY='/reader-feed.xml';
+const CHR_PROXY='https://crystalheartradio.app/api/functions/readerFeedProxy';
 async function fetchFeedXML(){
   try{
     const res=await fetch(CHR_PROXY+'?t='+Date.now(),{cache:'no-cache',signal:AbortSignal.timeout(8000)});
